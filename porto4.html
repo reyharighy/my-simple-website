@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CRUD Application in Object-Oriented Programming</title>
+        <meta name="description" content="Personal Website to showcase data science's projects">
+        <meta name="author" content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <style>
+            span.variables {
+                color: #339999;
+            }
+        </style>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+        <!-- Custom styles -->
+        <link href="style.css" rel="stylesheet" type="text/css" />
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header id="header">
+            <img src="./images/banner-porto-4.png" style="width: 100%">
+            <h2 id="headline">CRUD Application in Object-Oriented Programming</h2>
+            <hr />
+        </header>
+
+        <div id="container">
+            <div id="inner">
+                <div id="content">
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px;">Introduction</h2>
+                    <p style="text-align: justify;">
+                        Object-Oriented Programming (OOP) is a programming paradigm that structures code around the concept of "objects". 
+                        Objects are instances of classes, which are templates or blueprints for creating objects. 
+                        OOP focuses on modeling real-world entities and their interactions using classes and objects. 
+                        It promotes encapsulation, inheritance, and polymorphism as core concepts.
+                    </p>
+
+                    <p style="text-align: justify; margin-bottom: 30px;">
+                        Python is a popular programming language known for its simplicity and ease of use. 
+                        One of the most common applications of Python is for creating CRUD application to a wide range of use cases. 
+                        As for my project, this can be useful for managing and manipulating amounts of personal patient data by providing an easy-to-use interface which is customized to meet specific requirements or additional features such as data validation. 
+                        As for the storage file format, we will be using CSV (Comma-Separated Values) which is a lightweight and accessible file format used for storing tabular data, or information presented in a table with rows and columns.
+                        Overall, this is just a small start of understanding the basic concepts of creating CRUD application in Object-oriented Programming Paradigm.
+                    </p>
+                    <hr />
+
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px; margin-top: 30px;">CRUD Operations</h2>
+                    <p style="text-align: justify;">
+                        CRUD is an acronym that stands for Create, Read, Update, and Delete. 
+                        It refers to the basic operations that are commonly performed on data stored in a database that provides an interface for users to interact with a database by performing these basic operations.
+                        Here's a brief description of each of the CRUD operations.
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                Create: This operation is used to create new data in the database.
+                            </li>
+                            <li>
+                                Read: This operation is used to retrieve data from the database.
+                            </li>
+                            <li>
+                                Update: This operation is used to modify existing data in the database.
+                            </li>
+                            <li>
+                                Delete: This operation is used to remove data from the database.
+                            </li>
+                        </ol>
+                    </p>
+
+                    <p style="text-align: justify;">
+                        The application may also include additional features such as authentication, authorization, validation, and error handling to ensure that data is processed correctly and securely.
+                        In summary, a CRUD application is important because it provides an efficient and scalable way to manage data, automate tasks, and customize the application to meet specific business requirements. 
+                        For example, in data management, it allows users to manage data easily and efficiently. 
+                        Users can create, read, update, and delete data in a database with a few clicks or taps, without having to write complex SQL queries.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        This project presents an example of a personal patient record in a hospital, with a focus on the necessary patient data. 
+                        The hospital name and type are not specified, but the project outlines the patient information required, including patient's identifier (ID), name, place of birth, birthdate, gender, and phone number. 
+                        An ID is unique and non-repeating label that is used to identify a patient that later is used to retrieve or update the record. 
+                        They are going to be represented as numbers. Here are detailed format and example of each data:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                Identifier (ID): a 16-digit numeric data type that's manually entered.
+                            </li>
+                            <li>
+                                Name: a string data type that's manually entered.
+                            </li>
+                            <li>
+                                Place of birth: a string data type that's manually entered.
+                            </li>
+                            <li>
+                                Birthdate: a string data type that's manually entered.
+                            </li>
+                            <li>
+                                Gender: a string data type that's manually entered.
+                            </li>
+                            <li>
+                                Phone Number: a numeric data type that's manually entered.
+                            </li>
+                        </ol>
+                    </p>
+
+                    <p style="text-align: justify;">
+                        When working with CSV files, it's important to store all data as strings because CSV files do not have a standardized data type system. 
+                        If data is not stored as a string, it may be interpreted as a different data type, leading to errors in data processing. 
+                        By storing all data as strings, it can be parsed into a data structure and converted to the appropriate data type after reading the file. 
+                        This ensures that the data is correctly interpreted and processed according to its intended data type.
+                    </p>
+                    <img src="./images/patient's-data.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px; margin-bottom: 30px;">
+                        When working with CSV files as a database, we use Command-Line Interface (CLI) to interact with the files instead of a graphical user interface (GUI). 
+                        CLI can be used in CRUD applications and is particularly useful when efficiency, flexibility, portability, or security are important factors.
+                    </p>
+                    <hr />
+
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px; margin-top: 30px;">Implementing CRUD with CSV</h2>
+                    <p style="text-align: justify;">
+                        As the program run within the terminal, first and foremost it should disclose what’s inside the current CSV file. 
+                        We include the following codes at the very beginning.
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Data Loading</h3>
+                    <img src="./images/load-csv.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px; margin-bottom: 30px;">
+                        The provided code snippet is all about loading patient records from a CSV file and processing the data to create a list of dictionaries. 
+                        Let's break it down step by step:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                The "<span class="variables">csv</span>" module is imported, which allows us to work with CSV files.
+                            </li>
+                            <li>
+                                The code enters a "<span class="variables">with</span>" block, where it opens a CSV file named "<span class="variables">records-oop.csv</span>" in read mode ('r') with UTF-8 encoding. 
+                                The "<span class="variables">with</span>" statement ensures proper handling of the file, automatically closing it when done.
+                            </li>
+                            <li>
+                                An empty list named "<span class="variables">patients_list</span>" is created. This list will store the processed patient records.
+                            </li>
+                            <li>
+                                The "<span class="variables">csv.DictReader</span>" is used to read the CSV file. 
+                                It treats the first row as headers and each subsequent row as a dictionary with header values as keys.
+                            </li>
+                            <li>
+                                A loop iterates through each row in the CSV file (excluding the header).
+                            </li>
+                            <li>
+                                The value in the "<span class="variables">id_number</span>" column of the current row is converted to an integer and stored back in the same dictionary under the "<span class="variables">id_number</span>" key.
+                            </li>
+                            <li>
+                                The value in the "<span class="variables">birth_date</span>" column of the current row is processed. 
+                                It's split into parts, and each part is converted to an integer to represent the year, month, and day of birth. 
+                                These integers are stored as a list under the "<span class="variables">birth_date</span>" key in the same dictionary.
+                            </li>
+                            <li>
+                                The modified dictionary (row) is appended to the "<span class="variables">patients_list</span>", creating a list of patient records.
+                            </li>
+                            <li>
+                                After processing all rows, the "<span class="variables">with</span>" block ensures the CSV file is properly closed.
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        In essence, this code snippet reads patient data from a CSV file, processes the data, and stores it as a list of dictionaries. 
+                        This structured data can then be used for further analysis or manipulation in a more organized manner.
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Data Saving</h3>
+                    <img src="./images/save-csv.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        This section of code focuses on saving patient records to a CSV file and then terminating the program. 
+                        Here's an explanation of what's happening:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                "<span class="variables">if terminate:</span>": This condition checks whether a variable named terminate is "<span class="variables">True</span>". 
+                                It indicates whether the program should be terminated and whether patient records should be saved.
+                            </li>
+                            <li>
+                                Inside this condition, a "<span class="variables">with</span>" block is used to open a CSV file named "<span class="variables">records-oop.csv</span>" in write mode ('w') with UTF-8 encoding for saving data.
+                            </li>
+                            <li>
+                                A "<span class="variables">csv.DictWriter</span>" is created. 
+                                It's responsible for writing dictionaries (rows) into the CSV file. 
+                                The fieldnames parameter specifies the order and names of the columns in the CSV file.
+                            </li>
+                            <li>
+                                "<span class="variables">writer.writeheader()</span>": This writes the header row with the column names specified in fieldnames to the CSV file.
+                            </li>
+                            <li>
+                                "<span class="variables">writer.writerows(patients_list)</span>": This writes the list of dictionaries (patient records) stored in the "<span class="variables">patients_list</span>" to the CSV file.
+                            </li>
+                            <li>
+                                After writing the data, a message is printed indicating that the program has been successfully terminated.
+                            </li>
+                            <li>
+                                "<span class="variables">break</span>": This statement ends the loop or program execution, essentially terminating the program after saving the patient records.
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify; margin-bottom: 30px;">
+                        In summary, this section of code checks whether the program should be terminated. 
+                        If it should be terminated, it saves the patient records to a CSV file named "<span class="variables">records-oop.csv</span>", prints a termination message, and then ends the program execution. 
+                        This ensures that the patient records are properly saved before the program closes.
+                    </p>
+                    <hr />
+
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px; margin-top: 30px;">Control-Flow Procedure</h2>
+                    <p style="text-align: justify;">
+                        A control-flow procedure manages the flow of execution based on different conditions and user interactions. 
+                        It's responsible for guiding the program's behavior, directing it through different paths of code execution depending on the user's inputs or system states.
+                    </p>
+                    <img src="./images/control-flow.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px; margin-bottom: 30px;">
+                        This "<span class="variables">main_page</span>" method handles the main menu and user interactions in a program that manages patient records:
+                        <ol style="margin-top: -25px; text-align: justify;">
+                            <li>
+                                A "<span class="variables">while True</span>" loop starts to continuously display the main menu and process user inputs.
+                            </li>
+                            <li>
+                                Inside the loop:
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        "<span class="variables">terminate</span>" is set to "<span class="variables">False</span>", indicating the program is not set to terminate.
+                                    </li>
+                                    <li>
+                                        A formatted main menu is displayed, welcoming the user and offering options to create a new patient's record, search for a patient's record, or exit the program.
+                                    </li>
+                                    <li>
+                                        User input is obtained using "<span class="variables">self.option_entry_handler(name='main page')</span>", indicating a method to get a numeric option from the user.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Depending on the user's input ("<span class="variables">mp_input</span>"):
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        If "<span class="variables">mp_input</span>" is 1, it calls the "<span class="variables">create_page()</span>" method, which handles the process of creating a new patient's record.
+                                    </li>
+                                    <li>
+                                        If "<span class="variables">mp_input</span>" is 2, it calls the "<span class="variables">search_page()</span>" method for searching patient records.
+                                    </li>
+                                    <li>
+                                        If "<span class="variables">mp_input</span>" is 3, it calls the "<span class="variables">exit_page()</span>" method with the terminate flag and updates terminate based on the method's behavior.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        The loop continues indefinitely, allowing the user to navigate through the program by selecting different options from the main menu. 
+                        The program will continue running and processing user choices until there's an internal mechanism that modifies the loop-breaking condition or handles program termination.
+                    </p>
+                    <hr />
+
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px; margin-top: 30px;">Create Operations</h2>
+                    <p style="text-align: justify;">
+                        The "<span class="variables">Create</span>" operation in a CRUD application involves collecting user input, validating it, creating a new data record, storing it, and providing feedback to confirm the successful addition of the data.
+                    </p>
+                    <h3 style="margin-bottom: 20px;">Instance Creation Functionality</h3>
+                    <img src="./images/create-class.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        This code defines a class called "<span class="variables">Create</span>" which handles the creation of new patient records. 
+                        The "<span class="variables">__init__</span>" method is the constructor for this class and is responsible for initializing the attributes for a new patient's record.
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                "<span class="variables">self.id_number = self.check_duplicate()</span>": Generates a unique ID number for the patient's record. 
+                                The specifics of the "<span class="variables">check_duplicate()</span>" method ensures the generated ID isn't already in use.
+                            </li>
+                            <li>
+                                "<span class="variables">self.name = Initialize().alpha_entry_handler(name='Name')</span>": Collects and handles alphanumeric input for the patient's name using the "<span class="variables">alpha_entry_handler</span>" method from an "<span class="variables">Initialize</span>" class instance.
+                            </li>
+                            <li>
+                                "<span class="variables">self.birth_place = Initialize().alpha_entry_handler(name='Place of Birth')</span>": Collects and handles alphanumeric input for the patient's place of birth.
+                            </li>
+                            <li>
+                                "<span class="variables">self.birth_date = Initialize().birth_date_entry()</span>": Collects and handles input for the patient's birth date, handling validation and formatting.
+                            </li>
+                            <li>
+                                "<span class="variables">self.gender = Initialize().gender_entry()</span>": Collects and handles input for the patient's gender.
+                            </li>
+                            <li>
+                                "<span class="variables">self.phone = Initialize().num_entry_handler(name='Phone Number')</span>": Collects and handles numeric input for the patient's phone number.
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        In summary, the "<span class="variables">Create</span>" class serves to instantiate and gather data for a new patient's record creation. 
+                        It interacts with an "<span class="variables">Initialize</span>" class to manage various aspects of data collection and validation for patient attributes.
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Create Page Management</h3>
+                    <img src="./images/create-page.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        This "<span class="variables">create_page</span>" method is responsible for managing the creation of a new patient's record. 
+                        Here's the breakdown:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                A "<span class="variables">while True</span>" loop begins to manage the process of creating a new patient record.
+                            </li>
+                            <li>
+                                Inside the loop:
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        A prompt is displayed to the user, asking if they're sure they want to create a new patient's record.
+                                    </li>
+                                    <li>
+                                        The user is provided with options to confirm or cancel.
+                                    </li>
+                                    <li>
+                                        The "<span class="variables">self.option_entry_handler(name='confirmation')</span>" is used to obtain the user's choice, which handles numeric input for confirming actions.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                If the user provided input ("<span class="variables">confirm</span>" is not "<span class="variables">None</span>"):
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        If the input is 1, indicating the user wants to proceed:
+                                        <ul style="text-align: justify; margin-top: 5px;">
+                                            <li>
+                                                A title banner is displayed for the new patient record creation.
+                                            </li>
+                                            <li>
+                                                The user is prompted to fill out the required information.
+                                            </li>
+                                            <li>
+                                                A new instance of a class "<span class="variables">Create</span>" is created to manage the actual process of creating the record.
+                                            </li>
+                                            <li>
+                                                The "<span class="variables">saving_confirmation()</span>" method of the "<span class="variables">new_record</span>" instance is called, confirming the successful saving of the record.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        If the input is not 1, indicating the user doesn't want to proceed:
+                                        <ul style="text-align: justify; margin-top: 5px;">
+                                            <li>
+                                                A message is displayed indicating that the program is returning to the main page.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        The "<span class="variables">break</span>" statement is used to exit the loop after either creating the record or canceling the process.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        In summary, the "<span class="variables">create_page</span>" method guides the user through the process of creating a new patient's record. 
+                        It ensures a user-friendly experience by confirming the user's intent, presenting necessary information input, and handling different outcomes based on the user's choice.
+                    </p>
+                    <hr />
+
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px; margin-top: 30px;">Data Interactions</h2>
+                    <p style="text-align: justify;">
+                        Data interactions refer to how the application interacts with data throughout its lifecycle.
+                        These interactions involve performing operations like reading, updating, and deleting data records.  
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Instance Returning Functionality</h3>
+                    <img src="./images/search-class.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        The "<span class="variables">Search</span>" class is intended to search for patient records based on specific criteria. 
+                        Here's the breakdown:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                The class has an "<span class="variables">__init__</span>" method that initializes an attribute called "<span class="variables">show_list</span>", which is meant to store the results of the search operation.
+                            </li>
+                            <li>
+                                The "<span class="variables">filtered_by</span>" method takes two arguments: "<span class="variables">on_keys</span>" (a string representing the attribute to search on) and "<span class="variables">value</span>" (the value to match).
+                            </li>
+                            <li>
+                                Inside the method, a loop iterates through each patient's record in the "<span class="variables">patients_list</span>".
+                            </li>
+                            <li>
+                                For each patient's record, it uses the "<span class="variables">setdefault</span>" method to retrieve the value associated with the specified "<span class="variables">on_keys</span>". 
+                                If the value matches the provided value, the patient's record is considered a match.
+                            </li>
+                            <li>
+                                If a match is found, the patient's record is appended to the "<span class="variables">show_list</span>".
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        In summary, the "<span class="variables">Search</span>" class and its "<span class="variables">Search</span>" method allow for searching patient records based on a specified attribute and value. 
+                        It iterates through the list of patient records, compares the attribute value to the provided value, and stores matching records in the "<span class="variables">show_list</span>" attribute. 
+                        This class is a part of a parent-class "<span class="variables">Initialize</span>" for searching and displaying patient records.
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Updating and Deleting Modifier</h3>
+                    <img src="./images/search-modifier.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        This part of the code defines a method named "<span class="variables">modifier</span>" within the "<span class="variables">Search</span>" class. 
+                        Here's what it does:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                The method takes an argument "<span class="variables">result</span>" which is a dictionary representing the patient's record that has been searched for.
+                            </li>
+                            <li>
+                                Inside the method, a loop is started using "<span class="variables">while True</span>".
+                            </li>
+                            <li>
+                                The "<span class="variables">print</span>" statement displays a menu to the user, allowing them to choose from different options to modify the intended patient's record. 
+                                The options include updating the record, deleting the record, or returning to the search page.
+                            </li>
+                            <li>
+                                The "<span class="variables">Initialize().option_entry_handler(name='modifier')</span>" is used to obtain the user's choice for the modification operation. 
+                                This method handles numeric input for selecting menu options.
+                            </li>
+                            <li>
+                                If the user provided input ("<span class="variables">mod_input</span>" is not "<span class="variables">None</span>"), the code checks the user's choice:
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        If the choice is 1, it indicates the user wants to update the patient's record. 
+                                        The "<span class="variables">self.update(data_input=result)</span>" method is called to perform the update operation.
+                                    </li>
+                                    <li>
+                                        If the choice is 2, it indicates the user wants to delete the patient's record. 
+                                        The "<span class="variables">self.delete(data_input=result)</span>" method is called to perform the delete operation.
+                                    </li>
+                                    <li>
+                                        If the choice is not 1 or 2, it implies the user wants to go back to the search page.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                The "<span class="variables">break</span>" statement is used to exit the loop after the modification operation is completed.
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        In summary, the modifier method within the "<span class="variables">Search</span>" class is responsible for providing a menu to the user for modifying a searched patient's record. 
+                        It handles updating and deleting patient records based on the user's choice and ensures a smooth user experience for making changes to patient data.
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Instance Updating Functionality</h3>
+                    <img src="./images/update_funtion.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        This part of the code defines a method named update within the "<span class="variables">Search</span>" class. 
+                        Here's what it does:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                The method takes an argument "<span class="variables">data_input</span>", which is a dictionary representing the patient's record that needs to be updated.
+                            </li>
+                            <li>
+                                A dictionary is created using "<span class="variables">Initialize().dictionary(name='field')</span>". 
+                                This dictionary maps option numbers to field names.
+                            </li>
+                            <li>
+                                Inside the method, a loop is started using "<span class="variables">while True</span>".
+                            </li>
+                            <li>
+                                A menu is displayed to the user, providing options to choose which information they would like to update. 
+                                The options correspond to different fields of the patient's record, such as Identification Number, Name, Place of Birth, etc.
+                            </li>
+                            <li>
+                                The "<span class="variables">Initialize().option_entry_handler(name='update')</span>" method is used to obtain the user's choice for the update operation. 
+                                This method handles numeric input for selecting menu options.
+                            </li>
+                            <li>
+                                If the user provided input ("<span class="variables">up_input</span>" is not "<span class="variables">None</span>"), the code checks the user's choice:
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        If the choice is not 7, it indicates the user wants to update a specific field of the patient's record:
+                                        <ul style="text-align: justify; margin-top: 5px;">
+                                            <li>
+                                                The "<span class="variables">field</span>" variable is set to the field name based on the selected option using the dictionary.
+                                            </li>
+                                            <li>
+                                                Depending on the selected option, the appropriate data entry handler methods (like "<span class="variables">num_entry_handler</span>", "<span class="variables">alpha_entry_handler</span>", etc.) are used to obtain new data for the selected field.
+                                            </li>
+                                            <li>
+                                                The "<span class="variables">updating_confirmation</span>" method is called with the new data, old data ("<span class="variables">data_input</span>"), and the field name to confirm and apply the update.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        If the choice is 7, it indicates the user wants to go back to the search page.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                The "<span class="variables">break</span>" statement is used to exit the loop after the update operation is completed.
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify;">
+                        In summary, the update method within the "<span class="variables">Search</span>" class facilitates the process of updating specific fields of a patient's record. 
+                        It provides a menu for the user to choose which field to update, obtains new data for the selected field, and confirms the update operation. 
+                        This method ensures a user-friendly experience for modifying patient data.
+                    </p>
+
+                    <h3 style="margin-bottom: 20px;">Instance Deleting Functionality</h3>
+                    <img src="./images/delete_funtion.png" style="width: 70%; margin-left: 15%;">
+                    <p style="text-align: justify; margin-top: 20px;">
+                        This part of the code defines a method named delete within the "<span class="variables">Search</span>" class. 
+                        Here's what it does:
+                        <ol style="margin-top: -15px; text-align: justify;">
+                            <li>
+                                The method takes an argument "<span class="variables">data_input</span>", which is a dictionary representing the patient's record that the user intends to delete.
+                            </li>
+                            <li>
+                                Inside the method, a loop is started using "<span class="variables">while True</span>".
+                            </li>
+                            <li>
+                                A prompt is displayed to the user, asking if they're sure they want to delete the patient's record. 
+                                The user is presented with options to confirm or cancel the deletion.
+                            </li>
+                            <li>
+                                The "<span class="variables">Initialize().option_entry_handler(name='confirmation')</span>" method is used to obtain the user's choice for the confirmation operation. 
+                                This method handles numeric input for selecting menu options.
+                            </li>
+                            <li>
+                                If the user provided input ("<span class="variables">confirm</span>" is not "<span class="variables">None</span>"), the code checks the user's choice:
+                                <ul style="text-align: justify; margin-top: 5px;">
+                                    <li>
+                                        If the choice is 1, it indicates the user wants to proceed with deleting the patient's record. 
+                                        The "<span class="variables">data_input</span>" (patient's record dictionary) is removed from the "<span class="variables">patients_list</span>", effectively deleting the record.
+                                    </li>
+                                    <li>
+                                        If the choice is not 1, it implies the user has chosen not to proceed with the deletion. 
+                                        A message indicating that the patient's record was not deleted is displayed.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                The "<span class="variables">break</span>" statement is used to exit the loop after the deletion operation is completed.
+                            </li>
+                        </ol>
+                    </p>
+                    <p style="text-align: justify; margin-bottom: 30px;">
+                        In summary, the delete method within the "<span class="variables">Search</span>" class facilitates the process of deleting a patient's record. 
+                        It presents a confirmation prompt to the user, handles their choice, and deletes the record from the list of patient records if confirmed. 
+                        This method ensures that the user can perform record deletions with proper confirmation and feedback.
+                    </p>
+                    <hr />
+
+                    <h2 style="font-weight: bolder; color:#339999; margin-bottom: 10px; margin-top: 30px;">Conclussion</h2>
+                    <p style="text-align: justify;">
+                        In this project, we have successfully created a CRUD application using Python and CSV files as a database. 
+                        This type of application is ideal for small-scale projects and is a great way to learn about the fundamentals of building CRUD applications in Python.
+                    </p>
+                    <p style="text-align: justify;">
+                        We have gained valuable experience in Python programming, CSV file handling, and CLI application development. 
+                        We have also learned how to perform the four essential CRUD operations (Create, Read, Update, and Delete) on data stored in CSV files.
+                        While CSV files are a good starting point for managing small amounts of data, they may not be suitable for larger-scale applications. 
+                        For more extensive projects, we may want to consider using a more robust database management system like MySQL or PostgreSQL.
+                    </p>
+                    <p style="text-align: justify;">
+                        In addition, building your own CRUD application will give you the opportunity to tailor it to your specific needs and requirements. 
+                        You can experiment with different frameworks, databases, and data structures to find the best combination that works for you.
+                    </p>
+                    <p style="text-align: justify; margin-bottom: 30px;">
+                        Overall, building your own CRUD application is an excellent way to challenge yourself and take your programming skills to the next level. 
+                        Don't be afraid to start small and work your way up to more advanced projects. 
+                        With persistence and dedication, you can achieve great things and become a proficient Python developer.
+                    </p>
+                    <hr />
+
+                    <p style="margin-top: 30px;">
+                        Please find detailed of this project on <a href="https://github.com/reyharighy/CRUD_Application_in_Object-Oriented_Programming">My Github</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-area">
+            <h3 class="footer-text">About This Page</h3>
+            <p class="footer-info">
+                This website was code in HTML, CSS, and Javascript based on the theme
+                from <a href="https://github.com/cplmakerlab/simple-website-template" id="font-color">cplmakerlab</a>.
+                It's hosted on Github Pages. The code can found <a href="https://github.com/reyharighy/my-website-portfolio" id="font-color">here</a>.
+            </p>
+
+            <p class="footer-info">
+                Copyright ©2023 All rights reserved | This personal website is made with love.
+            </p>
+        </footer>
+    </body>
+</html>
