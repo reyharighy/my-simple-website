@@ -356,16 +356,15 @@
                     <h3 style="margin-bottom: 10px;">Feature Importances</h3>
                     <img src="./images/features-importances-telco.png" style="width: 80%; margin-left: 10%;">
                     <p style="text-align: justify; margin-top: 20px;">
-                        It can be seen that there are 3 most influential features in predicting customers who churn or not, including tenure, contract, and monthly charges respectively. 
-                        Then, followed by fiber optic and no class of online security with less significant impact. 
+                        It can be seen that there are 4 most influential features in predicting customers who churn or not, including tenure, contract, fiber optic in internet service, and monthly charges respectively. 
                         The other features have very little contribution in determining the final prediction result.
                     </p>
 
                     <p style="text-align: justify;">
-                        This <i>Shapley</i> value basically only measures the average contribution of each feature from all observations and predictions made by classification model. 
+                        This <i>Shapley</i> value basically only measures the average contribution of each feature from all observations and predictions made by algorithmic model which have gone through resampling and hyperparameter tuning processes. 
                         As a result, the model will have limitations in interpreting some of the features that are considered not so important for their contribution but participate in producing the probability prediction of an observation. 
                         This is reasonable because there are some observations that behave out of character in general so that they fall into edge cases. 
-                        Although basically, the number of observations is not that many or significant.    
+                        Although basically, the number of observations is not that many or significant.
                     </p>
 
                     <h3 style="margin-bottom: 10px;">Predictor and Target Relationship</h3>
@@ -377,7 +376,7 @@
                             <li>
                                 A tenure feature with a greater value, indicated by a redder color, has a smaller <i>Shapley</i> value and vice versa, with a smaller tenure feature value, the <i>Shapley</i> value will get bigger. 
                                 This represents that customers with a short subscription duration, or in other words, new customers, have a high tendency to churn. 
-                                This statement is in line with the *insights* obtained in the previous discussion in the Exploratory Data Analysis section. 
+                                This statement is in line with the insights obtained in the previous discussion in the Exploratory Data Analysis section. 
                                 Even so, there are some cases that are difficult to predict as seen from the <i>Shapley</i> value which is in the zero value range. 
                                 In the graph, it can be seen that some of the tenure feature values, whether high, medium or low, converge in the zero mean area.
                             </li>
@@ -389,21 +388,16 @@
                                 This means that customers who take month-to-month contracts will be considered by the algorithm model as causing churn while those who take others will be considered as causing customers to be loyal.
                             </li>
                             <li>
+                                Fiber optic in internet service feature is categorical in nature, which can be represented as a customer using the fiber optic service will have a tendency to churn on a relatively insignificant scale. 
+                                This can be used as an additional evaluation for the company to identify other related factors such as service quality and prices that are deemed inappropriate for the service.
+                            </li>
+                            <li>
                                 The monthly charges feature, with a higher value, will produce a larger <i>Shapley</i> value. 
                                 This means that the price affects the possibility of customers to churn. 
                                 The higher the monthly bill, the greater the possibility to churn. 
                                 This statement is in line with the insights obtained in the previous discussion in the Exploratory Data Analysis section. 
                                 Even so, there are some cases that are difficult to predict based on the value of <i>Shapley</i> which is in the zero range. 
                                 In this case, the algorithm model assesses the monthly charges feature as not having sufficient significance to predict customers who churn or not, although in general cases this feature does have significant significance.
-                            </li>
-                            <li>
-                                Fiber optic in internet service feature is categorical in nature, which can be represented as a customer using the fiber optic service will have a tendency to churn on a relatively insignificant scale. 
-                                This can be used as an additional evaluation for the company to identify other related factors such as service quality and prices that are deemed inappropriate for the service.
-                            </li>
-                            <li>
-                                The "No" class in online security is also categorical, which can be represented as customers who do not use the online security service will have a tendency to churn on a relatively insignificant scale. 
-                                This can be used as an evaluation to ensure that customers use the service as much as possible. 
-                                On the other hand, cybersecurity is a sensitive issue for customers.
                             </li>
                             <li>
                                 Other features can be described in a similar way but will not be discussed in more depth considering that the contribution made to the churn probability of a customer is very small.
@@ -414,10 +408,11 @@
                         The explanation above can be used as a form of generalization and does not have to happen in every local instance or observation.
                         Next, a visualization will be carried out to see the relationship between <i>Shapley</i> values in each value of the monthly charges, tenure and contract features based on customers who churn and are still subscribing.
                     </p>
-                    <img src="./images/3-most-important.png" style="width: 90%; margin-left: 5%;">
+                    <img src="./images/3-most-important.png" style="width: 60%; margin-left: 20%;">
                     <p style="text-align: justify; margin-top: 20px;">
                         It can be seen that the higher the monthly bill, the greater the contribution to the possibility of a customer churn and vice versa when viewed from the duration of the subscription. 
                         The subscription duration is directly related to the type of contract used so customers who take a month-to-month contract will have a greater tendency to churn compared to one-year and two-year contracts.
+                        In addition, as we've known previously, customers who use fiber optic tend to churn yet this circumstances don't apply in general.
                     </p>
 
                     <p style="text-align: justify;">
@@ -436,13 +431,11 @@
 
                     <p style="text-align: justify;">
                         There are several conditions that will be used to classify the observation sample which includes edge cases, 
-                        including features that generally have a large contribution, such as tenure, contract, and monthly charges, 
-                        will have a very small <i>Shapley</i> value in the observation sample that falls into the edge cases category. 
-                        Therefore, threshold will be set at negative 0.1 and positive 0.1 (-0.1 < values < 0.1) for the tenure and monthlyCharges features and at negative 1 and positive 1 (-0.55 < values < 0.55) for the contract feature.
+                        one common approach is to get the sum of Shapley values from all features in each observation that is around zero.
                     </p>
 
                     <p style="text-align: justify;">
-                        At least 16 observation samples were found which were considered the most extreme edge cases. 
+                        At least 33 observation samples were found which were considered the most extreme edge cases. 
                         In these cases it is certain that the classification model will have very wrong prediction results because the features that generally have a large contribution have turned into decisive features. 
                         Then an examination process will be carried out on the 5 observation samples that fall into the edge cases category.
                     </p>
@@ -450,7 +443,7 @@
                     <p style="text-align: justify; margin-top: 20px;">
                         It can be seen that in the 5 examples edge cases above, the features that have the greatest contribution are contract, fiber optic in internet service, and paperless billing where the three features in common cases have very small average contribution. 
                         The relationship given to the prediction results can be seen based on color, where red makes a positive contribution to customers who churn and blue makes a negative contribution or vice versa. 
-                        The cumulative <i>Shapley</i> value obtained is also in the range of base values, which is -0.4106 which indicates that these observation samples cause the developed classification model to produce predictions that are not much different from random predictions.
+                        The cumulative <i>Shapley</i> value obtained is also in the range of base values, which is -0.304 which indicates that these observation samples cause the developed classification model to produce predictions that are not much different from random predictions.
                     </p>
 
                     <p style="text-align: justify; margin-bottom: 30px;">
@@ -548,9 +541,14 @@
                         </li>
                     </ol>
 
-                    <p style="text-align: justify;">
+                    <p style="text-align: justify; margin-bottom: 30px;">
                         By applying the right recommendations, the developed classification model can be a valuable tool and asset for companies to take proactive, measurable steps in retaining customers and increasing customer satisfaction. 
                         Thus, every step taken must be based on data so that each evaluation and development process can be more measurable.
+                    </p>
+                    <hr />
+
+                    <p style="margin-top: 30px;">
+                        Please find detailed of this project on <a href="https://github.com/reyharighy/Predictive_Machine_Learning_for_Telco_Customer_Churn">My Github</a>.
                     </p>
                 </div>
             </div>
