@@ -1,1 +1,1 @@
-This section is to store all articles HTML files directory.
+This direcroty is intended to store all articles HTML files.
