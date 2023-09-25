@@ -16,14 +16,14 @@ function checkAndReload() {
 
 // Call the function on page load
 window.addEventListener('load', () => {
-    initialWidth = window.innerWidth; // Store the initial width
+    // initialWidth = window.innerWidth; // Store the initial width
     adjustViewportWidth();
 });
 
 // Call the function when the window is resized
 window.addEventListener('resize', () => {
-    checkAndReload(); // Check and reload if necessary
+    // checkAndReload(); // Check and reload if necessary
     adjustViewportWidth(); // Adjust viewport settings
 });
 
-let initialWidth = window.innerWidth;
+// let initialWidth = window.innerWidth;
