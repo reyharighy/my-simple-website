@@ -19,10 +19,10 @@ function checkAndReload() {
 }
 
 // Call the function on page load
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
     // initialWidth = window.innerWidth; // Store the initial width
-    adjustViewportWidth();
-});
+    // adjustViewportWidth();
+// });
 
 // Call the function when the window is resized
 window.addEventListener('resize', () => {
