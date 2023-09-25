@@ -1,1 +1,1 @@
-This directory is intended to store all project HTML files.
+This directory is intended to store all projects HTML files.
