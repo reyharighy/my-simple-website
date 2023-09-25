@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html" id="underlined">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1>
+                    CRUD Application in Object-Oriented Programming
+                </h1>
+                <h2 class="sans-light-30">
+                    A simple CRUD application from scratch and implementing its functionality in Object-oriented Programming Paradigm with Python.
+                </h2>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        3 August 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            tutorial
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/article/Article_1/article-1-inPage.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Introduction
+                    </h2>
+                    <p>
+                        Object-Oriented Programming (OOP) is a programming paradigm that structures code around the concept of "objects". Objects
+                        are instances of classes, which are templates or blueprints for creating objects. OOP focuses on modeling real-world entities
+                        and their interactions using classes and objects. It promotes encapsulation, inheritance, and polymorphism as core concepts.
+                    </p>
+                    <p>
+                        Python is a popular programming language known for its simplicity and ease of use. One of the most common applications of Python
+                        is for creating CRUD application to a wide range of use cases. As for my project, this can be useful for managing and manipulating
+                        amounts of personal patient data by providing an easy-to-use interface which is customized to meet specific requirements or
+                        additional features such as data validation. As for the storage file format, we will be using CSV (Comma-Separated Values) which is
+                        a lightweight and accessible file format used for storing tabular data, or information presented in a table with rows and columns.
+                        Overall, this is just a small start of understanding the basic concepts of creating CRUD application in Object-oriented Programming Paradigm.
+                    </p>
+                    <h2>
+                        CRUD Operations
+                    </h2>
+                    <p>
+                        CRUD is an acronym that stands for Create, Read, Update, and Delete. It refers to the basic operations that are commonly
+                        performed on data stored in a database that provides an interface for users to interact with a database by performing these
+                        basic operations.
+                    </p>
+                </div>
+                <section class="feature-carousel-container contained fadeIn inView" style="position: relative; width: 100%;">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="feature-carousel">
+                                <li class="slide active">
+                                    <blockquote class="feature">
+                                        <div class="topContent" style="row-gap: 40px;">
+                                            <div>
+                                                <p class="feature-name">
+                                                    Create Feature
+                                                    <br>
+                                                    <span style="font-weight: lighter; font-size: 1.5vw;">
+                                                        The application enables users to create new records in the database. 
+                                                        It provides a user-friendly interface to input data and add new entries.
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="feature">
+                                        <div class="topContent">
+                                            <p class="feature-name">
+                                                Read Feature
+                                                <br>
+                                                <span style="font-weight: lighter; font-size: 1.5vw;">
+                                                    Users can retrieve and view existing records from the database.
+                                                    The application offers options to search for specific records and then provides with
+                                                    modifying features such as data updating and deleting.
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="feature">
+                                        <div class="topContent">
+                                            <p class="feature-name">
+                                                Update Feature
+                                                <br>
+                                                <span style="font-weight: lighter; font-size: 1.5vw;">
+                                                    The update feature allows users to modify the data of existing records. 
+                                                    It presents a simple way to edit and update the information in the database.
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="feature">
+                                        <div class="topContent">
+                                            <p class="feature-name">
+                                                Delete Feature
+                                                <br>
+                                                <span style="font-weight: lighter; font-size: 1.5vw;">
+                                                    Users can delete records from the database. 
+                                                    The application ensures data integrity by confirming deletion actions.
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <div class="content fadeIn inView">
+                    <p>
+                        The application may also include additional features such as authentication, authorization, validation, and error handling to
+                        ensure that data is processed correctly and securely. In summary, a CRUD application is important because it provides an efficient
+                        and scalable way to manage data, automate tasks, and customize the application to meet specific business requirements. For example,
+                        in data management, it allows users to manage data easily and efficiently. Users can create, read, update, and delete data in a
+                        database with a few clicks or taps, without having to write complex SQL queries.
+                    </p>
+                    <p>
+                        This project presents an example of a personal patient record in a hospital, with a focus on the necessary patient data. The hospital
+                        name and type are not specified, but the project outlines the patient information required, including patient's identifier (ID), name,
+                        place of birth, birthdate, gender, and phone number. An ID is unique and non-repeating label that is used to identify a patient that
+                        later is used to retrieve or update the record. They are going to be represented as numbers. Here are detailed format and example of each data:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent">id_number</span>: a 16-digit numeric data type that's manually entered.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">name</span>: a string data type that's manually entered.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">birth_place</span>: a string data type that's manually entered.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">birth_date</span>: a string data type that's manually entered.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">gender</span>: a string data type that's manually entered.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">phone_number</span>: a numeric data type that's manually entered.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        When working with CSV files, it's important to store all data as strings because CSV files do not have a standardized data type system.
+                        If data is not stored as a string, it may be interpreted as a different data type, leading to errors in data processing. By storing
+                        all data as strings, it can be parsed into a data structure and converted to the appropriate data type after reading the file. This
+                        ensures that the data is correctly interpreted and processed according to its intended data type.
+                    </p>
+                    <img src="../images/article/Article_1/patient's-data.png" alt="patient's data example" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        When working with CSV files as a database, we use Command-Line Interface (CLI) to interact with the files instead of a graphical user
+                        interface (GUI). CLI can be used in CRUD applications and is particularly useful when efficiency, flexibility, portability, or security
+                        are important factors.
+                    </p>
+                    <h2>
+                        Implementing CRUD with CSV
+                    </h2>
+                    <p>
+                        As the program run within the terminal, first and foremost it should disclose what’s inside the current CSV file. We include the following
+                        codes at the very beginning.
+                    </p>
+                    <h3>
+                        Data Loading
+                    </h3>
+                    <img src="../images/article/Article_1/load-csv.png" alt="patient's data loading" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        The provided code snippet is all about loading patient records from a CSV file and processing the data to create a list of dictionaries. Let's
+                        break it down step by step:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #4cb07e;">csv</span> module is imported, which allows us to work with CSV files.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The code enters a <span class="accent" style="color: #b171b1;">with</span> block, where it opens a CSV file named <span class="accent" style="color: #bd8955;">records-oop.csv</span> in
+                                        read mode ('r') with UTF-8 encoding. The <span class="accent" style="color: #b171b1;">with</span> statement ensures proper handling of the file, automatically
+                                        closing it when done.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        An empty list named <span class="accent" style="color: #72ace7;">patients_list</span> is created. This list will store the processed patient records.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #4cb07e;">csv.DictReader</span> is used to read the CSV file. It treats the first row as headers and each subsequent row as
+                                        a dictionary with header values as keys.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A loop iterates through each row in the CSV file excluding the header.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The value in the <span class="accent" style="color: #bd8955;">id_number</span> column of the current row is converted to an integer and stored back in the same
+                                        dictionary under the <span class="accent" style="color: #bd8955;">id_number</span> key.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The value in the <span class="accent" style="color: #bd8955;">birth_date</span> column of the current row is processed. It's split into parts, and each part is
+                                        converted to an integer to represent the year, month, and day of birth. These integers are stored as a list under the
+                                        <span class="accent" style="color: #bd8955;">birth_date</span> key in the same dictionary.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The modified row of dictionary is appended to the <span class="accent" style="color: #72ace7;">patients_list</span>, creating a list of patient records.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        After processing all rows, the <span class="accent" style="color: #b171b1;">with</span> block ensures the CSV file is properly closed.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In essence, this code snippet reads patient data from a CSV file, processes the data, and stores it as a list of dictionaries. This structured
+                        data canthen be used for further analysis or manipulation in a more organized manner.
+                    </p>
+                    <h3>
+                        Data Saving
+                    </h3>
+                    <img src="../images/article/Article_1/save-csv.png" alt="patient's data saving" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This section of code focuses on saving patient records to a CSV file and then terminating the program. Here's an explanation of what's happening:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #b171b1;">if</span> <span class="accent" style="color: #72ace7;">terminate:</span>: This
+                                        condition checks whether a variable named terminate is <span class="accent" style="color: #497fb5;">True</span>.
+                                        It indicates whether the program should be terminated and whether patient records should be saved.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside this condition, a <span class="accent" style="color: #b171b1;">with</span> block is used to open a CSV file
+                                        named <span class="accent" style="color: #bd8955;">records-oop.csv</span> in
+                                        write mode ('w') with UTF-8 encoding for saving data.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A <span class="accent" style="color: #4cb07e;">csv.DictWriter</span> is created. It's responsible for writing row of dictionaries into the CSV file. The fieldnames
+                                        parameter specifies the order and names of the columns in the CSV file.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">writer</span>.<span class="accent" style="color: #b8b878;">writeheader</span>():
+                                        This writes the header row with the column names specified in fieldnames to the CSV file.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">writer</span>.<span class="accent" style="color: #b8b878;">writerows</span>(<span class="accent" style="color: #72ace7;">patients_list</span>): This
+                                        writes the list of patient records' dictionaries stored in the
+                                        <span class="accent" style="color: #72ace7;">patients_list</span> to the CSV file.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        After writing the data, a message is printed indicating that the program has been successfully terminated.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #b171b1;">break</span>: This statement ends the loop or program execution, essentially terminating the program after
+                                        saving the patient records.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, this section of code checks whether the program should be terminated. If it should be terminated, it saves the patient records to
+                        a CSV file named <span style="color: #bd8955;">records-oop.csv</span>, prints a termination message, and then ends the program execution. This ensures
+                        that the patient records are properly saved before the program closes.
+                    </p>
+                    <h2>
+                        Control-Flow Procedure
+                    </h2>
+                    <p>
+                        A control-flow procedure manages the flow of execution based on different conditions and user interactions. It's responsible for guiding the
+                        program's behavior, directing it through different paths of code execution depending on the user's inputs or system states.
+                    </p>
+                    <img src="../images/article/Article_1/control-flow.png" alt="control flow" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This <span style="color: #b8b878;">main_page</span> method handles the main menu and user interactions in a program that manages patient records:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        A <span class="accent" style="color: #b171b1;">while</span> <span class="accent" style="color: #497fb5;">True:</span> loop starts to
+                                        continuously display the main menu and process user inputs.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside the loop:
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    <span class="accent" style="color: #72ace7;">terminate</span> is set to <span class="accent" style="color: #497fb5;">False</span>, indicating
+                                                    the program is not set to terminate.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    A formatted main menu is displayed, welcoming the user and offering options to create a new patient's record,
+                                                    search for a patient's record, or exit the program.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    User input is obtained using <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #b8b878;">option_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'main page'</span>), indicating
+                                                    a method to get a numeric option from the user.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Depending on the user's input (<span class="accent" style="color: #72ace7;">mp_input</span>):
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    If <span class="accent" style="color: #72ace7;">mp_input</span> is 1, it calls the <span class="accent" style="color: #b8b878;">create_page</span>() method, which
+                                                    handles the process of creating a new patient's record.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    If <span class="accent" style="color: #72ace7;">mp_input</span> is 2, it calls the <span class="accent" style="color: #b8b878;">search_page</span>() method for
+                                                    searching patient records.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    If <span class="accent" style="color: #72ace7;">mp_input</span> is 3, it calls the <span class="accent" style="color: #b8b878;">exit_page</span>() method with
+                                                    the terminate flag and updates terminate based on the method's behavior.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        The loop continues indefinitely, allowing the user to navigate through the program by selecting different options from the main menu. The
+                        program will continue running and processing user choices until there's an internal mechanism that modifies the loop-breaking condition
+                        or handles program termination.
+                    </p>
+                    <h2>
+                        Create Operations
+                    </h2>
+                    <p>
+                        The create operation in a CRUD application involves collecting user input, validating it, creating a new data record, storing it, and providing
+                        feedback to confirm the successful addition of the data.
+                    </p>
+                    <h3>
+                        Instance Creation Functionality
+                    </h3>
+                    <img src="../images/article/Article_1/create-class.png" alt="instance create codes" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This code defines a class called <span style="color: #4cb07e;">Create</span> which handles the creation of new patient records. The <span style="color: #b8b878;">__init__</span> method is the
+                        constructor for this class and is responsible for initializing the attributes for a new patient's record.
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #72ace7;">id_number</span> = <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #b8b878;">check_duplicate</span>():
+                                        Generates a unique ID number for the patient's record. The specifics of the <span class="accent" style="color: #b8b878;">check_duplicate</span>() method ensures the generated ID isn't already in use.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #72ace7;">name</span> = <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">alpha_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'Name'</span>):
+                                        Collects and handles alphanumeric input for the patient's name using the <span class="accent" style="color: #b8b878;">alpha_entry_handler</span> method from an <span class="accent" style="color: #4cb07e;">Initialize</span> class instance.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #72ace7;">birth_place</span> = <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">alpha_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'Place of Birth'</span>):
+                                        Collects and handles alphanumeric input for the patient's place of birth.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #72ace7;">birth_date</span> = <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">birth_date_entry</span>():
+                                        Collects and handles input for the patient's birth date, handling validation and formatting.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #72ace7;">gender</span> = <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">gender_entry</span>():
+                                        Collects and handles input for the patient's gender.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #72ace7;">phone</span> = <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">num_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'Phone Number'</span>):
+                                        Collects and handles numeric input for the patient's phone number.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, the <span class="accent" style="color: #4cb07e;">Create</span> class serves to instantiate and gather data for a new patient's record creation. It interacts with an
+                        <span class="accent" style="color: #4cb07e;">Initialize</span> class to manage various aspects of data collection and validation for patient attributes.
+                    </p>
+                    <h3>
+                        Create Page Management
+                    </h3>
+                    <img src="../images/article/Article_1/create-page.png" alt="create page method" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This <span style="color: #b8b878;">create_page</span> method is responsible for managing the creation of a new patient's record. Here's the breakdown:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        A <span class="accent" style="color: #b171b1;">while</span> <span class="accent" style="color: #497fb5;">True:</span> loop begins to manage the process of creating a new patient record.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside the loop:
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    A prompt is displayed to the user, asking if they're sure they want to create a new patient's record.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    The user is provided with options to confirm or cancel.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    The <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #b8b878;">option_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'confirmation'</span>) is
+                                                    used to obtain the user's choice, which handles numeric input for confirming actions.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If the user provided input (<span class="accent" style="color: #72ace7;">confirm</span> is not <span class="accent" style="color: #497fb5;">None</span>):
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    If the input is 1, indicating the user wants to proceed:
+                                                    <ul>
+                                                        <li>
+                                                            <span>
+                                                                A title banner is displayed for the new patient record creation.
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                The user is prompted to fill out the required information.
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                A new instance of a class <span class="accent" style="color: #4cb07e;">Create</span> is
+                                                                created to manage the actual process of creating the record.
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                The <span class="accent" style="color: #b8b878;">saving_confirmation</span>() method of the
+                                                                <span class="accent" style="color: #72ace7;">new_record</span> instance is called, confirming
+                                                                the successful saving of the record.
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    If the input is not 1, indicating the user doesn't want to proceed:
+                                                    <ul>
+                                                        <li>
+                                                            <span>
+                                                                A message is displayed indicating that the program is returning to the main page.
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    The <span class="accent" style="color: #b171b1;">break</span> statement is used to exit the
+                                                    loop after either creating the record or canceling the process.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, the <span style="color: #b8b878;">create_page</span> method guides the user through the process of creating a
+                        new patient's record. It ensures a user-friendly experience by confirming the user's intent, presenting
+                        necessary information input, and handling different outcomes based on the user's choice.
+                    </p>
+                    <h2>
+                        Data Interactions
+                    </h2>
+                    <p>
+                        Data interactions refer to how the application interacts with data throughout its lifecycle. These
+                        interactions involve performing operations like reading, updating, and deleting data records.
+                    </p>
+                    <h3>
+                        Instance Returning Functionality
+                    </h3>
+                    <img src="../images/article/Article_1/search-class.png" alt="instance search codes" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        The <span style="color: #4cb07e;">Search</span> class is intended to search for patient records based on specific criteria. Here's the breakdown:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The class has an <span class="accent" style="color: #b8b878;">__init__</span> method that initializes an attribute called
+                                        <span class="accent" style="color: #72ace7;">show_list</span>, which is meant to store the results of the search operation.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #b8b878;">filtered_by</span> method takes two arguments: <span class="accent" style="color: #72ace7;">on_keys</span> (a
+                                        string representing the attribute to search on) and <span class="accent" style="color: #72ace7;">value</span> (the value to match).
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside the method, a loop iterates through each patient's record in the <span class="accent" style="color: #72ace7;">patients_list</span>.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        For each patient's record, it uses the <span class="accent" style="color: #b8b878;">setdefault</span> method to retrieve the value associated
+                                        with the specified <span class="accent" style="color: #72ace7;">on_keys</span>. If the value matches the provided value, the patient's record is considered a match.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If a match is found, the patient's record is appended to the <span class="accent" style="color: #72ace7;">show_list</span>.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, the <span style="color: #4cb07e;">Search</span> class and its methods allow for searching patient records based on a specified
+                        attribute and value. It iterates through the list of patient records, compares the attribute value to the provided value, and stores
+                        matching records in the <span style="color: #72ace7;">show_list</span> attribute. This class is a part of a parent-class <span style="color: #4cb07e;">Initialize</span> for searching
+                        and displaying patient records.
+                    </p>
+                    <h3>
+                        Updating and Deleting Modifier
+                    </h3>
+                    <img src="../images/article/Article_1/search-modifier.png" alt="instance modifier page" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This part of the code defines a method named <span style="color: #b8b878;">modifier</span> within the <span style="color: #4cb07e;">Search</span> class. Here's what it does:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The method takes an argument <span class="accent" style="color: #72ace7;">result</span> which is a dictionary representing the patient's
+                                        record that has been searched for.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside the method, a loop is started using <span class="accent" style="color: #b171b1;">while</span> <span class="accent" style="color: #497fb5;">True</span>.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #b8b878;">print</span> statement displays a menu to the user, allowing them to choose from different
+                                        options to modify the intended patient's record. The options include updating the record, deleting the record, or
+                                        returning to the search page.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">option_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'modifier'</span>) is
+                                        used to obtain the user's choice for the modification operation. This method handles numeric input for selecting menu options.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If the user provided input (<span class="accent" style="color: #72ace7;">mod_input</span> is not <span class="accent" style="color: #497fb5;">None</span>), the code checks the user's choice:
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    If the choice is 1, it indicates the user wants to update the patient's record. The <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #b8b878;">update</span>(<span class="accent" style="color: #72ace7;">data_input</span>=<span class="accent" style="color: #72ace7;">result</span>)
+                                                    method is called to perform the update operation.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    If the choice is 2, it indicates the user wants to delete the patient's record. The <span class="accent" style="color: #72ace7;">self</span>.<span class="accent" style="color: #b8b878;">delete</span>(<span class="accent" style="color: #72ace7;">data_input</span>=<span class="accent" style="color: #72ace7;">result</span>)
+                                                    method is called to perform the delete operation.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                If the choice is not 1 or 2, it implies the user wants to go back to the search page.
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #b171b1;">break</span> statement is used to exit the loop after the modification operation is completed.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, the modifier method within the <span style="color: #4cb07e;">Search</span> class is responsible for providing a menu to the user for modifying a searched
+                        patient's record. It handles updating and deleting patient records based on the user's choice and ensures a smooth user experience for making
+                        changes to patient data.
+                    </p>
+                    <h3>
+                        Instance Updating Functionality
+                    </h3>
+                    <img src="../images/article/Article_1/update_funtion.png" alt="instance update codes" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This part of the code defines a method named update within the <span style="color: #4cb07e;">Search</span> class. Here's what it does:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The method takes an argument <span class="accent" style="color: #72ace7;">data_input</span>, which is a dictionary representing the patient's record that needs to be updated.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A dictionary is created using <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">dictionary</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'field'</span>).
+                                        This dictionary maps option numbers to field names.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside the method, a loop is started using <span class="accent" style="color: #b171b1;">while</span> <span class="accent" style="color: #497fb5;">True</span>.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A menu is displayed to the user, providing options to choose which information they would like to update.
+                                        The options correspond to different fields of the patient's record, such as Identification Number, Name, Place of Birth, etc.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">option_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'update'</span>)
+                                        method is used to obtain the user's choice for the update operation. This method handles numeric input for selecting menu options.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If the user provided input (<span class="accent" style="color: #72ace7;">up_input</span> is not <span class="accent" style="color: #497fb5;">None</span>), the code checks the user's choice:
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    If the choice is not 7, it indicates the user wants to update a specific field of the patient's record:
+                                                    <ul>
+                                                        <li>
+                                                            <span>
+                                                                The <span class="accent" style="color: #72ace7;">field</span> variable is set to the field name based on the selected option using the dictionary.
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                Depending on the selected option, the appropriate data entry handler methods (like <span class="accent" style="color: #b8b878;">num_entry_handler</span>, <span class="accent" style="color: #b8b878;">alpha_entry_handler</span>, etc.)
+                                                                are used to obtain new data for the selected field.
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span>
+                                                                The <span class="accent" style="color: #b8b878;">updating_confirmation</span> method is called with the new data,
+                                                                old data (<span class="accent" style="color: #72ace7;">data_input</span>), and the field name to confirm and apply the update.
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    If the choice is 7, it indicates the user wants to go back to the search page.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #b171b1;">break</span> statement is used to exit the loop after the update operation is completed.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, the update method within the <span style="color: #4cb07e;">Search</span> class facilitates the process of updating specific fields of a patient's record.
+                        It provides a menu for the user to choose which field to update, obtains new data for the selected field, and confirms the update operation.
+                        This method ensures a user-friendly experience for modifying patient data.
+                    </p>
+                    <h3>
+                        Instance Deleting Functionality
+                    </h3>
+                    <img src="../images/article/Article_1/delete_funtion.png" alt="instance delete codes" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        This part of the code defines a method named delete within the <span style="color: #4cb07e;">Search</span> class. Here's what it does:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The method takes an argument <span class="accent" style="color: #72ace7;">data_input</span>, which is a dictionary representing the patient's record that the user intends to delete.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Inside the method, a loop is started using <span class="accent" style="color: #b171b1;">while</span> <span class="accent" style="color: #497fb5;">True</span>.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A prompt is displayed to the user, asking if they're sure they want to delete the patient's record. The user is presented with options to confirm or cancel the deletion.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #4cb07e;">Initialize</span>().<span class="accent" style="color: #b8b878;">option_entry_handler</span>(<span class="accent" style="color: #72ace7;">name</span>=<span class="accent" style="color: #bd8955;">'confirmation'</span>)
+                                        method is used to obtain the user's choice for the confirmation operation. This method handles numeric input for selecting menu options.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If the user provided input (<span class="accent" style="color: #72ace7;">confirm</span> is not <span class="accent" style="color: #497fb5;">None</span>), the code checks the user's choice:
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    If the choice is 1, it indicates the user wants to proceed with deleting the patient's record.
+                                                    The <span class="accent" style="color: #72ace7;">data_input</span> (patient's record dictionary) is removed from the <span class="accent" style="color: #72ace7;">patients_list</span>, effectively deleting the record.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    If the choice is not 1, it implies the user has chosen not to proceed with the deletion. A message indicating that the patient's record was not deleted is displayed.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The <span class="accent" style="color: #b171b1;">break</span> statement is used to exit the loop after the deletion operation is completed.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        In summary, the delete method within the <span style="color: #4cb07e;">Search</span> class facilitates the process of deleting a patient's record.
+                        It presents a confirmation prompt to the user, handles their choice, and deletes the record from the list of patient records if confirmed.
+                        This method ensures that the user can perform record deletions with proper confirmation and feedback.
+                    </p>
+                    <h2>
+                        Conclussion
+                    </h2>
+                    <p>
+                        In this project, we have successfully created a CRUD application using Python and CSV files as a database.
+                        This type of application is ideal for small-scale projects and is a great way to learn about the fundamentals of building CRUD applications in Python.
+                    </p>
+                    <p>
+                        We have gained valuable experience in Python programming, CSV file handling, and CLI application development. 
+                        We have also learned how to perform the four essential CRUD operations (Create, Read, Update, and Delete) on data stored in CSV files. 
+                        While CSV files are a good starting point for managing small amounts of data, they may not be suitable for larger-scale applications. 
+                        For more extensive projects, we may want to consider using a more robust database management system like MySQL or PostgreSQL.
+                    </p>
+                    <p>
+                        In addition, building your own CRUD application will give you the opportunity to tailor it to your specific needs and requirements. 
+                        You can experiment with different frameworks, databases, and data structures to find the best combination that works for you.
+                    </p>
+                    <p>
+                        Overall, building your own CRUD application is an excellent way to challenge yourself and take your programming skills to the next level. 
+                        Don't be afraid to start small and work your way up to more advanced projects. With persistence and dedication, you can achieve great things and become a proficient Python developer.
+                    </p>
+                    <p style="color: transparent;">
+                        intentionally left blank
+                    </p>
+                    <p>
+                        Please find codes detailed on Github channel.
+                    </p>
+                    <section class="referred-button button" style="position: relative;">
+                        <a href="https://github.com/reyharighy/CRUD_Application_in_Object-Oriented_Programming" target="_blank">
+                            Github
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <section class="contained article-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin fadeIn inView">
+                Read next
+            </h2>
+            <div class="entries">
+                <!-- <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div> -->
+            </div>
+        </section>
+        <section class="article-list fadeIn inView" style="margin-top: -100px;">
+            <div class="cta">
+                <a class="blunt-button" href="../articles.html">
+                    All Articles
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px; padding-top: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+</html>
