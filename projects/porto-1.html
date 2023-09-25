@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html" id="underlined">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1 style="padding-bottom: 50px;">
+                    Traveloka Indonesia New Year Hotel Rooms
+                </h1>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        19 September 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            Project
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/banner/porto-1.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Business Problems
+                    </h2>
+                    <p>
+                        The hotel industry faces the challenge of optimizing customer satisfaction and revenue generation in an increasingly competitive market. This challenge is driven by several key issues:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent">Delivered Features Improvement</span>: How can hotels enhance the features they offer to align better with customer preferences and expectations?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Strategic Discount Initiatives</span>: What data-driven pricing strategies should hotels adopt to offer appealing discounts?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Advisable Suggestions</span>: What actionable recommendations can hotels receive to enhance various aspects of their operations beyond features and discounts?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Ongoing Exclusive Offers and Deals</span>: How can hotels consistently create and manage exclusive offers and deals that resonate with guests and set them apart in a competitive market?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Data Quality Compliance</span>: What can we improve from data quality to actually reflect the problem we encounter through the analysis?
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h2>
+                        Data Understanding and Preparation
+                    </h2>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part1">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/dataset-info-1.png" alt="dataset info">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/dataset-info-2.png" alt="dataset info">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/dataset-info-3.png" alt="dataset info">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        At this stage, Data Understanding is performed with the aim of gaining a deeper understanding of the data characteristics being analyzed before getting into Explanatory Data Analysis. Some steps of preparation are conducted as a slight cleanse process, those are data formatting, duplicates, outliers detections, and missing values. For the research purpose, please directly go through this <a href="https://www.kaggle.com/datasets/datasciencerikiakbar/new-year-hotel-rooms-availability-from-traveloka" target="_blank"><span>link</span></a> for dataset source.
+                    </p>
+                    <h2>
+                        Explanatory Data Analysis
+                    </h2>
+                    <h3>
+                        Discrepancy Analysis of Multi-Services Hotel
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 200%; margin-left: -50%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part2" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part2">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/dist-normal-rate-nights.png" alt="distribution of normal rate by total night">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/dist-normal-rate-deviation-nights.png" alt="distribution of normal rate deviation in multi services hotels">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part2" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part2">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            This analysis is primarily intended to assess the central tendency and spread of normal rates across all observations based-on total night services, without factoring in the deviations in normal rates within individual multi-services hotels. The insights gleaned from this analysis are meant to be general assumptions that apply uniformly across the dataset.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            As evident from the visualization above, there exists a noteworthy variation in the deviation of normal rates among hotels that offer both 2-night and 3-night services. This deviation spans a spectrum, ranging from relatively insignificant differences to considerably significant ones. However, it's important to note that these statistics do not provide additional context regarding the nature of these differences, such as potential distinctions in room types or the features delivered.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        <span>Additional Notes:</span>
+                    </p>
+                    <p>
+                        Despite the notable variations in normal rates per night observed among multi-service hotels, it's essential to highlight that no distinct set of features has been identified as the cause for these differences. This underscores the need to consider this information carefully in our subsequent analyses. Furthermore, when it comes to other attributes associated with each hotel, such as star services, ratings, and the number of reviews, there are no discernible differences. These attributes remain consistent for hotels, irrespective of whether they offer multi-services or not.
+                    </p>
+                    <h3>
+                        Proportion of Hotel Availability Analysis
+                    </h3>
+                    <img src="../images/project/project-1/hotel-proportion-cities.png" alt="hotel availability proportion based-on city" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The visualization presented above underscores Jakarta as the highest total hotel count. Notably, this trend extends beyond Jakarta, as other major urban centers closely follow in terms of hotel quantity. This observation paints a picture of Indonesia's hospitality sector, characterized by a well-distributed presence. It's worth mentioning that the top five cities on this list are also home to a various of tourist landmarks, further emphasizing the strategic importance of the hotel industry in catering to diverse influx of visitors.
+                    </p>
+                    <h3>
+                        Hotel Popularity Infographic Accross Cities
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 200%; margin-left: -50%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part3" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part3">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/banda-aceh-info.png" alt="">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/bandung-info.png" alt="bandung infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/bogor-info.png" alt="bogor infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/denpasar-info.png" alt="denpasar infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/jakarta-info.png" alt="jakarta infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/medan-info.png" alt="medan infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/padang-info.png" alt="padang infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/palembang-info.png" alt="palembang infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/semarang-info.png" alt="semarang infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/solo-info.png" alt="solo infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/surabaya-info.png" alt="surabaya infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-1/yogyakarta-info.png" alt="yogyakarta infographic">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part3" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part3">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Kuta Alam stands out as the most densely populated hotel region in Banda Aceh, featuring an impressive count of 10 hotels. This number, comprising 38 percent of the city's total hotel availability, emphasizes the significant concentration of hotels in this specific area. This discovery highlights a noticeable disparity in hotel availability across 7 regions within the city.
+                                        </p>
+                                        <p>
+                                            Kuta Alam also has the highest proportion in terms of the number of reviews, with a value of 38.95% of all reviews in Banda Aceh. This is an indication that the uneven distribution also affects the proportion of accommodations used throughout the city.
+                                        </p>
+                                        <p>
+                                            However, the area with the highest ratings is located in a region where the hotel usage is not the highest, namely in Baiturrahman region, with an average rating that is 0.15 points higher than the average of all other hotels in Banda Aceh.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Dago emerges as the frontrunner in terms of hotel density within Bandung, with an impressive count of 7 hotels. This tally represents 13 percent of the city's total hotel availability, indicating a well-balanced distribution of hotels across 22 regions in Bandung.
+                                        </p>
+                                        <p>
+                                            In addition to having the highest number of hotels, Dago is also the most popular area based on the number of reviews with more than 45,000 in total or a proportion of 16.73%. This difference is not significantly skewed compared to other areas.
+                                        </p>
+                                        <p>
+                                            However, the regions with the best average ratings are Pamekaran and Merdeka, with an average rating that is 0.2 points higher, where Merdeka is also ranked second in terms of popularity. Furthermore, the top 10 regions with the highest average ratings have similar or even higher than the average accross the city, indicating that hotels in Bandung provide fairly good service quality in many areas.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Padjajaran emerges as the leader in terms of hotel density within Bogor, boasting an impressive count of 6 hotels. This number accounts for 18 percent of the city's total hotel availability, indicating a well-balanced distribution of hotels across 17 regions in Bogor.
+                                        </p>
+                                        <p>
+                                            In terms of the most popular region, Padjajaran remains the top choice with a number of reviews equivalent to 27.93% of all reviews in Bogor. This figure is significantly higher than other regions, indicating that the preferred hotels are still concentrated in that area.
+                                        </p>
+                                        <p>
+                                            However, in terms of service quality, the region with the best rating is Ciomas, which is not even among the top 10 most popular regions. In contrast, Padjajaran doesn't make it into the top 10 based on customer feedback. This suggests that there is a significant gap in certain factors, with many people preferring hotels with average quality over those that offer superior quality.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            The presence of only one hotel in Denpasar indicates a limited platform affiliation within this city region. This scarcity of options suggests that there may be opportunities for platform expansion and increased collaboration with hotels in Denpasar to provide more choices to customers in the area.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Senayan takes the lead as the most densely populated hotel region in Jakarta, boasting a remarkable count of 6 hotels. This figure, standing at 9 percent of the city's total hotel availability, underscores the even distribution of hotels across 36 regions in Jakarta.
+                                        </p>
+                                        <p>
+                                            In terms of usage, when looking at the proportion of the number of reviews, the highest number is in the Cawang area with a proportion of 15.61% of the total in Jakarta. This difference is not very significant compared to other regions.
+                                        </p>
+                                        <p>
+                                            However, in terms of service quality, we can see that the regions with the best ratings are Karet Tengsin, Cilandak Timur, and Kebayoran Lama Utara, with average ratings in these areas being 0.3 points higher than the average for all hotels in Jakarta. This indicates a gap between regions that are considered popular but have only average ratings, which may be seen as more affordable areas.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Pusat Kota Medan stands out as the region with the highest hotel density in Medan, boasting a significant count of 13 hotels. This number represents 30 percent of the city's total hotel availability, indicating that nearly a third of the hotels are concentrated in this specific area. This observation underscores a noticeable discrepancy in hotel availability across 14 regions within the city.
+                                        </p>
+                                        <p>
+                                            In addition, the majority of users stay in hotels in the same region, accounting for a proportion of 51.19% of the total. Therefore, it can be assumed that there isn't much variety in hotel preferences, and this may indicate a stagnation in the growth of the hotel industry in Medan.
+                                        </p>
+                                        <p>
+                                            In terms of service quality, only a few regions have average ratings above the overall average in Medan, such as Beringin, Medan Tembung, and Medan Area which their popularity is significantly lower. This should be a primary focus to unlock the true potential of the hospitality industry within the city.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Padang Barat takes the lead as the region with the highest hotel density in Padang, boasting a significant count of 17 hotels. This number represents a substantial 45 percent of the city's total hotel availability, signifying that nearly half of the hotels are concentrated in this specific area. This observation underscores a significant imbalance in hotel availability across 7 regions within the city.
+                                        </p>
+                                        <p>
+                                            Additionally, this region also has the largest share in terms of the number of reviews, accounting for as much as 65.04% of total in Padang. This indicates a significant imbalance in hotel preferences among users in the city.
+                                        </p>
+                                        <p>
+                                            In terms of service quality, only two areas are considered to meet expectations: Padang Barat and Lubuk Bengalung, with average rating values that are not significantly different from the overall average in Padang. With the highest number of reviews and the best quality coming from the same area, that is Padang Barat, it can be said that the hotel industry in the city may lack enthusiasm and competitive values that lead to customer dissatisfaction.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Ilir Timur 2 emerges as the most densely populated hotel region in Palembang, boasting an impressive count of 20 hotels. This substantial figure, representing 38 percent of the city's total hotel availability, underscores the concentration of more than a third of all hotels in this particular area. This finding sheds light on a notable imbalance in hotel availability across 8 regions within the city.
+                                        </p>
+                                        <p>
+                                            The region with the highest number of reviews falls to Ilir Timur 2, with a proportion of almost half of all the reviews in Palembang. This indicates a concentrated interest in customers' preferences.
+                                        </p>
+                                        <p>
+                                            In terms of rating, this region can be considered as one with already good service quality, with an average rating that is the same as the average within the city. However, the best-rated region is Alang-Alang Lebar, which has the lowest number of reviews. This can be assumed to be a hotel with much better quality but limitations in reaching a wider customer base. This can be attributed to various factors such as pricing, limited accessibility, and relatively low popularity.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Semarang Tengah emerges as the region with the highest hotel density in Semarang, featuring an impressive count of 9 hotels. This number accounts for a substantial 41 percent of the city's total hotel availability, indicating a significant concentration of hotels in this specific area. This observation underscores a notable imbalance in hotel availability across 9 regions within the city.
+                                        </p>
+                                        <p>
+                                            The number of reviews based on regions in Semarang can be described as highly skewed. More than half of the reviews are held by Semarang Tengah, with a proportion of 64.97% of the total within the city. This indicates that the majority of customer preferences are concentrated in that area, leading to intense competition among hotels in the city.
+                                        </p>
+                                        <p>
+                                            In terms of service quality, the region with the highest average rating is Kota Lama, with the lowest number of reviews. This suggests that the service quality in that area is the best but is dominated by only a few hotels, indicating very limited preference variation.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Solo Baru emerges as the leader in terms of hotel density within Solo, featuring an impressive count of 5 hotels. This number constitutes 16 percent of the city's total hotel availability, signifying a well-balanced distribution of hotels across 23 regions in Solo.
+                                        </p>
+                                        <p>
+                                            The distribution of enthusiasts tends to be somewhat skewed when viewed based on the number of reviews, with Solo Baru dominating with a proportion of 22.29%. However, when looking at the average rating values, this region does not make it into the top 10 regions with the best average ratings. The best average ratings are held by Setabelan, a region with very few enthusiasts, with an average rating significantly higher by 0.9 compared to the city's overall average.
+                                        </p>
+                                        <p>
+                                            This indicates a significant disparity between regions with the highest number of enthusiasts and regions with the best quality. In other words, there is intense competition in Solo Baru, while there is an unbalanced dominance in the Setabelan area.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Genteng stands out as the most densely populated hotel region in Surabaya, boasting a substantial count of 13 hotels. This figure, accounting for 24 percent of the total hotel availability in the city, reveals that nearly a quarter of all hotels are concentrated in this area. As for the other top most availability, Wonokromo and Tegalsari are having slightly different proportion of 15 % and 16 %, respectively.
+                                        </p>
+                                        <p>
+                                            In terms of the number of reviews, the top three are still held by these three regions. This indicates intense competition among these areas. Additionally, based on service quality evaluated by the average rating per region, these three areas have relatively similar averages, although their ratings may not be the highest.
+                                        </p>
+                                        <p>
+                                            This is an important factor in the development of the hotel industry in Surabaya as it will encourage improvements in service quality that is customers-oriented.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Depok shines as the region with the highest hotel density in Yogyakarta, featuring a noteworthy count of 16 hotels. This substantial number constitutes 34 percent of the city's total hotel availability, signifying a significant concentration of hotels in this specific area. This observation highlights a discernible disparity in hotel availability across 14 regions within the city.
+                                        </p>
+                                        <p>
+                                            Based on the number of reviews, Depok continues to dominate with a proportion of about one-third of the total reviews within the city. The highest number of hotels and reviews indicates this area is highly popular among customers and tourists.
+                                        </p>
+                                        <p>
+                                            However, the average rating value in this region is still below the overall average, yet not significant. This means that the service quality in Depok is considered inferior to the overall service quality in Yogyakarta. The highest rating is held by the Jetis region, which has relatively low popularity.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Geolocation of Hotel Accross Platform
+                    </h3>
+                    <iframe src="../images/project/project-1/map.html" frameborder="0" scrolling="no" style="display: grid; width: 180%; height: 550px; margin-left: -40%; margin-bottom: 5%;"></iframe>
+                    <p>
+                        With the aid of Folium and its plugins, we have the capability to craft detailed geolocation maps. These maps not only pinpoint the exact locations of specific hotels but also enrich the visualization with additional information about these hotels, such as their names, star services, ratings, features, and more. This interactive approach offers an immersive and informative way to explore and analyze hotel data, enhancing our ability to gain deeper insights into the hospitality industry.
+                    </p>
+                    <h3>
+                        Total Count of Hotel Location by Star Services
+                    </h3>
+                    <img src="../images/project/project-1/hotel-location-by-star.png" alt="hotel location by star service" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The visual representation presented above serves as supplementary information, shedding light on cities that boast the highest total hotel counts based on star service criteria. By discerning which star service classifications are most prevalent in a given city, we can embark on a more comprehensive analysis of the economic and demographic factors that might be influencing these trends. For instance, we can investigate whether cities with a higher concentration of luxury hotels tend to have a more affluent population or attract a specific type of tourist demographic. Conversely, we can explore the dynamics of budget hotels in cities that emphasize cost-conscious travel.
+                    </p>
+                    <h3>
+                        Distribution of Normal Rate per Night by Location
+                    </h3>
+                    <img src="../images/project/project-1/normal-rate-per-night-by-location.png" alt="distribution of normal rate per night based-on location" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The visualization presented above represents an advanced layer of information that complements the previous plot. It provides a comprehensive view of several key aspects:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent">Span of Normal Rates per Night</span>: It showcases the range of normal rates per night across different cities, offering insights into the variance of pricing strategies. A wider span indicates a diverse range of hotel attributes, while a narrower span may highlight competitive offerings in a particular city.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Total Hotel Counts</span>: It reveals the total number of hotels in each city categorized by star service levels, giving an overview of the hospitality industry's presence.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Normal Rate Offered</span>: It identifies the most budget-friendly hotel rate within each city on Traveloka platform.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        The interplay of these factors hints at the economic profile of a city and various factors that influence hotel pricing, including the presence of tourist landmarks, business centers, and the city's appeal as a holiday destination.
+                    </p>
+                    <p>
+                        However, it's essential to note that this information is specific to the Traveloka platform and may not represent all hotels in a given city, as not all hotels may be affiliated with the platform. Therefore, while this data provides valuable insights, it's crucial to consider it within the context of Traveloka platform.
+                    </p>
+                    <h3>
+                        Distribution of Hotel Discounts by Star Services
+                    </h3>
+                    <img src="../images/project/project-1/star-based-hotel-rate-and-discount-analysis.png" alt="star-based hotel rate per night and disocunt analysis" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The provided visualization offers valuable insights:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent">Discount Percentage</span>: The discount percentage spans from 1.46% to 70%, with a dense concentration around 25%. A density plot provides a comprehensive view of these distributions across all star service categories.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Average Discount Rate</span>: Average discount rates vary based on star service classifications, demonstrating a positive correlation with star services. This is supported by a correlation coefficient of 0.81 in the correlation matrix.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Rate Distribution</span>: The boxenplot suggests a noticeable difference between normal and discount rates, with discount rates generally lower, aligning with common expectations.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Total Number of Hotels</span>: The number of hotels is ranked by star services, with 4-star services having the highest count and 1-star services the lowest.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Distribution of Normal Rate per Night by Feature Count
+                    </h3>
+                    <img src="../images/project/project-1/feature-based-normal-rate.png" alt="feature-based normal rate per night analysis" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The visualization above offer the following insights:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent">Normal Rate Relationship</span>: There appears to be a positive correlation between the number of features offered by a hotel and normal rate per night they charge to customers. This observation aligns with common expectations and is supported by a correlation coefficient of 0.43 in the correlation matrix.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Total Number of Features</span>: The data suggests around 43 % hotels offer a limited number of features, while others, comprising nearly a quarter, provide a more extensive range of features, reaching up to 8. These observations prompt further exploration, including examining the central tendencies of normal rates per night concerning both the total number of features and star services. The accompanying table provides additional information for reference.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Density Analysis of Feature Count and Star Services
+                    </h3>
+                    <img src="../images/project/project-1/star-vs-feature-relationship.png" alt="star services vs feature count relationship">
+                    <p>
+                        The plotted figure reveals a valuable insight into the relationship between the number of features and star services. At first glance, a positive correlation is evident from the upward trend of the red line. However, a closer examination unveils nuanced patterns. Hotels with 2 and 3-star services tend to offer fewer features than expected based on the ideal guideline represented by a straight line. Conversely, hotels with 4 and 5-star services tend to provide a significantly greater number of features, exceeding the guideline's expectations. 
+                    </p>
+                    <p>
+                        This observation suggests that higher-star-rated hotels generally offer a much more extensive range of features compared to their lower-star-rated counterparts, with a pronounced disparity.
+                    </p>
+                    <h3>
+                        Density Analysis of Review Count and Star Services
+                    </h3>
+                    <img src="../images/project/project-1/star-vs-review-relationship.png" alt="star services vs review count realtionship">
+                    <p>
+                        Based on the visualization above, it can be concluded that there is a fairly positive relationship between star services and the number of reviews. This is evident from the red line with the trend of total reviews increasing with an increase in star services. The red line represents the regression line as a guideline or benchmark for comparison. It can be seen that hotels with 3-star services have total reviews concentrated below the red line, while for 4-star services, they are above the red line, as indicated by the denser concentration of color. Let alone, this is supported by positive correlation matrix score between them of 0.49.
+                    </p>
+                    <p>
+                        This observation suggests that the higher the star services, the higher the total reviews tend to be. However, this is a general assumption and not universally applicable. It can be recommended that hotels improve their star service standards to increase the likelihood of receiving more reviews, which in turn can lead to an increase in their hotel occupancy ratio.
+                    </p>
+                    <h3>
+                        Density and Relational Plot of Normal Rate and Review Count by Star Services
+                    </h3>
+                    <img src="../images/project/project-1/relational-between-star-rate-review.png" alt="density and relational plot of normal rate and review count by star services" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        This insights indicate that hotels with 3-star services and above, generally assumed as good quality service, tend to have lower customers or reviews as their services prices go higher. These insights suggest that top-rated hotels are often favored by high-spending customers who are willing to pay more for exceptional services. On the other hand, hotels with 2-star services and below tend to have more customers when the prices go higher. 
+                    </p>
+                    <p>
+                        These might give us reasonable assumptions that hotels with utmost ratings, considered as luxury, are exclusively preferred by high spending customers who is looking for exceptional services while hotels other than that tend to have more customers as their prices are more affordable.
+                    </p>
+                    <h3>
+                        Review Count Impact Analysis on Rating Given
+                    </h3>
+                    <img src="../images/project/project-1/distribution-of-review-count.png" alt="distribution of review count by rating info" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Based on the chart above, we can see that customers tend to prefer hotels with ratings that are not at the extreme ends. Hotels with the highest rating, labeled as <span>Luar Biasa</span>, are not very popular, likely because they are more exclusive and expensive. On the flip side, hotels with the lowest ratings, labeled as <span>Baik</span>, are also not preferred, probably because there are better-rated and more affordable alternatives available.
+                    </p>
+                    <p>
+                        This insight is important because it suggests that hotels with the lowest ratings may suffer from a lack of popularity and effective marketing campaigns. To help these less-popular hotels, we can consider offering special packages and deals to boost their ratings, ultimately improving their classification and occupancy rates.
+                    </p>
+                    <h3>
+                        Summary Report on Average Rating and Normal Rate per Night of Frequent Feature Set
+                    </h3>
+                    <img src="../images/project/project-1/frequently-feature-set.png" alt="in-depth analysis of frequently delivered feature set" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The visualizations presented above serve as invaluable tools for identifying the most commonly offered feature sets within the dataset. Moreover, they provide deeper insights into how these combinations of features influence customer ratings and the dispersion of normal rates.
+                    </p>
+                    <p>
+                        This wealth of information enables us to offer personalized recommendations to each hotel. By pinpointing which features are frequently embraced and highly valued by customers, we can advise hotels on providing amenities that are more likely to elevate customer satisfaction.
+                    </p>
+                    <p>
+                        Furthermore, aligning these insights with the normal rate distribution allows us to uncover relationships between certain set of features and their associated pricing structures. This aspect can be considered by hotel management when enhancing amenities, aligning them with their financial plans.
+                    </p>
+                    <p>
+                        These dual approaches empower us to make well-informed decisions that simultaneously enhance customer satisfaction and promote cost-effectiveness.
+                    </p>
+                    <h3>
+                        Summary Report of Linear Regression Model
+                    </h3>
+                    <img src="../images/project/project-1/regression-plot.png" alt="summary plot of linear regression model" style="display: grid; width: 180%; margin-left: -40%;">
+                    <p>
+                        The visualization plot presented above provides a visual representation of the linear model we've previously applied. The red straight line serves as a benchmark, representing the ideal rating expected from customers. Hotels located below this line could be categorized as <span>not-satisfying</span>, while those situated above it could be deemed <span>fairly-satisfying</span> or <span>incredibly-satisfying</span>. This graphical approach offers a quick and intuitive means of evaluating customer satisfaction levels.
+                    </p>
+                    <h2>
+                        Strategic Business Recommendation
+                    </h2>
+                    <p>
+                        After conducting an extensive analysis, we have distilled a series of strategic recommendations based on the invaluable insights we've gathered. These recommendations are to elevate the company business to new heights, providing a clear path for improvement and growth. These recommendations include:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <p>
+                                            <span class="accent">Delivered Features Improvement</span>: As revealed in our comprehensive Feature Basket Analysis, we have identified a set of frequently delivered features that have demonstrated a consistent ability to enhance customer satisfaction, as reflected in the ratings provided. We recommend that hotel management consider these features as benchmarking criteria for their operations. By providing these features consistently, hotels can not only meet but exceed customer expectations, fostering greater guest satisfaction and loyalty.
+                                        </p>
+                                        <p>
+                                            It's important to note that delivering these features might come with associated costs. To strike a balance between providing enhanced amenities and ensuring affordability for customers, we suggest using the spread of the normal rate per night as a guideline. This approach not only helps maintain competitive pricing across hotels on the platform but also ensures that customers' expectations are met without compromising their budget constraints.
+                                        </p>
+                                        <p>
+                                            By incorporating these recommendations, hotels can position themselves as customer-centric establishments, offering a winning combination of quality services and competitive pricing.
+                                        </p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <p>
+                                            <span class="accent">Strategic Discount Initiatives</span>: After an in-depth analysis of customers feedback, we have successfully evaluated hotel quality based on customer satisfaction criteria. This evaluation is substantiated by comparing actual customer ratings with the assessments made by our linear regression model, serving as valuable comparison metrics.
+                                        </p>
+                                        <p>
+                                            As Traveloka operates as an intermediary platform, we have the unique capability to identify hotels that are truly underrated and underappreciated by customers. To further enhance customer satisfaction, we can tailor the proportion of discounts and create specific agreements with hotels that are targeted for inclusion in the discount campaigns during new year holiday. This approach not only benefits customers by offering them attractive discounts but also helps hotels unlock their true potential and gain the recognition they deserve.
+                                            <section>
+                                                <ul>
+                                                    <li>
+                                                        <span>
+                                                            For hotels categorized as <span class="accent">remarkably-satisfying</span>, we suggest offering a maximum discount of 10%. These hotels have consistently provided exceptional service to customers, aligning with their pricing. Hence, there's no immediate need for substantial discounts.   
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            Hotels categorized as <span class="accent">acceptable</span> can consider offering discounts ranging from 10% to 25%. These hotels generally meet customer expectations, as indicated by their ratings, which closely match the predicted ratings from the linear regression model. The calculation details are provided on notebook.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            Hotels categorized as <span class="accent">dissatisfactory</span> may benefit from offering discounts in the range of 25% to 75%. These hotels have untapped potential for improvement but may lack promotional efforts to enhance their reputation among customers. We recommend using the disparity between their actual and predicted ratings to determine proportionate and reasonable discounts. The calculation details can be found on notebook.
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <p>
+                                            <span class="accent">Advisable Suggestions</span>: The following suggestions are qualitative in nature, as they are not explicitly quantified in the analyzed data. Nevertheless, implementing these recommendations can lead to significant improvements and serve as a benchmark for all hotels.
+                                            <section>
+                                                <ul>
+                                                    <li>
+                                                        <span>
+                                                            <span class="accent">Enhance Customer Service</span>: Providing exceptional customer service is crucial. Train staff to be courteous, responsive, and attentive to guest needs. Consider offering personalized services to create a memorable experience.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <span class="accent">Online Reputation Management</span>: Actively manage online reviews and respond to feedback. Encourage satisfied guests to leave positive reviews and address negative feedback promptly and professionally.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <span class="accent">Safety and Security</span>: Ensure the safety and security of guests. Implement security measures and provide information about safety protocols within the hotel.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <span class="accent">Employee Training</span>: Invest in ongoing training for your staff to keep them updated on industry trends and to enhance their skills.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <span class="accent">Regular Maintenance</span>: Maintain the hotel's facilities and rooms to ensure they are in excellent condition. Regular upgrades and refurbishments may be necessary.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            <span class="accent">Local Cultural Experiences</span>: Offer guests the opportunity to explore local culture, traditions, and cuisine. Collaborate with local businesses to provide authentic experiences.
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <p>
+                                            <span class="accent">Ongoing Exclusive Offers and Deals</span>: This means that hotels should design appealing offers that include various discounts for guests. These packages can be tailored to align with specific occasions, holidays like New Year's Eve or Valentine's Day, or local events such as festivals or conventions happening in the area. This part suggests that hotels with lower customer ratings can benefit significantly from this strategy. By offering attractive packages and promotions, they can entice guests to stay despite their lower ratings.
+                                        </p>
+                                        <p>
+                                            Consistency is key. Hotels should not offer these packages as one-time efforts but rather as ongoing strategies. Continuously providing appealing packages and promotions can lead to an improved reputation for the hotel. This means that when hotels consistently offer attractive packages, they become the preferred choice for guests. Repeat customers are more likely to choose the hotel, leading to higher occupancy rates.
+                                        </p>
+                                        <p>
+                                            As hotels implement these strategies and guests have positive experiences, their ratings and reviews are likely to improve over time. This is because guests are more likely to leave positive feedback when they have a satisfying stay.
+                                        </p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <p>
+                                            <span class="accent">Data Quality Compliance</span>: As data has been thoroughly analyzed, it has become evident that certain hotels offer multiple services. However, it is challenging to differentiate these services based solely on the normal rates charged to customers. This would regard different rates as having the same features delivered, which in turn affects the overall review bias applied to both services when summarizing guest feedback.
+                                        </p>
+                                        <p>
+                                            If this scenario aligns with our expectations, it would pave the way for deeper analysis and the generation of data-driven conclusions that can provide valuable insights. One such potential insight is the ability to discern the specific services that are genuinely appreciated by customers and how these services are intertwined with pricing.
+                                        </p>
+                                        <p>
+                                            Furthermore, it would enable us to conduct a more in-depth analysis of the total reviews based on this differentiation. This would allow us to pinpoint specific service types that are frequently preferred by customers, providing a granular understanding of what aspects of the hotel's offerings resonate most with guests.
+                                        </p>
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p style="color: transparent;">
+                        intentionally left blank
+                    </p>
+                    <p>
+                        Please find codes detailed on Github channel.
+                    </p>
+                    <section class="referred-button button" style="position: relative;">
+                        <a href="https://github.com/reyharighy/Traveloka_New_Year_Hotel_Rooms" target="_blank">
+                            Github
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <section class="contained project-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin">
+                Read next
+            </h2>
+        </section>
+        <section class="contained case-projects-next fadeIn inView">
+            <article class="case-project fadeIn inView">
+                <a href="./porto-2.html">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-2.png" alt="Traveloka Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Statistical Analysis on USA Youtube Trending Videos
+                        </span>
+                        <section class="case-project-wrapper">
+                            The project's specific focus is to generate valuable insights tailored for content
+                            creators, marketers, and decision-makers, facilitating a deeper understanding of
+                            YouTube user preferences and consumer behavior within the digital landscape. By
+                            analyzing viewer engagement patterns and trending content topics,
+                            this research aims to equip stakeholders with data-driven strategies to enhance their
+                            online presence and effectively connect with their target audiences on the YouTube platform.
+                        </section>
+                    </p>
+                </a>
+            </article>
+            <article class="case-project fadeIn">
+                <a href="./porto-3.html" class="case-project fadeIn">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-3.png" alt="Olist Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Customer Analysis on Olist E-Commerce
+                        </span>
+                        <section class="case-project-wrapper">
+                            Olist have collected separated information data throughout the year. With current dataset,
+                            it is hard to identify customer behaviour. However, the existing dataset poses a challenge
+                            in comprehending customer behavior as it lacks a delineation of customer segments. The aspiration
+                            of this project lies in empowering Olist to discern and classify their customers into meaningful
+                            segments. This segmentation process will enable Olist to gain invaluable insights, refine their
+                            marketing strategies, and provide personalized experiences, ultimately fostering enhanced customer
+                            satisfaction and optimizing their business operations.
+                        </section>
+                    </p>
+                </a>
+            </article>
+        </section>
+        <section class="project-list fadeIn inView" style="margin-top: -30px;">
+            <div class="cta">
+                <a class="blunt-button" href="../projects.html">
+                    All Projects
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/project-selector.js"></script>
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+</html>

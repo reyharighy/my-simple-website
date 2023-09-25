@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html" id="underlined">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1 style="padding-bottom: 50px;">
+                    Statistical Analysis on USA Youtube Trending Videos
+                </h1>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        13 August 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            Project
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/project/project-2/banner-porto-2.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Problem Statements
+                    </h2>
+                    <p>
+                        The background of the problem is very important to know because it will make it easier to identify the source of the problem and determine the right solution. Background information on the problem can be used as a basis for evaluating data and making wise decisions in dealing with the problem at hand. In this context it includes:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Do trending videos have the same quality and characteristics even though the video attributes vary?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Why can increased user accessibility help manage trending videos?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How can screening process help determine the suitability of uploaded content so that views and engagement increase?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        What features can help improve the relationship between creators and content connoisseurs so that new content will be positively received?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How and how much is the relationship between various attributes in determining the sustainability of trending videos?
+                                    </span>
+                                </li>
+                            </ol>
+                    </p>
+                    <p>
+                        The hypothesis being tested is the anti-thesis of the problem background. Everything about the data has no significant intercorrelation and even if there is it is just coincidence.
+                    </p>
+                    <h2>
+                        Data Understanding
+                    </h2>
+                    <p style="margin-bottom: 0px;">
+                        This dataset is provided as material for working on the topic of Trending Video Statistics on YouTube specifically for the United States region. In the early stages, the information contained will be described in more depth to understand its characteristics. As material for analysis, the datasets used are sourced from <a href="https://drive.google.com/drive/folders/1JFhDSfs4vzWuCdsBFObEp5sVLQMo-dR1" target="_blank"><span>following link</span></a>, for each row the data contained consists of 16 columns, each of which contains information as follows:
+                    </p>
+                    <img src="../images/project/project-2/youtube-data-info.png" alt="dataset-info" style="display: grid; width: 150%; margin: 30px; margin-left: -25%; border-radius: 30px;">
+                    <p style="margin-top: 0px;">
+                        The dataset will go through some kind of data cleansing and feature engineering processes in order to make it well-prepared before taking into account of Exploratory Data Analysis.
+                    </p>
+                    <h2>
+                        Explanatory Data Analysis
+                    </h2>
+                    <h3>
+                        Views Research
+                    </h3>
+                    <p>
+                        The analysis in this section is to identify impression metrics based on data in the views column. Here it will be examined whether there is a significant difference between the average number of views in each video category.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part1">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/views-dist.png" alt="views distribution">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/views-per-cat.png" alt="views per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-views-videos.png" alt="top 10 viewed videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-views-channels.png" alt="top 10 viewed channels">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Visually, the number of views on each video is not normally distributed or symmetrically following a Gaussian distribution. Because the data is not normally distributed, statistical analysis that requires normal distribution assumptions cannot be used and it is necessary to look for alternative analyzes that are in accordance with the conditions of the data. The mean in each category will be calculated using the median value in each category.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen visually that the size of the data center in each category is significantly different. This indicates that each category has different characteristics which can be caused by factors such as topics, production quality, release time, and the type of content used. The top six views per category which are above the average are dominated by entertainment categories, such as Gaming, Music, Film & Animation, Comedy, Shows, and Entertainment. On the other hand, the remaining categories are below the average. Interpretations that can be drawn are:
+                                        </p>
+                                        <section>
+                                            <ol>
+                                                <li>
+                                                    <span>
+                                                        The high level of user interest caused by high attractiveness.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        It is entertainment in nature so that it has a positive side for users.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Larger number of users.
+                                                    </span>
+                                                </li>
+                                            </ol>
+                                        </section>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Based on the top 10 views videos, all of them are dominated by entertainment content. This further reinforces that content with this theme needs to be reproduced in order to attract more potential viewers so that the generated traffic can increase all the time.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Several well-known content creators are identified from the total number of views such as ibighit which is an entertainment company from South Korea which was founded in 2005. YouTube needs to give sufficient appreciation to the channel owners and carry out an efficient optimization process to recommend their content to users who have appropriate preferences. This also applies to other top channels. Other recommendations that can be made are:
+                                        </p>
+                                        <section>
+                                            <ol>
+                                                <li>
+                                                    <span>
+                                                        Give awards to content creators who have good performance, such as Silver Play Button, Gold Play Button, or Diamond Play Button. This award can provide a motivational boost for content creators to continue creating quality content.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Help content creators improve video quality by providing guidelines for improving the quality of their videos.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Provide promotional support for content that is considered to have great potential so as to help that content be more easily found by potential audiences.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Provide suggestions for improving performance so that it attracts more audiences.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Providing interesting features such as live streaming, premiere features, or other new features to make it more interactive with the audience.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Provide funding for content that is considered to have great potential so that the content will develop and attract more viewers.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Create mutually supportive content creator communities such as discussion groups or online forums. This can help content creators exchange experiences and suggestions to improve the quality of their content.
+                                                    </span>
+                                                </li>
+                                            </ol>
+                                        </section>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Engagement Importance
+                    </h3>
+                    <p>
+                        Engagement is a term used to describe the interaction between viewers and uploaded content. It includes various things such as the number of likes, dislikes, and comments. Here the data will be filtered based on the feature availability status in ratings and comments.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part2" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part2">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/engagement-dist.png" alt="engagement count distribution">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/engagement-count-cat.png" alt="engagement count per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/engagement-count-videos.png" alt="top 10 engagement count videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/engagement-count-channels.png" alt="top 10 engagement count channels">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part2" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part2">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Visually, the distribution does not follow a normal distribution. This indicates that there are influencing factors which on the other hand can also be a factor causing differences in the number of engagements in each category. Analysis of the number of engagement can find out how many viewers are engaged with the content. The higher the number, the more likely the content is in accordance with the interests of the audience. On the other hand, this analysis is used to measure how close the relationship between content owners and viewers is. With a good relationship, the audience will be routine and loyal to wait for every content that is launched.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            The series of videos with the highest engagement is still controlled by the entertainment industry. Some of them are video clips from boyband BTS and the rest are music content from top foreign musicians. It should be emphasized that musical content really attracts the interest of the audience, which is likely to be loyal fans, plus the object popularity of the content. This high engagement indicates that the audience is actively involved in the discussion or interaction in the video.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Based on the top 10 views videos, all of them are dominated by entertainment content. This further reinforces that content with this theme needs to be reproduced in order to attract more potential viewers so that the generated traffic can increase all the time.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Quality content and potential value are based on the owner and developer factors of the video channel. YouTube needs to issue a number of recommendations in order to increase the interaction provided by loyal viewers and new viewers, including:
+                                        </p>
+                                        <section>
+                                            <ol>
+                                                <li>
+                                                    <span>
+                                                        Provide facilities for direct interaction such as live streaming. Loyal viewers will be very willing to enjoy content from their idols so that the resulting traffic will be maintained.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Several channels with the most popular content need to be given a special space without having to block other channels. This is so that the channel owner can continue to maintain the content they produce and continue to attract new viewers who have not been reached through the recommendation system.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Provide analytical and statistical tools that can help channel owners to analyze the performance of their channel and content so that it becomes an evaluation material for making further content.
+                                                    </span>
+                                                </li>
+                                            </ol>
+                                            <p>
+                                                With these recommendations, YouTube can help content creators to increase engagement on their channels and increase audience engagement on platform.
+                                            </p>
+                                        </section>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Growth Analysis
+                    </h3>
+                    <p>
+                        Growth Analysis is a process of measuring and evaluating the growth of an aspect. This analysis can provide valuable information to improve YouTube service performance and predict future growth. By knowing the growth trends in each category, YouTube can determine a priority scale to make recommendations regarding which industries are currently popular.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part3" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part3">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/growth-trends-viewed.png" alt="top viewed growth trends">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/growth-trends-engaged.png" alt="top engaged growth trends">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/corr-matrix.png" alt="growth correlation matrix">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part3" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part3">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Based on the total views of the top six categories, it can be seen that the Music and Entertainment categories experienced the most significant growth. This indicates a significant increase in user demand for content related to that category.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            The number of engagement shows a very significant growth in the Music category. This industry has the potential to see the enthusiasm of users who actively participate in providing feedback. Therefore, it is highly recommended that YouTube continues to encourage and support the global music industry in order to attract new potential audiences as a top priority regardless of other videographic industries. With the growing number of views and engagement, it will be easier for the recommendations given to be widely accepted. This needs to be proven by measuring the correlation between the two things using correlation analysis techniques.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Based on the correlation analysis above, it can be concluded that the number of views has a positive and significant correlation to the number of likes and comments. Therefore, the previous statement can be considered valid.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Engagement Rate Trends
+                    </h3>
+                    <p>
+                        After understanding the significant relationship between the number of views and engagement. We will try to analyze turnover from each increase in views to the number of engagements in terms of engagement rate.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part4" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part4">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/engagement-rate-trends.png" alt="engagement rate trends">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/corr-matrix-engagement.png" alt="engagement rate corr matrix">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part4" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part4">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen visually that videos with the highest engagement level have a tendency to decline. This indicates that engagement rate will saturate over time even though the number of views and engagement continues to grow. That way, before arriving at correlation analysis, we can assume that engagement rate will continue to decrease all the time trending.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Based on correlation analysis, there is a negative relationship between the number of views and engagement rate of 8.5%. That means that every significant increase in the number of views will be accompanied by a small increase in the number of engagements. This is a phenomenon that does not apply absolutely and only provides a general response from views and engagement intercorrelation.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Decline in Engagement Rate
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part5" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part5">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/decline-dist.png" alt="distribution of decline rate">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/decline-per-cat.png" alt="decline rate per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-viewed-decline.png" alt="decline rate of top 10 viewed videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-engaged-decline.png" alt="decline rate of top 10 engaged videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part5" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part5">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that the decline for each video is concentrated between zero and two percent. Even though in reality, there are a small number of videos that have a magnitude outside of this value. At first glance, the data does not form a normal distribution. Therefore, we can use the median as a measure of data center to investigate further based on its causality across all categories.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that several categories with a very dominant number of views in the previous discussion, have drop percentage values above the average. This is quite logical considering that one of the categories, namely Music which has a significant growth in the number of views, will not always get an increase in the number of engagement in addition to views with several factors as follows:
+                                            <section>
+                                                <ol>
+                                                    <li>
+                                                        <span>
+                                                            The recommended content doesn't appeal to new audiences. This can be due to a lack of market research or a lack of proper content planning.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            Poor video quality can cause viewers not to be interested in watching and interacting with videos.
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            Not so efficient recommendation algorithm.
+                                                        </span>
+                                                    </li>
+                                                </ol>
+                                            </section>
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that the risk of declining on engagement rate is quite large for the most popular videos. Next, we will analyze the 10 videos with the most engagements.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that the videos with the most engagements have also experienced a significant decline so that they are well above the average. We can conclude this as a certainty that no video can last forever on the trending list because new videos will always appear and competition is getting tougher in the creative industry. Therefore, YouTube as a service provider must continue to develop the most efficient algorithm in recommending a new video with a certain priority scale.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Days-to-Trending
+                    </h3>
+                    <p>
+                        Days-to-trending is a metric used to measure the time it takes for a video to enter the trending list on YouTube. The calculation is done by calculating the difference between the date the video was uploaded and the date the video was first trending.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part6" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part6">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/day-trend-dist.png" alt="days-to-trending distribution">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/day-trend-cat.png" alt="overall days-to-trending per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-days-trend-viewed.png" alt="days-to-trending of top 10 viewed videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-days-trend-engaged.png" alt="days-to-trending of top 10 engaged videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part6" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part6">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Visually, it can be seen that the data is concentrated between 1 to 3 days. Even so, there are a few that take a long time to trend so that the data is not normally distributed. Next, we will use the median to measure the data center point in each category.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            In all YouTube service categories, it can be seen that the data center point is above the average. This explains that the varying amount of time required for a video to enter the trending list and is not a guarantee that a video that has been uploaded for a long time will not be trending which may be due to time and events. Sometimes there is a video that is just being discussed when the incident related to the video occurs at a different time.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Even so, the determining pattern for a video to enter the trending list can be found clearly based on the number of views that are most dominant. There is a tendency for videos in certain categories, such as Music, to trend faster because there is already a large market of users or in other words loyal viewers.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Then for videos with the most dominant interests it will also be easier to enter the trending list in a relatively short time. Based on these findings, it is necessary to have sustainable viewers who are loyal and consistent in consuming video content presented by content creators. Maintaining sustainable viewers is very important because they can help increase engagement rate and views of videos. Apart from that, they can also help increase brand awareness and create a loyal community.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Trending Duration
+                    </h3>
+                    <p>
+                        Trending on YouTube refers to videos or content that are currently popular at a particular moment. Trending is calculated based on a number of factors, including the number of views, level of engagement, and speed of growth of views. YouTube has a special section for content that is trending, which users can see when opening the main page or doing a search on the platform.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part7" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part7">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/trend-duration-dist.png" alt="trending duration distribution">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/trend-duration-cat.png" alt="overall trending duration per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-duration-viewed.png" alt="trending duration of top-10 viewed videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-duration-engaged.png" alt="trending duration of top 10 engaged videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part7" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part7">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that the duration for each video tends not to be normally distributed with concentration levels ranging from 4 to 8 days.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Visually, it can be seen that the data center points for duration in each category are mostly around the mean value. Even so, there is an exception in the Music category, which is 13.5 days. This is based on the interest factor and segmentation of users who are loyal to enjoying content based on that category.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can also be seen that several videos with the most dominant views have a longer duration than the general average. This is because videos with a large number of views have the potential to continue to get engagement and attract interest from new potential viewers so traffic will be maintained.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Furthermore, for several videos with the most dominant engagement, they get a portion of duration around the average with the exception of a handful of videos which are caused by external factors which may be in the form of videographic quality or the theme of the content contained. Release time is also one of the reasons why the video can stay on the trending list for a long time.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Video Quality
+                    </h3>
+                    <p>
+                        The quality of a video in this discussion is based on engagement rate which develops every time it is trending. The quality of a video can change depending on how big the effect of decline is received. Therefore, the categorization will be made with the following provisions:
+                        <section>
+                            <ol>
+                                <li>
+                                    <span>
+                                        If it is more than equal to 15%, then the quality is Excellent.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If between 3% and 15%, then the quality is Good.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If it is between 1% and 3%, then the quality is Fair.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        If it is below 1%, then the quality is Poor.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part8" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part8">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/quality-density.png" alt="video quality density on Duration">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/corr-matrix-quality.png" alt="correlation matrix of videos' quality">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/quality-proportion.png" alt="video quality proportion">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part8" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part8">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            The visualization above provides a general description of the duration density of a video based on each quality category. It can be seen that the difference is not too significant for videos with quality from the best to the worst. Videos with excellent and good quality tend to have a longer trending duration than videos with fair and poor quality.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that there is no significant correlation between the quality of a video and trending duration so that it is not the main factor for categorizing quality based on engagement rate because it has a blurry boundary to be recognized.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            End-product quality of a video is dominated by videos with good quality with a total share of around 57% and the rest is occupied by fair and poor quality videos with very few portions of excellent quality videos. Therefore, it is very difficult to use a nominal reference for engagement rate where the value tends to decrease over time due to the decline factor experienced by each video.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Sentiment Ratio
+                    </h3>
+                    <p>
+                        Sentiment ratio refers to the ratio of positive and negative sentiments expressed in a video. This ratio is calculated by dividing the number of negative sentiments by the positive sentiments expressed. Sentiment ratio can assist in evaluating audience response and can be used to measure the popularity or success of a product, brand, or campaign embedded in a circulating video.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part9" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part9">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/sentiment-dist.png" alt="distribution of sentiment ratio">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/sentiment-cat.png" alt="overall sentiment ratio per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-unfavorable.png" alt="top-10-unfavorable videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part9" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part9">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that most of the videos have a concentration of negative sentiment in the low range, which is between 2 and 10%. However, there are a small number of videos with quite extreme negative sentiments and we will find out their characteristics. It is known that the data is not normally distributed and this is a natural thing considering that the video categories are very diverse and each has different characteristics, both in terms of content and the users themselves.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Videos with the theme News & Politics have a high level of negative sentiment because this topic is often related to complex and controversial issues in society. This can trigger debate and conflict between groups with different views, and in the end can trigger a negative response from the content published.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen that the 10 videos with the top negative sentiments are occupied by videos with the theme of news from an event that smells of social politics. The value is quite extreme where the number of dislikes responses can be many times the number of likes you get. This is an evaluation material for content creators to avoid things that are sensitive and offensive in the content they produce.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Similarity Degree
+                    </h3>
+                    <p>
+                        Similarity degree is a measure to measure the extent to which two or more objects have the same context in terms of certain characteristics, features or characteristics. This calculation is obtained from a comparison of the number of common tags of the total tags used by a video.
+                    </p>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part10" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part10">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/similar-dist.png" alt="distribution of tags similarness">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/similar-cat.png" alt="overall similarity per category">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-similar-viewed.png" alt="similarity of top-10 viewed videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/top-10-similar-engaged.png" alt="similarity of top-10 engaged videos">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-2/similar-proportion.png" alt="video similarity proportion">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part10" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part10">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen at a glance that the distribution of the data forms a uniform pattern in which it is almost certain that the data is not normally distributed. This can be used as a reference in calculating the distribution in each video category using the median value.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            It can be seen at a glance that the distribution of the data forms a uniform pattern in which it is almost certain that the data is not normally distributed. This can be used as a reference in calculating the distribution in each video category using the median value.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            In some videos with the most dominant number of views, most of them embed hashtags in their videos which are generally used in other videos as well. Even though the results are not significant enough, the use of hashtags remains a factor that content creators can consider as a boost to the number of views and engagement in addition to other factors, such as categories, content quality, and the number of user segments with preferences according to that context.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Some videos with a fairly dominant number of engagement are felt to have a significant correlation with common tags considering that the more and more familiar contexts used the easier the video is to find so as to attract users' interest in enjoying the content and providing a response in the form of likes and comments.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Most of the trending videos have a fairly high degree of similarity to other videos in terms of the context or hashtags used. Although not a major factor, at least using the right hashtags can help increase the number of views and engagement of a video and is a requirement for the YouTube algorithm in determining the priority of videos that will appear on the trending list.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>
+                        Recommendations
+                    </h2>
+                    <p>
+                        It is necessary to evaluate all insights that have been generated in the Exloratory Data Analysis section, which are as follows:
+                        <section>
+                            <ol>
+                                <li>
+                                    <span>
+                                        Information about the target audience can provide insight into who is the target audience based on preferences and search history. Preferences can be seen from the audience's track record of responding in the form of likes and comments on videos. This can be used as a determining factor by the YouTube algorithm regarding which videos with similar categories to recommend so that cost effectiveness can be minimized starting from the time side and the capacity of the trending list that can be loaded at a certain time. On the other hand, the campaign or advertising algorithm functionality of a brand can be maximized to suit the video context and behavioural instinct of each user with the aim of minimizing the level of disruption which is quite significant to the possibility of ignorance occurrence.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Video performance can be measured from engagement rate which is growing all the time. A video that does not meet the trending criteria or reaches a saturation point can be removed from the trending page in order to maximize the accessibility of users who are limited by time and the many choices of trending videos that must be enjoyed. Priority recommendations on channels with fairly good performance can be used as a reference by YouTube algorithm in determining what content can be loaded on a trending page at a time. This is based on the amount of engagement that can be achieved from loyal users so they can decide whether a video that is trending can attract the interest of new potential viewers or not.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Validation Approval System which can screen new uploaded content to determine the suitability of the attributes used. For example, videos in certain categories must have qualified requirements to be included in that category. If not, it will potentially create a discrepancy between the video and the audience who enjoys it. This can lead to a fairly low engagement rate and have implications for wasted user time without any positive benefits being received in return.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Assist content creators with certain features such as guidelines, statistical analysis, video quality improvement and attribute recommendations on hashtags when in the process of compiling new content so that it can be received positively by service users.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Providing facilities that can enhance the relationship between content creators and viewers, such as, but not limited to live streaming services, premiere access, discussion forums, and interactive features in the comment section. The goal is to create sustainability viewers who will potentially continue to provide support to content creators to continue to produce quality new content and provide positive benefits to platform users.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Better user experience so as to maximize the main factors that can increase engagement rate, such as easy user accessibility, video performance analysis, monetization, as well as technical and community support.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p style="color: transparent;">
+                        intentionally left blank
+                    </p>
+                    <p>
+                        Please find codes detailed on Github channel.
+                    </p>
+                    <section class="referred-button button" style="position: relative;">
+                        <a href="https://github.com/reyharighy/Statistical_Analysis_on_Youtube_Trending_Video" target="_blank">
+                            Github
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <section class="contained project-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin">
+                Read next
+            </h2>
+        </section>
+        <section class="contained case-projects-next fadeIn inView">
+            <article class="case-project fadeIn inView">
+                <a href="./porto-1.html">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-1.png" alt="Traveloka Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Traveloka Indonesia New Year Hotel Rooms
+                        </span>
+                        <section class="case-project-wrapper">
+                            This project is dedicated to conducting a comprehensive analysis and comparison
+                            of various aspects related to hotel accommodations offered during the New Year
+                            holiday season in Indonesia, with a primary objective of providing invaluable insights into
+                            the practices and improvements within the hospitality industry. In an increasingly
+                            competitive market, the project seeks to contribute to the elevation of customer
+                            satisfaction, highlighting trends, strengths, and areas for enhancement.
+                        </section>
+                    </p>
+                </a>
+            </article>
+            <article class="case-project fadeIn">
+                <a href="./porto-3.html" class="case-project fadeIn">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-3.png" alt="Olist Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Customer Analysis on Olist E-Commerce
+                        </span>
+                        <section class="case-project-wrapper">
+                            Olist have collected separated information data throughout the year. With current dataset,
+                            it is hard to identify customer behaviour. However, the existing dataset poses a challenge
+                            in comprehending customer behavior as it lacks a delineation of customer segments. The aspiration
+                            of this project lies in empowering Olist to discern and classify their customers into meaningful
+                            segments. This segmentation process will enable Olist to gain invaluable insights, refine their
+                            marketing strategies, and provide personalized experiences, ultimately fostering enhanced customer
+                            satisfaction and optimizing their business operations.
+                        </section>
+                    </p>
+                </a>
+            </article>
+        </section>
+        <section class="project-list fadeIn inView" style="margin-top: -30px;">
+            <div class="cta">
+                <a class="blunt-button" href="../projects.html">
+                    All Projects
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/project-selector.js"></script>
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+</html>

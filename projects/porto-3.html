@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html" id="underlined">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1 style="padding-bottom: 50px;">
+                    Customer Analysis on Olist E-Commerce
+                </h1>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        5 July 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            Project
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/project/project-3/banner-porto-3.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Business Understanding
+                    </h2>
+                    <h3>
+                        Introduction
+                    </h3>
+                    <p>
+                        Olist, a Brazilian e-commerce marketplace integrator referred to their <a href="https://olist.com/pt-br/" target="_blank"><span>website</span></a>, is an online e-commerce platform designed to facilitate direct sales on e-commerce sites of Brazil. The company's platform connects entrepreneurs with major online retailers and allows shopkeepers to advertise and sell in the marketplaces without complication, enabling retail companies to reach out to the international marketplaces, improve the shopping experience and modify their purchasing behavior.
+                    </p>
+                    <p>
+                        Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. After a customer purchases the product from, a seller gets notified to fulfill that order. Once the customer receives the product, or the estimated delivery date is due, the customer gets a satisfaction survey by email where he can give a note for the purchase experience and write down some comments.
+                    </p>
+                    <h3>
+                        Context
+                    </h3>
+                    <p>
+                        The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers.
+                    </p>
+                    <h3>
+                        Problem Statements
+                    </h3>
+                    <p>
+                        Olist have collected data throughout the year, the data contains seperated information, there are aggregated data, unique data or even combination of both. With olist current dataset, it is hard to identify customer behaviour since it has no representation of customer segments. Moreover, even after understanding the segmentation, what kind of approach should they take?
+                    </p>
+                    <p>
+                        Hence, the questions to be answered in this project:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Is there any growing trend on e-commerce sales in Brazil?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How the total sales is concentraded in brazilian states?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        What are the best states to do transaction in Brazil?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How payments types can take influence on e-commerce?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How are the behaviour of our customer?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How would you classify them?
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        How CRM campaign strategy be implemented?
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Objective
+                    </h3>
+                    <p>
+                        With this project, it is hoped that Olist will be able to classify their customers with the appropriate segmentation.
+                    </p>
+                    <h3>
+                        Project Limitation
+                    </h3>
+                    <p>
+                        The machine learning model built is limited to orders from 2016 to 2018. Thus, the performance of the model will be much different when used to classify customers from today. In addition, this model is built from several selected features based on features importance and correlation analysis to the target.
+                    </p>
+                    <h3>
+                        Analytical Approach
+                    </h3>
+                    <p>
+                        Underlying the problem statements, our main focus lies around the implementation of CRM Campaign, the analytical approach we use are:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Customer Segmentation by Clustering.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Clusters Classification.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h2>
+                        Data Understanding
+                    </h2>
+                    <h3>
+                        Data Scheme
+                    </h3>
+                    <img src="../images/project/project-3/data_scheme.png" alt="data scheme" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        There are nine sets of data provided at the expense of Olist E-Commerce which are freely accessible for the research purposes. Please directly go through this <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank"><span>link</span></a> for data sets information. As merging process based-on data schemes shown above, we inherited three data sets named as Order History, Customer Payments, and Recency-Frequency-Monetary Table.
+                    </p>
+                    <h2>
+                        Explanatory Data Analysis
+                    </h2>
+                    <h3>
+                        Evolution of Total Orders in Olist
+                    </h3>
+                    <img src="../images/project/project-3/insight1.png" alt="evolution of total orders" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Insight:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        There is no record on November 2016 and incomplete records on September 2018. The highest orders received in 1 month is on November 2017.   
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Based on total orders by the day of week, Monday and Tuesday are the most transaction happened in a week with 16.29% and 16.05% from total.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        In total orders by time of the day, it can be seen that afternoon is the most transaction happened in a day with 38.29% from total. This may happen because more customers have free time during the lunch breaks. The second most is during night while customers have more free time after all day work.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Total Orders Comparison Between 2017 and 2018 (Q1-Q3)
+                    </h3>
+                    <img src="../images/project/project-3/insight2.png" alt="total orders comparison between 2017-2018" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Insight:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Based on comparison plot above, it can be seen that there was an increase in orders of 136.52% between January and August in 2017 to January and August in 2018. This might happen because many new customers are transacting on Olist in 2018. Therefore, this case should be investigated further in modelling.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Evolution of Olist Orders on Brazilian Regions
+                    </h3>
+                    <img src="../images/project/project-3/insight3.png" alt="evolution of orders on regions" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Insight:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Based on Evolution of E-Commerce Orders on Brazilian Regions plot, it can be seen that Brazil is divided into 5 major regions, where the South East is the region with the fastest evolution of e-commerce orders from January 2017 to August 2018. Meanwhile Sao Paulo and Rio de Janeiro from South East region are also in the 1st and 2nd place for top orders in each states and cities.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Evolution of Olist: Total Orders and Total Amount Sold in R$
+                    </h3>
+                    <img src="../images/project/project-3/insight4.png" alt="evolution of orders and amount in R$" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Insight:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The highest value sold in history is on November 2017. It's possible that this can be happen when the blackfriday event is held, where each store probably gives a massive discount that only happens for 1 day. The value is 1001.9K just for 1 month.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The total amount between January and August in 2017 to January and August in 2018 is also increased 137.04% where Evolution of Average Freight Value tend to be stable from January 2017 to May 2018. A sharp increase occurred in the July 2018. This might be happened because many new customer come to use Olist as their daily e-commerce to do shopping.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Comparative Study: Olist Delivery Performance
+                    </h3>
+                    <img src="../images/project/project-3/insight5.png" alt="delivery performance" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Insight:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The mean value of freight paid is R$ 22.77 yet there are still many states that must paid more for freight value above R$ 40. The top 5 are Paraiba, Roraima, Rondonia, Acre, and Maranhao.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Even Roraima State is also in top 2 of 5 states with highest average time to delivery. This needs to be discussed further between the Olist team, so the freight value can be adjusted and each customer gets the best delivery service at the right price.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Evolution of Payment Types in Olist
+                    </h3>
+                    <img src="../images/project/project-3/insight6.png" alt="payments type" style="display: grid; width: 150%; margin-left: -25%;">
+                    <p>
+                        Insight:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Based on 3 plot above, it can be seen that credit card is the most preferred payment choice by customers with 73.99% from total. The evolution of payment types with credit card is also increasing rapidly from January 2017 to May 2018. Many customers also preffered to take 1 month payment installments. This indicates that payment with a credit card, customers do not need to immediately pay in full for the products they buy. They can pay it with installments they preffered and can be paid at the end of the periods.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The most payment installments that customer preffered is 1. It indicates that many customers buy products that are not too expensive and are still able to be paid at the end of the first month.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h2>
+                        Customer Segmentation by Clustering
+                    </h2>
+                    <img src="../images/project/project-3/cluster.png" alt="customer clustering">
+                    <p>
+                        Based on the result of the clustering, we can conclude:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        <span class="accent">Class 0</span>: High Monetary & High Recency.
+                                        <section>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        One of our old customer with the trust to spend high.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Type of customer that goes through our e-commerce when they want to buy high value products.
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Class 1</span>: Low Monetary & High Recency.
+                                        <section>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        Customers that are getting out of our e-commerce with low spending.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        The type of customer that tries our e-commerce and may end up not liking it.
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Class 2</span>: High Monetary & Low Recency.
+                                        <section>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        Recent and high spending customer with trust to spend more.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        This type of customer is the customer we want to retain since it is our best customer.
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <span class="accent">Class 3</span>: Low Monetary & Low Recency.
+                                        <section>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        Fresh customers whose spending is not as much as <span class="accent">Class 0</span> and <span class="accent">Class 2</span>.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        Type of customer that loves shopping and buying small things.
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h2>
+                        Clusters Classification
+                    </h2>
+                    <h3>
+                        Feature Importances
+                    </h3>
+                    <img src="../images/project/project-3/features-importances.png" alt="features importances">
+                    <p>
+                        Based on feature importances quantified by <span>Shapley</span> value, the two most important features are <span>total_price</span> and <span>total_freight</span>. Meanwhile, other features seem to have insignificant impacts on model output as shown above. This result does not imply the correlation nor the relationship of the features to the output, merely the significance power of the features to the output itself.
+                    </p>
+                    <h3>
+                        Explainable AI for Cluster 0
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part1">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster0.png" alt="summary plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster0-exp.jpg" alt="waterfall plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has positive contributions for a model to predict an observation as <span>Cluster 0</span>. It means the higher the <span>total_price</span>, the higher the possibily of an observation to be predicted as <span>Cluster 0</span>. The leftovers are insignificant yet they do still have varied contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has positive contributions for a model to predict an observation as <span>Cluster 0</span>. It means the higher the <span>total_price</span>, the higher the possibily of an observation to be predicted as <span>Cluster 0</span>. The leftovers are insignificant yet they do still have varied contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Explainable AI for Cluster 1
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part2" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part2">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster1.png" alt="summary plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster1-exp.jpg" alt="waterfall plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part2" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part2">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has negative contributions for a model to predict an observation as <span>Cluster 1</span>. It means the higher the <span>total_price</span>, the less the possibily of an observation to be predicted as <span>Cluster 1</span>. The leftovers are insignificant yet they do still have varied contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has negative contributions for a model to predict an observation as <span>Cluster 1</span>. It means the higher the <span>total_price</span>, the less the possibily of an observation to be predicted as <span>Cluster 1</span>. The leftovers are insignificant yet they do still have varied contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Explainable AI for Cluster 2
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part3" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part3">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster2.png" alt="summary plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster2-exp.jpg" alt="waterfall plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part3" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part3">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has positive contributions for a model to predict an observation as <span>Cluster 2</span>. It means the higher the <span>total_price</span>, the higher the possibily of an observation to be predicted as <span>Cluster 2</span>. The leftovers are insignificant yet they do still have proportional contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has positive contributions for a model to predict an observation as <span>Cluster 2</span>. It means the higher the <span>total_price</span>, the higher the possibily of an observation to be predicted as <span>Cluster 2</span>. The leftovers are insignificant yet they do still have proportional contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h3>
+                        Explainable AI for Cluster 3
+                    </h3>
+                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                        <div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-left-part4" aria-label="Previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div style="position: relative;">
+                                <ul class="insight-carousel-part4">
+                                    <li class="slide active">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster3.png" alt="summary plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                    <li class="slide">
+                                        <blockquote class="insight">
+                                            <div class="topContent">
+                                                <img src="../images/project/project-3/cluster3-exp.jpg" alt="waterfall plot">
+                                            </div>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                                <button class="animate-arrow arrow-right-part4" aria-label="Next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                    viewBox="0 0 38.616 68.83">
+                                        <defs>
+                                            <clippath id="clip-path">
+                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                                transform="translate(9 0)" fill="none"></rect>
+                                            </clippath>
+                                            <clippath id="clip-path-2">
+                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                                transform="translate(0 0)" fill="none"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                    stroke="#2a2b34" stroke-width="1"></line>
+                                                </g>
+                                            </g>
+                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part4">
+                            <li class="slide active">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has negative contributions for a model to predict an observation as <span>Cluster 3</span>. It means the higher the <span>total_price</span>, the less the possibily of an observation to be predicted as <span>Cluster 3</span>. The leftovers are insignificant yet they do still have proportional contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Feature of <span>total_price</span> has negative contributions for a model to predict an observation as <span>Cluster 3</span>. It means the higher the <span>total_price</span>, the less the possibily of an observation to be predicted as <span>Cluster 3</span>. The leftovers are insignificant yet they do still have proportional contributions in each feature.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>
+                        Conclussion & Recommendation
+                    </h2>
+                    <h3>
+                        Conclussion
+                    </h3>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        There is a growing trend on e-commerce sales in Brazil when the total amount sold between 2017 to 2018 is increased to 137.04%. The highest value sold in history was on November 2017 with 1001.9K just for 1 month. This could be happen because the blackfriday event is held on that month, where each sellers probably gives a massive discount that only happens for 1 day.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The biggest mean price by customer state is Paraiba with R$215, but the amount price tend to be low with just R$113.40K. Inversely proportional to Sao Paulo where the mean price is lowest, but had the biggest amount price comparing to another states with R$5172.26K. This is how total sales is concentraded in Brazil.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The Best states to do transaction in Brazil is Sao Paulo, where this state dominates the total orders of all Brazilian states by 42.8% from total.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The credit card is the most preferred payment choice by customers with 73.99% from total. The evolution of payment types with credit card is also increasing rapidly from January 2017 to May 2018. Many customers also preffered to take 1 month payment installments. This indicates that payment with a credit card, many customers do not need to immediately pay in full for the products they bought. They can pay it with installments they preffered and can be paid at the end of the periods. Vouchers can also be used for payments, with this, customers can get discounts for the products that they bought and add more products to buy. This is how payment types can take influence on e-commerce.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Based on the clusters, we conclude that it is divided by 4 groups of customer, which is:
+                                        <section>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        <span class="accent">Class 0</span>: Type of customer with trust on spending only on high value products.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        <span class="accent">Class 1</span>: Type of customer that are potentially high to churn.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        <span class="accent">Class 2</span>: The best customer, spend more on a recent timeline.
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        <span class="accent">Class 3</span>: Type of customer that loves shopping for small things.
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Recommendation
+                    </h3>
+                    <section class="para-list fadeIn inView">
+                        <ol>
+                            <li>
+                                <span>
+                                    <span class="accent">Class 0</span>: Old High-Value Customer. <span class="accent">Goal</span>: Draw Interest. How:
+                                    <section>
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    Focus on building customer retention by giving discount on high value items.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Provide excellent customer service and ensure a seamless shopping experience for their high-value transactions.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    On-time delivery guarantee, late delivery will result in a free shipment in the next purchase.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Create an appealing and user-friendly experience for the customer.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Give a better shipping services, by live tracking of shipment.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span class="accent">Class 1</span>: Potential Churners. <span class="accent">Goal</span>: Draw Interest & Increase Spending. How:
+                                    <section>
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    Customer re-enggagement by giving an old user promotion to draw back to use the e-commerce.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Collect feedback from these customers to understand their concerns or issues and address them promptly.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span class="accent">Class 2</span>: Best Customer. <span class="accent">Goal</span>: Retain & if possible increase. How:
+                                    <section>
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    Giving promotion on all items include the lower or higher value products.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Provide points and rewards to incentivize repeat purchases.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span class="accent">Class 3</span>: Fresh Shopper. <span class="accent">Goal</span>: Increase Spending. How:
+                                    <section>
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    Implement strategies to increase their average order value by offering bundle deals.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Give a first-timer promotion like free shipping for a whole month.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Provide a detailed purchasing process which with easy to use shopping cart and multiple payment option.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    Show product recommendation by previous purchase.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </span>
+                            </li>
+                        </ol>
+                    </section>
+                    <p style="color: transparent;">
+                        intentionally left blank
+                    </p>
+                    <p>
+                        Please find codes detailed on Github channel.
+                    </p>
+                    <section class="referred-button button" style="position: relative;">
+                        <a href="https://github.com/PurwadhikaDev/GammaGroup_JC_DS_OL_09_FinalProject" target="_blank">
+                            Github
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <section class="contained project-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin">
+                Read next
+            </h2>
+        </section>
+        <section class="contained case-projects-next fadeIn inView">
+            <article class="case-project fadeIn inView">
+                <a href="./porto-2.html">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-2.png" alt="Youtube Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Statistical Analysis on USA Youtube Trending Videos
+                        </span>
+                        <section class="case-project-wrapper">
+                            The project's specific focus is to generate valuable insights tailored for content
+                            creators, marketers, and decision-makers, facilitating a deeper understanding of
+                            YouTube user preferences and consumer behavior within the digital landscape. By
+                            analyzing viewer engagement patterns and trending content topics,
+                            this research aims to equip stakeholders with data-driven strategies to enhance their
+                            online presence and effectively connect with their target audiences on the YouTube platform.
+                        </section>
+                    </p>
+                </a>
+            </article>
+            <article class="case-project fadeIn">
+                <a href="./porto-4.html" class="case-project fadeIn">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-4.jpg" alt="Telco Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Customer Analysis on Olist E-Commerce
+                        </span>
+                        <section class="case-project-wrapper">
+                            In the telecom industry, marketing professionals place a strong emphasis on keeping customers from
+                            switching to rival companies because it's much more cost-effective to retain existing customers than
+                            to acquire new ones. Retention is a top priority, and a common strategy involves offering special
+                            packages. However, this can be expensive if extended to all customers since only a small fraction
+                            typically consider leaving, or "churning". To address this challenge, a predictive model will be
+                            created to generate churn scores as indicators. These scores will help identify early signs of potential
+                            churn, allowing the company to take proactive measures to prevent customers from actually unsubscribing.
+                        </section>
+                    </p>
+                </a>
+            </article>
+        </section>
+        <section class="project-list fadeIn inView" style="margin-top: -30px;">
+            <div class="cta">
+                <a class="blunt-button" href="../projects.html">
+                    All Projects
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/project-selector.js"></script>
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+</html>
