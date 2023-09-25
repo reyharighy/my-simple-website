@@ -551,14 +551,14 @@ footer, header, nav, section, main {
     animation-delay: .5s;
 }
 
-/* header.main-navigation, .fadeIn { */
-/*     opacity: 0; */
-/*     transition: opacity 1s ease-in-out */
-/* } */
+header.main-navigation, .fadeIn {
+    opacity: 0;
+    transition: opacity 1s ease-in-out
+}
 
-/* header.main-navigation.inView, .fadeIn.inView { */
-/*     opacity: 1; */
-/* } */
+header.main-navigation.inView, .fadeIn.inView {
+    opacity: 1;
+}
 
 .project-entries {
     margin-bottom: var(--space-1);
