@@ -1,11 +1,12 @@
 //-------------------------------- SKILLSET CAROUSEL --------------------------------
+let currentSlide = 0;
 
 window.addEventListener('load', (event) => {
     let carousel = document.querySelector('.skillset-carousel');
     if(carousel == null) return;
     
     let slides = carousel.querySelectorAll('.slide');
-    let currentSlide = 0;
+    // let currentSlide = 0;
 
     // Initial setup
     slides[currentSlide].className = 'slide active';
@@ -38,7 +39,7 @@ function setupSkillsetCarouselHeight() {
     if(carousel == null) return;
     
     let slides = carousel.querySelectorAll('.slide');
-    let currentSlide = 0;
+    // let currentSlide = 0;
 
     slides[currentSlide].className = 'slide active';
     carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
@@ -158,17 +159,6 @@ function setupInsightCarouselHeightP1() {
     carouselP1.style.height = `${slidesP1[currentSlideP1].offsetHeight}px`;
 }
 
-function setupInsightCarouselWidthP1() {
-    let carouselP1 = document.querySelector('.insight-carousel-part1');
-    if (carouselP1 == null) return;
-    
-    let slidesP1 = carouselP1.querySelectorAll('.slide');
-    let currentSlideP1 = 0;
-
-    slidesP1[currentSlideP1].className = 'slide active';
-    carouselP1.style.width = `${slidesP1[currentSlideP1].offsetWidth}px`;
-}
-
 function setupInsightPromptCarouselHeightP1() {
     let carouselPromptP1 = document.querySelector('.insight-prompt-carousel-part1');
     if (carouselPromptP1 == null) return;
@@ -183,10 +173,6 @@ function setupInsightPromptCarouselHeightP1() {
 // Resize
 window.addEventListener('resize', function(event) {
     setupInsightCarouselHeightP1();
-}, true);
-
-window.addEventListener('resize', function(event) {
-    setupInsightCarouselWidthP1();
 }, true);
 
 window.addEventListener('resize', function(event) {
@@ -325,6 +311,17 @@ function setupInsightCarouselHeightP3() {
 
     slidesP3[currentSlideP3].className = 'slide active';
     carouselP3.style.height = `${slidesP3[currentSlideP3].offsetHeight}px`;
+}
+
+function setupInsightCarouselWidthP3() {
+    let carouselP1 = document.querySelector('.insight-carousel-part1');
+    if (carouselP1 == null) return;
+    
+    let slidesP1 = carouselP1.querySelectorAll('.slide');
+    let currentSlideP1 = 0;
+
+    slidesP1[currentSlideP1].className = 'slide active';
+    carouselP1.style.width = `${slidesP1[currentSlideP1].offsetWidth}px`;
 }
 
 function setupInsightPromptCarouselHeightP3() {
