@@ -1399,26 +1399,6 @@ blockquote {
     width: 100%;
 }
 
-.insight-prompt .bottomContent ol li span {
-    font-family: "Serif";
-    font-size: 1.5vw;
-    margin-bottom: var(--space-1);
-    line-height: 1.5;
-    margin-left: 2vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-}
-
-#ord-list ol li span {
-    font-family: "Serif";
-    font-size: 1.5vw;
-    margin-bottom: var(--space-1);
-    line-height: 1.75;
-    margin-left: 2vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-}
-
 .skillset .topContent img {
     width: 63px;
     height: 63px;
@@ -1925,4 +1905,17 @@ article.journal .main div.content .para-list ol li ul span .accent {
     font-size: 1.5vw;
     color: var(--accent);
     text-shadow: 0px 0px .5px #505050;
+}
+
+.insight-prompt .bottomContent .para-list ol li {
+    font-family: "Serif",serif;
+    font-size: 1.5vw;
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.insight-prompt .bottomContent .para-list ol li span {
+    font-size: 1.5vw;
+    line-height: 1.5;
 }
