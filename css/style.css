@@ -1907,7 +1907,7 @@ article.journal .main div.content .para-list ol li ul span .accent {
     text-shadow: 0px 0px .5px #505050;
 }
 
-.insight-prompt .bottomContent .para-list ol li {
+.insight-prompt div.bottomContent p section.para-list ol li {
     font-family: "Serif",serif;
     font-size: 1.5vw;
     margin-left: 25px;
@@ -1915,7 +1915,6 @@ article.journal .main div.content .para-list ol li ul span .accent {
     margin-bottom: 10px;
 }
 
-.insight-prompt .bottomContent .para-list ol li span {
-    font-size: 1.5vw;
+.insight-prompt div.bottomContent p section.para-list ol li span {
     line-height: 1.5;
 }
