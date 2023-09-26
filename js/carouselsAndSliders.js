@@ -1,9 +1,10 @@
 //-------------------------------- SKILLSET CAROUSEL --------------------------------
-let carouselSkillset = document.querySelector('.skillset-carousel');
-let slidesSkillset = carouselSkillset.querySelectorAll('.slide');
 let currentSlideSkillset = 0;
 
 window.addEventListener('load', (event) => {
+    let carouselSkillset = document.querySelector('.skillset-carousel');
+    let slidesSkillset = carouselSkillset.querySelectorAll('.slide');
+
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
@@ -26,6 +27,9 @@ window.addEventListener('load', (event) => {
 });
 
 function setupSkillsetCarouselHeight() {
+    let carouselSkillset = document.querySelector('.skillset-carousel');
+    let slidesSkillset = carouselSkillset.querySelectorAll('.slide');
+
     slidesSkillset[currentSlideSkillset].className = 'slide active';
     carouselSkillset.style.height = `${slidesSkillset[currentSlideSkillset].offsetHeight}px`;
 }
@@ -37,11 +41,12 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END SKILLSET CAROUSEL --------------------------------
 
 //-------------------------------- CRUD FEATURE CAROUSEL --------------------------------
-let carouselFeature = document.querySelector('.feature-carousel');
-let slidesFeature = carouselFeature.querySelectorAll('.slide');
 let currentSlideFeature = 0;
 
 window.addEventListener('load', (event) => {
+    let carouselFeature = document.querySelector('.feature-carousel');
+    let slidesFeature = carouselFeature.querySelectorAll('.slide');
+
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
@@ -65,6 +70,9 @@ window.addEventListener('load', (event) => {
 });
 
 function setupFeatureCarouselHeight() {
+    let carouselFeature = document.querySelector('.feature-carousel');
+    let slidesFeature = carouselFeature.querySelectorAll('.slide');
+
     slidesFeature[currentSlideFeature].className = 'slide active';
     carouselFeature.style.height = `${slidesFeature[currentSlideFeature].offsetHeight}px`;
 }
