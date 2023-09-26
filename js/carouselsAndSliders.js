@@ -5,6 +5,10 @@ window.addEventListener('load', (event) => {
     let carouselSkillset = document.querySelector('.skillset-carousel');
     let slidesSkillset = carouselSkillset.querySelectorAll('.slide');
 
+    // Initial
+    slidesSkillset[currentSlideSkillset].className = 'slide active';
+    setupSkillsetCarouselHeight();
+
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
