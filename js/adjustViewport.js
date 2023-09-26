@@ -1,8 +1,8 @@
 function adjustViewportWidth() {
     if (window.innerWidth < 765) {
-        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=764, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=764, initial-scale=2.0, maximum-scale=1.0,);
     } else {
-        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
     }
 }
 
