@@ -51,6 +51,10 @@ window.addEventListener('load', (event) => {
     let carouselFeature = document.querySelector('.feature-carousel');
     let slidesFeature = carouselFeature.querySelectorAll('.slide');
 
+    // Initial
+    slidesFeature[currentSlideFeature].className = 'slide active';
+    setupFeatureCarouselHeight();
+
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
@@ -70,7 +74,6 @@ window.addEventListener('load', (event) => {
         // Adjust carousel height based on active slide
         setupFeatureCarouselHeight();
     }
-
 });
 
 function setupFeatureCarouselHeight() {
