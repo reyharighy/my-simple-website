@@ -1386,8 +1386,7 @@ blockquote {
     display: flex;
     align-items: center;
     align-self: center;
-    position: relative;
-    max-width: 100%;
+    width: 100%;
     border-radius: 30px;
 }
 
@@ -1397,12 +1396,27 @@ blockquote {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
 }
 
-#para-carousel {
-    margin-bottom: -12.5%;
+.insight-prompt .bottomContent ol li span {
+    font-family: "Serif";
+    font-size: 1.5vw;
+    margin-bottom: var(--space-1);
+    line-height: 1.5;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#ord-list ol li span {
+    font-family: "Serif";
+    font-size: 1.5vw;
+    margin-bottom: var(--space-1);
+    line-height: 1.75;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
 .skillset .topContent img {
