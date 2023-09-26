@@ -110,11 +110,11 @@
                     <h2>
                         Data Understanding
                     </h2>
-                    <p style="margin-bottom: 0px;">
+                    <p>
                         This dataset is provided as material for working on the topic of Trending Video Statistics on YouTube specifically for the United States region. In the early stages, the information contained will be described in more depth to understand its characteristics. As material for analysis, the datasets used are sourced from <a href="https://drive.google.com/drive/folders/1JFhDSfs4vzWuCdsBFObEp5sVLQMo-dR1" target="_blank"><span>following link</span></a>, for each row the data contained consists of 16 columns, each of which contains information as follows:
                     </p>
                     <img src="../images/project/project-2/youtube-data-info.png" alt="dataset-info" style="display: grid; width: 150%; margin: 30px; margin-left: -25%; border-radius: 30px;">
-                    <p style="margin-top: 0px;">
+                    <p>
                         The dataset will go through some kind of data cleansing and feature engineering processes in order to make it well-prepared before taking into account of Exploratory Data Analysis.
                     </p>
                     <h2>
@@ -126,112 +126,118 @@
                     <p>
                         The analysis in this section is to identify impression metrics based on data in the views column. Here it will be examined whether there is a significant difference between the average number of views in each video category.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part1" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part1">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/views-dist.png" alt="views distribution">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/views-per-cat.png" alt="views per category">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-views-videos.png" alt="top 10 viewed videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-views-channels.png" alt="top 10 viewed channels">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part1" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part1">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/views-dist.png" alt="views distribution">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/views-per-cat.png" alt="views per category">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-views-videos.png" alt="top 10 viewed videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-views-channels.png" alt="top 10 viewed channels">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part1">
                             <li class="slide active">
@@ -336,7 +342,10 @@
                     <p>
                         Engagement is a term used to describe the interaction between viewers and uploaded content. It includes various things such as the number of likes, dislikes, and comments. Here the data will be filtered based on the feature availability status in ratings and comments.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                    <section class="insight-carousel-container fadeIn inView">
                         <div>
                             <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
                                 <button class="animate-arrow arrow-left-part2" aria-label="Previous">
@@ -442,6 +451,9 @@
                             </div>
                         </div>
                     </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part2">
                             <li class="slide active">
@@ -510,105 +522,111 @@
                     <p>
                         Growth Analysis is a process of measuring and evaluating the growth of an aspect. This analysis can provide valuable information to improve YouTube service performance and predict future growth. By knowing the growth trends in each category, YouTube can determine a priority scale to make recommendations regarding which industries are currently popular.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part3" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part3" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part3">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/growth-trends-viewed.png" alt="top viewed growth trends">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/growth-trends-engaged.png" alt="top engaged growth trends">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/corr-matrix.png" alt="growth correlation matrix">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part3" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part3">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/growth-trends-viewed.png" alt="top viewed growth trends">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/growth-trends-engaged.png" alt="top engaged growth trends">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/corr-matrix.png" alt="growth correlation matrix">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part3" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part3">
                             <li class="slide active">
@@ -646,98 +664,104 @@
                     <p>
                         After understanding the significant relationship between the number of views and engagement. We will try to analyze turnover from each increase in views to the number of engagements in terms of engagement rate.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part4" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part4" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part4">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/engagement-rate-trends.png" alt="engagement rate trends">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/corr-matrix-engagement.png" alt="engagement rate corr matrix">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part4" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part4">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/engagement-rate-trends.png" alt="engagement rate trends">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/corr-matrix-engagement.png" alt="engagement rate corr matrix">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part4" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part4">
                             <li class="slide active">
@@ -763,112 +787,119 @@
                     <h3>
                         Decline in Engagement Rate
                     </h3>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part5" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                    <p style="opacity: 0; margin: 0; height: 0;">That way, we will discuss this phenomenon in depth according That way, we will discuss this phenomenon in depth according</p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part5" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part5">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/decline-dist.png" alt="distribution of decline rate">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/decline-per-cat.png" alt="decline rate per category">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-viewed-decline.png" alt="decline rate of top 10 viewed videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-engaged-decline.png" alt="decline rate of top 10 engaged videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part5" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part5">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/decline-dist.png" alt="distribution of decline rate">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/decline-per-cat.png" alt="decline rate per category">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-viewed-decline.png" alt="decline rate of top 10 viewed videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-engaged-decline.png" alt="decline rate of top 10 engaged videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part5" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part5">
                             <li class="slide active">
@@ -934,112 +965,118 @@
                     <p>
                         Days-to-trending is a metric used to measure the time it takes for a video to enter the trending list on YouTube. The calculation is done by calculating the difference between the date the video was uploaded and the date the video was first trending.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part6" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part6" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part6">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/day-trend-dist.png" alt="days-to-trending distribution">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/day-trend-cat.png" alt="overall days-to-trending per category">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-days-trend-viewed.png" alt="days-to-trending of top 10 viewed videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-days-trend-engaged.png" alt="days-to-trending of top 10 engaged videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part6" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part6">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/day-trend-dist.png" alt="days-to-trending distribution">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/day-trend-cat.png" alt="overall days-to-trending per category">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-days-trend-viewed.png" alt="days-to-trending of top 10 viewed videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-days-trend-engaged.png" alt="days-to-trending of top 10 engaged videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part6" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part6">
                             <li class="slide active">
@@ -1086,112 +1123,118 @@
                     <p>
                         Trending on YouTube refers to videos or content that are currently popular at a particular moment. Trending is calculated based on a number of factors, including the number of views, level of engagement, and speed of growth of views. YouTube has a special section for content that is trending, which users can see when opening the main page or doing a search on the platform.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part7" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part7" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part7">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/trend-duration-dist.png" alt="trending duration distribution">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/trend-duration-cat.png" alt="overall trending duration per category">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-duration-viewed.png" alt="trending duration of top-10 viewed videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-duration-engaged.png" alt="trending duration of top 10 engaged videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part7" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part7">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/trend-duration-dist.png" alt="trending duration distribution">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/trend-duration-cat.png" alt="overall trending duration per category">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-duration-viewed.png" alt="trending duration of top-10 viewed videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-duration-engaged.png" alt="trending duration of top 10 engaged videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part7" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part7">
                             <li class="slide active">
@@ -1237,7 +1280,7 @@
                     </h3>
                     <p>
                         The quality of a video in this discussion is based on engagement rate which develops every time it is trending. The quality of a video can change depending on how big the effect of decline is received. Therefore, the categorization will be made with the following provisions:
-                        <section>
+                        <section id="ord-list">
                             <ol>
                                 <li>
                                     <span>
@@ -1262,105 +1305,111 @@
                             </ol>
                         </section>
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part8" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part8" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part8">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/quality-density.png" alt="video quality density on Duration">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/corr-matrix-quality.png" alt="correlation matrix of videos' quality">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/quality-proportion.png" alt="video quality proportion">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part8" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part8">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/quality-density.png" alt="video quality density on Duration">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/corr-matrix-quality.png" alt="correlation matrix of videos' quality">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/quality-proportion.png" alt="video quality proportion">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part8" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part8">
                             <li class="slide active">
@@ -1398,105 +1447,111 @@
                     <p>
                         Sentiment ratio refers to the ratio of positive and negative sentiments expressed in a video. This ratio is calculated by dividing the number of negative sentiments by the positive sentiments expressed. Sentiment ratio can assist in evaluating audience response and can be used to measure the popularity or success of a product, brand, or campaign embedded in a circulating video.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part9" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part9" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part9">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/sentiment-dist.png" alt="distribution of sentiment ratio">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/sentiment-cat.png" alt="overall sentiment ratio per category">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-unfavorable.png" alt="top-10-unfavorable videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part9" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part9">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/sentiment-dist.png" alt="distribution of sentiment ratio">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/sentiment-cat.png" alt="overall sentiment ratio per category">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-unfavorable.png" alt="top-10-unfavorable videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part9" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part9">
                             <li class="slide active">
@@ -1534,119 +1589,125 @@
                     <p>
                         Similarity degree is a measure to measure the extent to which two or more objects have the same context in terms of certain characteristics, features or characteristics. This calculation is obtained from a comparison of the number of common tags of the total tags used by a video.
                     </p>
-                    <section class="insight-carousel-container fadeIn inView" style="width: 150%; margin-left: -25%;">
-                        <div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-left-part10" aria-label="Previous">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part10" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div style="position: relative;">
-                                <ul class="insight-carousel-part10">
-                                    <li class="slide active">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/similar-dist.png" alt="distribution of tags similarness">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/similar-cat.png" alt="overall similarity per category">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-similar-viewed.png" alt="similarity of top-10 viewed videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/top-10-similar-engaged.png" alt="similarity of top-10 engaged videos">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                    <li class="slide">
-                                        <blockquote class="insight">
-                                            <div class="topContent">
-                                                <img src="../images/project/project-2/similar-proportion.png" alt="video similarity proportion">
-                                            </div>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
-                                <button class="animate-arrow arrow-right-part10" aria-label="Next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
-                                    viewBox="0 0 38.616 68.83">
-                                        <defs>
-                                            <clippath id="clip-path">
-                                                <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
-                                                transform="translate(9 0)" fill="none"></rect>
-                                            </clippath>
-                                            <clippath id="clip-path-2">
-                                                <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
-                                                transform="translate(0 0)" fill="none"></rect>
-                                            </clippath>
-                                        </defs>
-                                        <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
-                                            <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
-                                                <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
-                                                    <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
-                                                    stroke="#2a2b34" stroke-width="1"></line>
-                                                </g>
-                                            </g>
-                                            <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
-                                            transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                            <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
-                                                <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
-                                                    <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                    <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
-                                                    fill="none" stroke="#2a2b34" stroke-width="1"></path>
-                                                </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
                                             </g>
                                         </g>
-                                    </svg>
-                                </button>
-                            </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
-                    </section>
+                        <div style="position: relative;">
+                            <ul class="insight-carousel-part10">
+                                <li class="slide active">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/similar-dist.png" alt="distribution of tags similarness">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/similar-cat.png" alt="overall similarity per category">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-similar-viewed.png" alt="similarity of top-10 viewed videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/top-10-similar-engaged.png" alt="similarity of top-10 engaged videos">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-2/similar-proportion.png" alt="video similarity proportion">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part10" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
                     <section class="insight-prompt-carousel-container fadeIn inView">
                         <ul class="insight-prompt-carousel-part10">
                             <li class="slide active">
@@ -1701,7 +1762,7 @@
                     </h2>
                     <p>
                         It is necessary to evaluate all insights that have been generated in the Exloratory Data Analysis section, which are as follows:
-                        <section>
+                        <section id="ord-list">
                             <ol>
                                 <li>
                                     <span>
