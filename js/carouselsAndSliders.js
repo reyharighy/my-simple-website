@@ -1,16 +1,20 @@
 //-------------------------------- SKILLSET CAROUSEL --------------------------------
 let currentSlide = 0;
+let carousel = document.querySelector('.skillset-carousel');
+// if (carousel == null) return;
+
+let slides = carousel.querySelectorAll('.slide');
 
 window.addEventListener('load', (event) => {
-    let carousel = document.querySelector('.skillset-carousel');
-    if(carousel == null) return;
+    // let carousel = document.querySelector('.skillset-carousel');
+    // if (carousel == null) return;
     
-    let slides = carousel.querySelectorAll('.slide');
+    // let slides = carousel.querySelectorAll('.slide');
     // let currentSlide = 0;
 
     // Initial setup
     slides[currentSlide].className = 'slide active';
-    setupSkillsetCarouselHeight();
+    // setupSkillsetCarouselHeight();
 
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
@@ -21,7 +25,8 @@ window.addEventListener('load', (event) => {
         currentSlide = (currentSlide+1)%slides.length;
         slides[currentSlide].className = 'slide active';
         // Adjust carousel height based on active slide
-        carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+        // carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+        setupSkillsetCarouselHeight();
     }
     
     function prevSlide() {
@@ -29,16 +34,16 @@ window.addEventListener('load', (event) => {
         currentSlide = (currentSlide-1+slides.length)%slides.length;
         slides[currentSlide].className = 'slide active';
         // Adjust carousel height based on active slide
-        carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+        // carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+        setupSkillsetCarouselHeight();
     }
-
 });
 
 function setupSkillsetCarouselHeight() {
-    let carousel = document.querySelector('.skillset-carousel');
-    if(carousel == null) return;
+    // let carousel = document.querySelector('.skillset-carousel');
+    // if(carousel == null) return;
     
-    let slides = carousel.querySelectorAll('.slide');
+    // let slides = carousel.querySelectorAll('.slide');
     // let currentSlide = 0;
 
     slides[currentSlide].className = 'slide active';
