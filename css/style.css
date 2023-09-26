@@ -901,7 +901,7 @@ section.project-list .cta a {
     }
 
     .poppins-14 {
-        font-size: 2vw;
+        opacity: 0;
     }
 }
 
