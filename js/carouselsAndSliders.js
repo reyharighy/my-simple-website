@@ -1,53 +1,33 @@
 //-------------------------------- SKILLSET CAROUSEL --------------------------------
-let currentSlide = 0;
-let carousel = document.querySelector('.skillset-carousel');
-// if (carousel == null) return;
-
-let slides = carousel.querySelectorAll('.slide');
+let carouselSkillset = document.querySelector('.skillset-carousel');
+let slidesSkillset = carouselSkillset.querySelectorAll('.slide');
+let currentSlideSkillset = 0;
 
 window.addEventListener('load', (event) => {
-    // let carousel = document.querySelector('.skillset-carousel');
-    // if (carousel == null) return;
-    
-    // let slides = carousel.querySelectorAll('.slide');
-    // let currentSlide = 0;
-
-    // Initial setup
-    slides[currentSlide].className = 'slide active';
-    // setupSkillsetCarouselHeight();
-
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
 
     function nextSlide() {
-        slides[currentSlide].className = 'slide';
-        currentSlide = (currentSlide+1)%slides.length;
-        slides[currentSlide].className = 'slide active';
+        slidesSkillset[currentSlideSkillset].className = 'slide';
+        currentSlideSkillset = (currentSlideSkillset+1)%slidesSkillset.length;
+        slidesSkillset[currentSlideSkillset].className = 'slide active';
         // Adjust carousel height based on active slide
-        // carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
         setupSkillsetCarouselHeight();
     }
     
     function prevSlide() {
-        slides[currentSlide].className = 'slide';
-        currentSlide = (currentSlide-1+slides.length)%slides.length;
-        slides[currentSlide].className = 'slide active';
+        slidesSkillset[currentSlideSkillset].className = 'slide';
+        currentSlideSkillset = (currentSlideSkillset-1+slidesSkillset.length)%slidesSkillset.length;
+        slidesSkillset[currentSlideSkillset].className = 'slide active';
         // Adjust carousel height based on active slide
-        // carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
         setupSkillsetCarouselHeight();
     }
 });
 
 function setupSkillsetCarouselHeight() {
-    // let carousel = document.querySelector('.skillset-carousel');
-    // if(carousel == null) return;
-    
-    // let slides = carousel.querySelectorAll('.slide');
-    // let currentSlide = 0;
-
-    slides[currentSlide].className = 'slide active';
-    carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+    slidesSkillset[currentSlideSkillset].className = 'slide active';
+    carouselSkillset.style.height = `${slidesSkillset[currentSlideSkillset].offsetHeight}px`;
 }
 
 // Resize
@@ -57,49 +37,36 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END SKILLSET CAROUSEL --------------------------------
 
 //-------------------------------- CRUD FEATURE CAROUSEL --------------------------------
+let carouselFeature = document.querySelector('.feature-carousel');
+let slidesFeature = carouselFeature.querySelectorAll('.slide');
+let currentSlideFeature = 0;
 
 window.addEventListener('load', (event) => {
-    let carousel = document.querySelector('.feature-carousel');
-    if(carousel == null) return;
-    
-    let slides = carousel.querySelectorAll('.slide');
-    let currentSlide = 0;
-
-    // Initial setup
-    slides[currentSlide].className = 'slide active';
-    setupFeatureCarouselHeight();
-
     // Add event listeners to buttons
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
 
     function nextSlide() {
-        slides[currentSlide].className = 'slide';
-        currentSlide = (currentSlide+1)%slides.length;
-        slides[currentSlide].className = 'slide active';
+        slidesFeature[currentSlideFeature].className = 'slide';
+        currentSlideFeature = (currentSlideFeature+1)%slidesFeature.length;
+        slidesFeature[currentSlideFeature].className = 'slide active';
         // Adjust carousel height based on active slide
-        carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+        setupFeatureCarouselHeight();
     }
     
     function prevSlide() {
-        slides[currentSlide].className = 'slide';
-        currentSlide = (currentSlide-1+slides.length)%slides.length;
-        slides[currentSlide].className = 'slide active';
+        slidesFeature[currentSlideFeature].className = 'slide';
+        currentSlideFeature = (currentSlideFeature-1+slidesFeature.length)%slidesFeature.length;
+        slidesFeature[currentSlideFeature].className = 'slide active';
         // Adjust carousel height based on active slide
-        carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+        setupFeatureCarouselHeight();
     }
 
 });
 
 function setupFeatureCarouselHeight() {
-    let carousel = document.querySelector('.feature-carousel');
-    if(carousel == null) return;
-    
-    let slides = carousel.querySelectorAll('.slide');
-    let currentSlide = 0;
-
-    slides[currentSlide].className = 'slide active';
-    carousel.style.height = `${slides[currentSlide].offsetHeight}px`;
+    slidesFeature[currentSlideFeature].className = 'slide active';
+    carouselFeature.style.height = `${slidesFeature[currentSlideFeature].offsetHeight}px`;
 }
 
 // Resize
