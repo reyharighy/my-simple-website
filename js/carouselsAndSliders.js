@@ -91,15 +91,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END FEATURE CAROUSEL --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART1 --------------------------------
+let currentSlideP1 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP1 = document.querySelector('.insight-carousel-part1');
     let carouselPromptP1 = document.querySelector('.insight-prompt-carousel-part1');
-    if (carouselP1 == null) return;
-    if (carouselPromptP1 == null) return;
-    
     let slidesP1 = carouselP1.querySelectorAll('.slide');
     let slidesPromptP1 = carouselPromptP1.querySelectorAll('.slide');
-    let currentSlideP1 = 0;
 
     // Initial setup
     slidesP1[currentSlideP1].className = 'slide active';
@@ -118,8 +116,8 @@ window.addEventListener('load', (event) => {
         slidesP1[currentSlideP1].className = 'slide active';
         slidesPromptP1[currentSlideP1].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP1.style.height = `${slidesP1[currentSlideP1].offsetHeight}px`;
-        carouselPromptP1.style.height = `${slidesPromptP1[currentSlideP1].offsetHeight}px`;
+        setupInsightCarouselHeightP1();
+        setupInsightPromptCarouselHeightP1();
     }
     
     function prevSlide() {
@@ -129,18 +127,15 @@ window.addEventListener('load', (event) => {
         slidesP1[currentSlideP1].className = 'slide active';
         slidesPromptP1[currentSlideP1].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP1.style.height = `${slidesP1[currentSlideP1].offsetHeight}px`;
-        carouselPromptP1.style.height = `${slidesPromptP1[currentSlideP1].offsetHeight}px`;
+        setupInsightCarouselHeightP1();
+        setupInsightPromptCarouselHeightP1();
     }
 
 });
 
 function setupInsightCarouselHeightP1() {
     let carouselP1 = document.querySelector('.insight-carousel-part1');
-    if (carouselP1 == null) return;
-    
     let slidesP1 = carouselP1.querySelectorAll('.slide');
-    let currentSlideP1 = 0;
 
     slidesP1[currentSlideP1].className = 'slide active';
     carouselP1.style.height = `${slidesP1[currentSlideP1].offsetHeight}px`;
@@ -148,10 +143,7 @@ function setupInsightCarouselHeightP1() {
 
 function setupInsightPromptCarouselHeightP1() {
     let carouselPromptP1 = document.querySelector('.insight-prompt-carousel-part1');
-    if (carouselPromptP1 == null) return;
-    
     let slidesPromptP1 = carouselPromptP1.querySelectorAll('.slide');
-    let currentSlideP1 = 0;
 
     slidesPromptP1[currentSlideP1].className = 'slide active';
     carouselPromptP1.style.height = `${slidesPromptP1[currentSlideP1].offsetHeight}px`;
@@ -168,15 +160,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART1 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART2 --------------------------------
+let currentSlideP2 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP2 = document.querySelector('.insight-carousel-part2');
     let carouselPromptP2 = document.querySelector('.insight-prompt-carousel-part2');
-    if(carouselP2 == null) return;
-    if(carouselPromptP2 == null) return;
-    
     let slidesP2 = carouselP2.querySelectorAll('.slide');
     let slidesPromptP2 = carouselPromptP2.querySelectorAll('.slide');
-    let currentSlideP2 = 0;
 
     // Initial setup
     slidesP2[currentSlideP2].className = 'slide active';
@@ -195,8 +185,8 @@ window.addEventListener('load', (event) => {
         slidesP2[currentSlideP2].className = 'slide active';
         slidesPromptP2[currentSlideP2].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP2.style.height = `${slidesP2[currentSlideP2].offsetHeight}px`;
-        carouselPromptP2.style.height = `${slidesPromptP2[currentSlideP2].offsetHeight}px`;
+        setupInsightCarouselHeightP2();
+        setupInsightPromptCarouselHeightP2();
     }
     
     function prevSlide() {
@@ -206,18 +196,15 @@ window.addEventListener('load', (event) => {
         slidesP2[currentSlideP2].className = 'slide active';
         slidesPromptP2[currentSlideP2].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP2.style.height = `${slidesP2[currentSlideP2].offsetHeight}px`;
-        carouselPromptP2.style.height = `${slidesPromptP2[currentSlideP2].offsetHeight}px`;
+        setupInsightCarouselHeightP2();
+        setupInsightPromptCarouselHeightP2();
     }
 
 });
 
 function setupInsightCarouselHeightP2() {
     let carouselP2 = document.querySelector('.insight-carousel-part2');
-    if(carouselP2 == null) return;
-    
     let slidesP2 = carouselP2.querySelectorAll('.slide');
-    let currentSlideP2 = 0;
 
     slidesP2[currentSlideP2].className = 'slide active';
     carouselP2.style.height = `${slidesP2[currentSlideP2].offsetHeight}px`;
@@ -225,10 +212,7 @@ function setupInsightCarouselHeightP2() {
 
 function setupInsightPromptCarouselHeightP2() {
     let carouselPromptP2 = document.querySelector('.insight-prompt-carousel-part2');
-    if(carouselPromptP2 == null) return;
-    
     let slidesPromptP2 = carouselPromptP2.querySelectorAll('.slide');
-    let currentSlideP2 = 0;
 
     slidesPromptP2[currentSlideP2].className = 'slide active';
     carouselPromptP2.style.height = `${slidesPromptP2[currentSlideP2].offsetHeight}px`;
@@ -245,15 +229,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART2 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART3 --------------------------------
+let currentSlideP3 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP3 = document.querySelector('.insight-carousel-part3');
     let carouselPromptP3 = document.querySelector('.insight-prompt-carousel-part3');
-    if(carouselP3 == null) return;
-    if(carouselPromptP3 == null) return;
-    
     let slidesP3 = carouselP3.querySelectorAll('.slide');
     let slidesPromptP3 = carouselPromptP3.querySelectorAll('.slide');
-    let currentSlideP3 = 0;
 
     // Initial setup
     slidesP3[currentSlideP3].className = 'slide active';
@@ -272,8 +254,8 @@ window.addEventListener('load', (event) => {
         slidesP3[currentSlideP3].className = 'slide active';
         slidesPromptP3[currentSlideP3].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP3.style.height = `${slidesP3[currentSlideP3].offsetHeight}px`;
-        carouselPromptP3.style.height = `${slidesPromptP3[currentSlideP3].offsetHeight}px`;
+        setupInsightCarouselHeightP3();
+        setupInsightPromptCarouselHeightP3();
     }
     
     function prevSlide() {
@@ -283,18 +265,15 @@ window.addEventListener('load', (event) => {
         slidesP3[currentSlideP3].className = 'slide active';
         slidesPromptP3[currentSlideP3].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP3.style.height = `${slidesP3[currentSlideP3].offsetHeight}px`;
-        carouselPromptP3.style.height = `${slidesPromptP3[currentSlideP3].offsetHeight}px`;
+        setupInsightCarouselHeightP3();
+        setupInsightPromptCarouselHeightP3();
     }
 
 });
 
 function setupInsightCarouselHeightP3() {
     let carouselP3 = document.querySelector('.insight-carousel-part3');
-    if(carouselP3 == null) return;
-    
     let slidesP3 = carouselP3.querySelectorAll('.slide');
-    let currentSlideP3 = 0;
 
     slidesP3[currentSlideP3].className = 'slide active';
     carouselP3.style.height = `${slidesP3[currentSlideP3].offsetHeight}px`;
@@ -302,10 +281,7 @@ function setupInsightCarouselHeightP3() {
 
 function setupInsightCarouselWidthP3() {
     let carouselP1 = document.querySelector('.insight-carousel-part1');
-    if (carouselP1 == null) return;
-    
     let slidesP1 = carouselP1.querySelectorAll('.slide');
-    let currentSlideP1 = 0;
 
     slidesP1[currentSlideP1].className = 'slide active';
     carouselP1.style.width = `${slidesP1[currentSlideP1].offsetWidth}px`;
@@ -313,10 +289,7 @@ function setupInsightCarouselWidthP3() {
 
 function setupInsightPromptCarouselHeightP3() {
     let carouselPromptP3 = document.querySelector('.insight-prompt-carousel-part3');
-    if(carouselPromptP3 == null) return;
-    
     let slidesPromptP3 = carouselPromptP3.querySelectorAll('.slide');
-    let currentSlideP3 = 0;
 
     slidesPromptP3[currentSlideP3].className = 'slide active';
     carouselPromptP3.style.height = `${slidesPromptP3[currentSlideP3].offsetHeight}px`;
@@ -333,15 +306,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART3 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART4 --------------------------------
+let currentSlideP4 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP4 = document.querySelector('.insight-carousel-part4');
     let carouselPromptP4 = document.querySelector('.insight-prompt-carousel-part4');
-    if(carouselP4 == null) return;
-    if(carouselPromptP4 == null) return;
-    
     let slidesP4 = carouselP4.querySelectorAll('.slide');
     let slidesPromptP4 = carouselPromptP4.querySelectorAll('.slide');
-    let currentSlideP4 = 0;
 
     // Initial setup
     slidesP4[currentSlideP4].className = 'slide active';
@@ -360,8 +331,8 @@ window.addEventListener('load', (event) => {
         slidesP4[currentSlideP4].className = 'slide active';
         slidesPromptP4[currentSlideP4].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP4.style.height = `${slidesP4[currentSlideP4].offsetHeight}px`;
-        carouselPromptP4.style.height = `${slidesPromptP4[currentSlideP4].offsetHeight}px`;
+        setupInsightCarouselHeightP4();
+        setupInsightPromptCarouselHeightP4();
     }
     
     function prevSlide() {
@@ -371,18 +342,15 @@ window.addEventListener('load', (event) => {
         slidesP4[currentSlideP4].className = 'slide active';
         slidesPromptP4[currentSlideP4].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP4.style.height = `${slidesP4[currentSlideP4].offsetHeight}px`;
-        carouselPromptP4.style.height = `${slidesPromptP4[currentSlideP4].offsetHeight}px`;
+        setupInsightCarouselHeightP4();
+        setupInsightPromptCarouselHeightP4();
     }
 
 });
 
 function setupInsightCarouselHeightP4() {
     let carouselP4 = document.querySelector('.insight-carousel-part4');
-    if(carouselP4 == null) return;
-    
     let slidesP4 = carouselP4.querySelectorAll('.slide');
-    let currentSlideP4 = 0;
 
     slidesP4[currentSlideP4].className = 'slide active';
     carouselP4.style.height = `${slidesP4[currentSlideP4].offsetHeight}px`;
@@ -390,10 +358,7 @@ function setupInsightCarouselHeightP4() {
 
 function setupInsightPromptCarouselHeightP4() {
     let carouselPromptP4 = document.querySelector('.insight-prompt-carousel-part4');
-    if(carouselPromptP4 == null) return;
-    
     let slidesPromptP4 = carouselPromptP4.querySelectorAll('.slide');
-    let currentSlideP4 = 0;
 
     slidesPromptP4[currentSlideP4].className = 'slide active';
     carouselPromptP4.style.height = `${slidesPromptP4[currentSlideP4].offsetHeight}px`;
@@ -410,15 +375,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART4 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART5 --------------------------------
+let currentSlideP5 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP5 = document.querySelector('.insight-carousel-part5');
     let carouselPromptP5 = document.querySelector('.insight-prompt-carousel-part5');
-    if(carouselP5 == null) return;
-    if(carouselPromptP5 == null) return;
-    
     let slidesP5 = carouselP5.querySelectorAll('.slide');
     let slidesPromptP5 = carouselPromptP5.querySelectorAll('.slide');
-    let currentSlideP5 = 0;
 
     // Initial setup
     slidesP5[currentSlideP5].className = 'slide active';
@@ -437,8 +400,8 @@ window.addEventListener('load', (event) => {
         slidesP5[currentSlideP5].className = 'slide active';
         slidesPromptP5[currentSlideP5].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP5.style.height = `${slidesP5[currentSlideP5].offsetHeight}px`;
-        carouselPromptP5.style.height = `${slidesPromptP5[currentSlideP5].offsetHeight}px`;
+        setupInsightCarouselHeightP5();
+        setupInsightPromptCarouselHeightP5();
     }
     
     function prevSlide() {
@@ -448,18 +411,15 @@ window.addEventListener('load', (event) => {
         slidesP5[currentSlideP5].className = 'slide active';
         slidesPromptP5[currentSlideP5].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP5.style.height = `${slidesP5[currentSlideP5].offsetHeight}px`;
-        carouselPromptP5.style.height = `${slidesPromptP5[currentSlideP5].offsetHeight}px`;
+        setupInsightCarouselHeightP5();
+        setupInsightPromptCarouselHeightP5();
     }
 
 });
 
 function setupInsightCarouselHeightP5() {
     let carouselP5 = document.querySelector('.insight-carousel-part5');
-    if(carouselP5 == null) return;
-    
     let slidesP5 = carouselP5.querySelectorAll('.slide');
-    let currentSlideP5 = 0;
 
     slidesP5[currentSlideP5].className = 'slide active';
     carouselP5.style.height = `${slidesP5[currentSlideP5].offsetHeight}px`;
@@ -467,10 +427,7 @@ function setupInsightCarouselHeightP5() {
 
 function setupInsightPromptCarouselHeightP5() {
     let carouselPromptP5 = document.querySelector('.insight-prompt-carousel-part5');
-    if(carouselPromptP5 == null) return;
-    
     let slidesPromptP5 = carouselPromptP5.querySelectorAll('.slide');
-    let currentSlideP5 = 0;
 
     slidesPromptP5[currentSlideP5].className = 'slide active';
     carouselPromptP5.style.height = `${slidesPromptP5[currentSlideP5].offsetHeight}px`;
@@ -487,15 +444,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART5 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART6 --------------------------------
+let currentSlideP6 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP6 = document.querySelector('.insight-carousel-part6');
     let carouselPromptP6 = document.querySelector('.insight-prompt-carousel-part6');
-    if(carouselP6 == null) return;
-    if(carouselPromptP6 == null) return;
-    
     let slidesP6 = carouselP6.querySelectorAll('.slide');
     let slidesPromptP6 = carouselPromptP6.querySelectorAll('.slide');
-    let currentSlideP6 = 0;
 
     // Initial setup
     slidesP6[currentSlideP6].className = 'slide active';
@@ -514,8 +469,8 @@ window.addEventListener('load', (event) => {
         slidesP6[currentSlideP6].className = 'slide active';
         slidesPromptP6[currentSlideP6].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP6.style.height = `${slidesP6[currentSlideP6].offsetHeight}px`;
-        carouselPromptP6.style.height = `${slidesPromptP6[currentSlideP6].offsetHeight}px`;
+        setupInsightCarouselHeightP6();
+        setupInsightPromptCarouselHeightP6();
     }
     
     function prevSlide() {
@@ -525,18 +480,15 @@ window.addEventListener('load', (event) => {
         slidesP6[currentSlideP6].className = 'slide active';
         slidesPromptP6[currentSlideP6].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP6.style.height = `${slidesP6[currentSlideP6].offsetHeight}px`;
-        carouselPromptP6.style.height = `${slidesPromptP6[currentSlideP6].offsetHeight}px`;
+        setupInsightCarouselHeightP6();
+        setupInsightPromptCarouselHeightP6();
     }
 
 });
 
 function setupInsightCarouselHeightP6() {
     let carouselP6 = document.querySelector('.insight-carousel-part6');
-    if(carouselP6 == null) return;
-    
     let slidesP6 = carouselP6.querySelectorAll('.slide');
-    let currentSlideP6 = 0;
 
     slidesP6[currentSlideP6].className = 'slide active';
     carouselP6.style.height = `${slidesP6[currentSlideP6].offsetHeight}px`;
@@ -544,10 +496,7 @@ function setupInsightCarouselHeightP6() {
 
 function setupInsightPromptCarouselHeightP6() {
     let carouselPromptP6 = document.querySelector('.insight-prompt-carousel-part6');
-    if(carouselPromptP6 == null) return;
-    
     let slidesPromptP6 = carouselPromptP6.querySelectorAll('.slide');
-    let currentSlideP6 = 0;
 
     slidesPromptP6[currentSlideP6].className = 'slide active';
     carouselPromptP6.style.height = `${slidesPromptP6[currentSlideP6].offsetHeight}px`;
@@ -564,15 +513,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART6 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART7 --------------------------------
+let currentSlideP7 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP7 = document.querySelector('.insight-carousel-part7');
-    let carouselPromptP7 = document.querySelector('.insight-prompt-carousel-part7');
-    if(carouselP7 == null) return;
-    if(carouselPromptP7 == null) return;
-    
+    let carouselPromptP7 = document.querySelector('.insight-prompt-carousel-part7');    
     let slidesP7 = carouselP7.querySelectorAll('.slide');
     let slidesPromptP7 = carouselPromptP7.querySelectorAll('.slide');
-    let currentSlideP7 = 0;
 
     // Initial setup
     slidesP7[currentSlideP7].className = 'slide active';
@@ -591,8 +538,8 @@ window.addEventListener('load', (event) => {
         slidesP7[currentSlideP7].className = 'slide active';
         slidesPromptP7[currentSlideP7].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP7.style.height = `${slidesP7[currentSlideP7].offsetHeight}px`;
-        carouselPromptP7.style.height = `${slidesPromptP7[currentSlideP7].offsetHeight}px`;
+        setupInsightCarouselHeightP7();
+        setupInsightPromptCarouselHeightP7();
     }
     
     function prevSlide() {
@@ -602,18 +549,15 @@ window.addEventListener('load', (event) => {
         slidesP7[currentSlideP7].className = 'slide active';
         slidesPromptP7[currentSlideP7].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP7.style.height = `${slidesP7[currentSlideP7].offsetHeight}px`;
-        carouselPromptP7.style.height = `${slidesPromptP7[currentSlideP7].offsetHeight}px`;
+        setupInsightCarouselHeightP7();
+        setupInsightPromptCarouselHeightP7();
     }
 
 });
 
 function setupInsightCarouselHeightP7() {
     let carouselP7 = document.querySelector('.insight-carousel-part7');
-    if(carouselP7 == null) return;
-    
     let slidesP7 = carouselP7.querySelectorAll('.slide');
-    let currentSlideP7 = 0;
 
     slidesP7[currentSlideP7].className = 'slide active';
     carouselP7.style.height = `${slidesP7[currentSlideP7].offsetHeight}px`;
@@ -621,10 +565,7 @@ function setupInsightCarouselHeightP7() {
 
 function setupInsightPromptCarouselHeightP7() {
     let carouselPromptP7 = document.querySelector('.insight-prompt-carousel-part7');
-    if(carouselPromptP7 == null) return;
-    
     let slidesPromptP7 = carouselPromptP7.querySelectorAll('.slide');
-    let currentSlideP7 = 0;
 
     slidesPromptP7[currentSlideP7].className = 'slide active';
     carouselPromptP7.style.height = `${slidesPromptP7[currentSlideP7].offsetHeight}px`;
@@ -641,15 +582,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART7 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART8 --------------------------------
+let currentSlideP8 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP8 = document.querySelector('.insight-carousel-part8');
     let carouselPromptP8 = document.querySelector('.insight-prompt-carousel-part8');
-    if(carouselP8 == null) return;
-    if(carouselPromptP8 == null) return;
-    
     let slidesP8 = carouselP8.querySelectorAll('.slide');
     let slidesPromptP8 = carouselPromptP8.querySelectorAll('.slide');
-    let currentSlideP8 = 0;
 
     // Initial setup
     slidesP8[currentSlideP8].className = 'slide active';
@@ -668,8 +607,8 @@ window.addEventListener('load', (event) => {
         slidesP8[currentSlideP8].className = 'slide active';
         slidesPromptP8[currentSlideP8].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP8.style.height = `${slidesP8[currentSlideP8].offsetHeight}px`;
-        carouselPromptP8.style.height = `${slidesPromptP8[currentSlideP8].offsetHeight}px`;
+        setupInsightCarouselHeightP8();
+        setupInsightPromptCarouselHeightP8();
     }
     
     function prevSlide() {
@@ -679,29 +618,23 @@ window.addEventListener('load', (event) => {
         slidesP8[currentSlideP8].className = 'slide active';
         slidesPromptP8[currentSlideP8].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP8.style.height = `${slidesP8[currentSlideP8].offsetHeight}px`;
-        carouselPromptP8.style.height = `${slidesPromptP8[currentSlideP8].offsetHeight}px`;
+        setupInsightCarouselHeightP8();
+        setupInsightPromptCarouselHeightP8();
     }
 
 });
 
 function setupInsightCarouselHeightP8() {
     let carouselP8 = document.querySelector('.insight-carousel-part8');
-    if(carouselP8 == null) return;
-    
     let slidesP8 = carouselP8.querySelectorAll('.slide');
-    let currentSlideP8 = 0;
 
     slidesP8[currentSlideP8].className = 'slide active';
     carouselP8.style.height = `${slidesP8[currentSlideP8].offsetHeight}px`;
 }
 
 function setupInsightPromptCarouselHeightP8() {
-    let carouselPromptP8 = document.querySelector('.insight-prompt-carousel-part8');
-    if(carouselPromptP8 == null) return;
-    
+    let carouselPromptP8 = document.querySelector('.insight-prompt-carousel-part8');    
     let slidesPromptP8 = carouselPromptP8.querySelectorAll('.slide');
-    let currentSlideP8 = 0;
 
     slidesPromptP8[currentSlideP8].className = 'slide active';
     carouselPromptP8.style.height = `${slidesPromptP8[currentSlideP8].offsetHeight}px`;
@@ -718,15 +651,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART8 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART9 --------------------------------
+let currentSlideP9 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP9 = document.querySelector('.insight-carousel-part9');
     let carouselPromptP9 = document.querySelector('.insight-prompt-carousel-part9');
-    if(carouselP9 == null) return;
-    if(carouselPromptP9 == null) return;
-    
     let slidesP9 = carouselP9.querySelectorAll('.slide');
     let slidesPromptP9 = carouselPromptP9.querySelectorAll('.slide');
-    let currentSlideP9 = 0;
 
     // Initial setup
     slidesP9[currentSlideP9].className = 'slide active';
@@ -745,8 +676,8 @@ window.addEventListener('load', (event) => {
         slidesP9[currentSlideP9].className = 'slide active';
         slidesPromptP9[currentSlideP9].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP9.style.height = `${slidesP9[currentSlideP9].offsetHeight}px`;
-        carouselPromptP9.style.height = `${slidesPromptP9[currentSlideP9].offsetHeight}px`;
+        setupInsightCarouselHeightP9();
+        setupInsightPromptCarouselHeightP9();
     }
     
     function prevSlide() {
@@ -756,18 +687,15 @@ window.addEventListener('load', (event) => {
         slidesP9[currentSlideP9].className = 'slide active';
         slidesPromptP9[currentSlideP9].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP9.style.height = `${slidesP9[currentSlideP9].offsetHeight}px`;
-        carouselPromptP9.style.height = `${slidesPromptP9[currentSlideP9].offsetHeight}px`;
+        setupInsightCarouselHeightP9();
+        setupInsightPromptCarouselHeightP9();
     }
 
 });
 
 function setupInsightCarouselHeightP9() {
     let carouselP9 = document.querySelector('.insight-carousel-part9');
-    if(carouselP9 == null) return;
-    
     let slidesP9 = carouselP9.querySelectorAll('.slide');
-    let currentSlideP9 = 0;
 
     slidesP9[currentSlideP9].className = 'slide active';
     carouselP9.style.height = `${slidesP9[currentSlideP9].offsetHeight}px`;
@@ -775,10 +703,7 @@ function setupInsightCarouselHeightP9() {
 
 function setupInsightPromptCarouselHeightP9() {
     let carouselPromptP9 = document.querySelector('.insight-prompt-carousel-part9');
-    if(carouselPromptP9 == null) return;
-    
     let slidesPromptP9 = carouselPromptP9.querySelectorAll('.slide');
-    let currentSlideP9 = 0;
 
     slidesPromptP9[currentSlideP9].className = 'slide active';
     carouselPromptP9.style.height = `${slidesPromptP9[currentSlideP9].offsetHeight}px`;
@@ -795,15 +720,13 @@ window.addEventListener('resize', function(event) {
 //-------------------------------- END INSIGHTS CAROUSEL PART9 --------------------------------
 
 //-------------------------------- INSIGHTS CAROUSEL PART10 --------------------------------
+let currentSlideP10 = 0;
+
 window.addEventListener('load', (event) => {
     let carouselP10 = document.querySelector('.insight-carousel-part10');
     let carouselPromptP10 = document.querySelector('.insight-prompt-carousel-part10');
-    if(carouselP10 == null) return;
-    if(carouselPromptP10 == null) return;
-    
     let slidesP10 = carouselP10.querySelectorAll('.slide');
     let slidesPromptP10 = carouselPromptP10.querySelectorAll('.slide');
-    let currentSlideP10 = 0;
 
     // Initial setup
     slidesP10[currentSlideP10].className = 'slide active';
@@ -822,8 +745,8 @@ window.addEventListener('load', (event) => {
         slidesP10[currentSlideP10].className = 'slide active';
         slidesPromptP10[currentSlideP10].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP10.style.height = `${slidesP10[currentSlideP10].offsetHeight}px`;
-        carouselPromptP10.style.height = `${slidesPromptP10[currentSlideP10].offsetHeight}px`;
+        setupInsightCarouselHeightP10();
+        setupInsightPromptCarouselHeightP10();
     }
     
     function prevSlide() {
@@ -833,18 +756,15 @@ window.addEventListener('load', (event) => {
         slidesP10[currentSlideP10].className = 'slide active';
         slidesPromptP10[currentSlideP10].className = 'slide active';
         // Adjust carousel height based on active slide
-        carouselP10.style.height = `${slidesP10[currentSlideP10].offsetHeight}px`;
-        carouselPromptP10.style.height = `${slidesPromptP10[currentSlideP10].offsetHeight}px`;
+        setupInsightCarouselHeightP10();
+        setupInsightPromptCarouselHeightP10();
     }
 
 });
 
 function setupInsightCarouselHeightP10() {
     let carouselP10 = document.querySelector('.insight-carousel-part10');
-    if(carouselP10 == null) return;
-    
     let slidesP10 = carouselP10.querySelectorAll('.slide');
-    let currentSlideP10 = 0;
 
     slidesP10[currentSlideP10].className = 'slide active';
     carouselP10.style.height = `${slidesP10[currentSlideP10].offsetHeight}px`;
@@ -852,10 +772,7 @@ function setupInsightCarouselHeightP10() {
 
 function setupInsightPromptCarouselHeightP10() {
     let carouselPromptP10 = document.querySelector('.insight-prompt-carousel-part10');
-    if(carouselPromptP10 == null) return;
-    
     let slidesPromptP10 = carouselPromptP10.querySelectorAll('.slide');
-    let currentSlideP10 = 0;
 
     slidesPromptP10[currentSlideP10].className = 'slide active';
     carouselPromptP10.style.height = `${slidesPromptP10[currentSlideP10].offsetHeight}px`;
@@ -870,132 +787,3 @@ window.addEventListener('resize', function(event) {
     setupInsightPromptCarouselHeightP10();
 }, true);
 //-------------------------------- END INSIGHTS CAROUSEL PART10 --------------------------------
-
-//******** CAROUSEL ************/
-// window.addEventListener('load', (event) => {
-//     var carousels = document.querySelectorAll('.carousel');
-
-//     carousels.forEach(function(carousel) {
-//         var isDown = false;
-//         var startX, scrollLeft;
-//         var velX = 0;
-//         var momentumID;
-
-//         carousel.addEventListener('mousedown', (e) => {
-//             isDown = true;
-//             carousel.classList.add('active');
-//             startX = e.pageX - carousel.offsetLeft;
-//             scrollLeft = carousel.scrollLeft;
-//             cancelMomentumTracking();
-//         });
-
-//         carousel.addEventListener('mouseleave', () => {
-//             isDown = false;
-//             carousel.classList.remove('active');
-//         });
-
-//         carousel.addEventListener('mouseup', () => {
-//             isDown = false;
-//             carousel.classList.remove('active');
-//             carousel.style.transition = 'all 0.25s';
-//             beginMomentumTracking();
-//         });
-
-//         carousel.addEventListener('mousemove', (e) => {
-//             if(!isDown){
-//                 carousel.classList.remove('moving');
-//                 return
-//             }
-//             e.preventDefault();
-
-//             carousel.classList.add('moving');
-//             const x = e.pageX - carousel.offsetLeft;
-//             const walk = (x - startX) * 1; //scroll-fast
-//             carousel.scrollLeft = scrollLeft - walk;
-//         });
-//         carousel.addEventListener('wheel', (e) => {
-//           cancelMomentumTracking();
-//         }, { passive: true });
-
-//         function beginMomentumTracking() {
-//             cancelMomentumTracking();
-//             momentumID = requestAnimationFrame(momentumLoop);
-//         }
-
-//         function cancelMomentumTracking() {
-//             cancelAnimationFrame(momentumID);
-//         }
-
-//         function momentumLoop() {
-//             carousel.scrollLeft += velX;
-//             velX *= 0.95;
-//             if (Math.abs(velX) > 0.5) {
-//                 momentumID = requestAnimationFrame(momentumLoop);
-//             }
-//         }
-//     });
-
-//     var carousels = document.querySelectorAll('.carousel');
-
-//     carousels.forEach(function(carousel) {
-//         let isDown = false;
-//         let startX;
-//         let scrollLeft;
-//         let velX = 0;
-//         let momentumID;
-    
-//         carousel.addEventListener('mousedown', (e) => {
-//             isDown = true;
-//             carousel.classList.add('active');
-//             startX = e.pageX - carousel.offsetLeft;
-//             scrollLeft = carousel.scrollLeft;
-//             cancelMomentumTracking();
-//         });
-    
-//         carousel.addEventListener('mouseleave', () => {
-//             isDown = false;
-//             carousel.classList.remove('active');
-//         });
-    
-//         carousel.addEventListener('mouseup', () => {
-//             isDown = false;
-//             carousel.classList.remove('active');
-//             beginMomentumTracking();
-//         });
-    
-//         carousel.addEventListener('mousemove', (e) => {
-//             if (!isDown) {
-//                 carousel.classList.remove('moving');
-//                 return
-//             }
-//             e.preventDefault();
-//             carousel.classList.add('moving');
-//             const x = e.pageX - carousel.offsetLeft;
-//             const walk = (x - startX) * 1.2; //scroll-fast
-//             var prevScrollLeft = carousel.scrollLeft;
-//             carousel.scrollLeft = scrollLeft - walk;
-//             velX = carousel.scrollLeft - prevScrollLeft;
-//         });
-    
-//         carousel.addEventListener('wheel', (e) => {
-//             cancelMomentumTracking();
-//         }, { passive: true });
-    
-//         function beginMomentumTracking() {
-//             cancelMomentumTracking();
-//             momentumID = requestAnimationFrame(momentumLoop);
-//         }
-    
-//         function cancelMomentumTracking() {
-//             cancelAnimationFrame(momentumID);
-//         }
-    
-//         function momentumLoop() {
-//             carousel.scrollLeft += velX;
-//             velX *= 0.8;
-//             if (Math.abs(velX) > 0.25) {
-//                 momentumID = requestAnimationFrame(momentumLoop);
-//             }
-//         }
-//     });
-// });
