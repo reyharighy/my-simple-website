@@ -3,9 +3,7 @@ const allTabs = document.querySelectorAll(".tab-content");
 const caseProjects = document.querySelectorAll(".case-project");
 const caseArticles = document.querySelectorAll(".article-entry-thumbnail");
 
-function isTouchDevice() {
-  return 'ontouchstart' in window || navigator.maxTouchPoints;
-}
+// -------------------------- MAIN MENU PROJECT WRAPPER --------------------------
 
 const shiftTabs = (linkId) => {
   allTabs.forEach((tab, i) => {
@@ -98,6 +96,14 @@ allLinks.forEach((elem) => {
   });
 });
 
+// -------------------------- END MAIN MENU PROJECT WRAPPER --------------------------
+
+// -------------------------- PROJECT WRAPPER DEVICE EMULATOR --------------------------
+
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints;
+}
+
 if (!isTouchDevice()) {
   caseProjects.forEach((project) => {
     const imageHolder = project.querySelector(".image-holder");
@@ -126,6 +132,10 @@ if (!isTouchDevice()) {
   });
 }
 
+// -------------------------- END PROJECT WRAPPER DEVICE EMULATOR --------------------------
+
+// -------------------------- ARTICLE WRAPPER DEVICE EMULATOR --------------------------
+
 if (!isTouchDevice()) {
   caseArticles.forEach((article) => {
     const imageHolder = article.querySelector(".image-hover");
@@ -153,3 +163,5 @@ if (!isTouchDevice()) {
     articleWrapper.style.maxHeight = articleWrapper.scrollHeight + 'px';
   });  
 }
+
+// -------------------------- END ARTICLE WRAPPER DEVICE EMULATOR --------------------------

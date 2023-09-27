@@ -8,7 +8,6 @@ function adjustViewportWidth(initialWidth) {
 
 let initialWidth = null;
 
-// Call the function on page load
 window.addEventListener('load', () => {
     initialWidth = window.innerWidth;
     adjustViewportWidth(initialWidth);
