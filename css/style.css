@@ -865,7 +865,7 @@ section.project-list .cta a {
 
 .case-article-wrapper {
     display: flex;
-    line-height: 1.5;
+    line-height: 1.75;
     flex-direction: column;
     -moz-column-gap: .27em;
     column-gap: .27em;
@@ -880,7 +880,7 @@ section.project-list .cta a {
     font-weight: 900;
     letter-spacing: var(--letter-spacing-wide-14);
     font-size: 1.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
     margin-left: 5px;
     margin-right: 5px;
     color: #505050;
@@ -889,7 +889,7 @@ section.project-list .cta a {
 .poppins-14 {
     font-family: "Serif",serif;
     font-size: 1.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
     margin-left: 5px;
     margin-right: 5px;
     color: #505050;
@@ -1028,7 +1028,7 @@ footer {
 .h1 {
     font-family: "Serif",serif;
     font-size: 4vw;
-    line-height: 1.5;
+    line-height: 1.75;
     letter-spacing: var(--letter-spacing-30);
 }
 
@@ -1112,7 +1112,7 @@ main.profile .profile-prompt {
 .sans-light-30 {
     font-family: "Poppins",serif;;
     font-size: 1.75vw;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .profile-picture {
@@ -1143,7 +1143,7 @@ main.profile .profile-prompt {
     margin-left: 50px;
     font-family: "Serif",serif;
     font-size: calc(var(--fs-17) - 2px);
-    line-height: 1.5;
+    line-height: 1.75;
     color: var(--dark-mode-border);
 }
 
@@ -1292,7 +1292,26 @@ main.profile .profile-prompt {
 .insight-carousel-container .insight-carousel-part8,
 .insight-carousel-container .insight-carousel-part9,
 .insight-carousel-container .insight-carousel-part10 {
-    display: inherit;
+    position: inherit;
+    padding: 0;
+    margin-bottom:var(--space-1);
+    transition: height .3s ease-out;
+}
+
+.insight-prompt-carousel-container .insight-prompt-carousel-part1, 
+.insight-prompt-carousel-container .insight-prompt-carousel-part2,
+.insight-prompt-carousel-container .insight-prompt-carousel-part3,
+.insight-prompt-carousel-container .insight-prompt-carousel-part4,
+.insight-prompt-carousel-container .insight-prompt-carousel-part5,
+.insight-prompt-carousel-container .insight-prompt-carousel-part6,
+.insight-prompt-carousel-container .insight-prompt-carousel-part7,
+.insight-prompt-carousel-container .insight-prompt-carousel-part8,
+.insight-prompt-carousel-container .insight-prompt-carousel-part9,
+.insight-prompt-carousel-container .insight-prompt-carousel-part10 {
+    position: inherit;
+    padding: 0;
+    margin-bottom:var(--space-1);
+    transition: height .3s ease-out;
 }
 
 .skillset-carousel .slide {
@@ -1408,7 +1427,7 @@ blockquote {
 .skillset-prompt {
     font-family: "Poppins",serif;;
     font-size: 1.75vw;
-    line-height: 1.5;
+    line-height: 1.75;
     letter-spacing: var(--letter-spacing-30);
 }
 
@@ -1416,13 +1435,13 @@ blockquote {
     font-family: "Serif",serif;
     font-weight: bolder;
     font-size: 2vw;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .feature-prompt {
     font-family: "Serif",serif;
     font-size: 1.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .skillset .separator {
@@ -1512,7 +1531,7 @@ blockquote {
 .serif-22 {
     font-family: "Serif",serif;
     font-size: 2.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .verified-entries .features {
@@ -1544,7 +1563,7 @@ blockquote {
     border-radius: 50px;
     font-family: "Sans Serif",sans-serif;
     font-size: 1.75vw;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .rounded-button.small {
@@ -1638,7 +1657,7 @@ blockquote {
 .case-project-title span {
     font-family: "Wide",sans-serif;
     font-size: 1.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide-14);
     margin-top: -30px;
@@ -1658,7 +1677,7 @@ blockquote {
 .case-project-wrapper {
     font-family: "Serif",serif;
     font-size: 1.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
     display: flex;
     flex-direction: column;
     -moz-column-gap: .27em;
@@ -1692,6 +1711,8 @@ article.journal .header, article.journal .main {
 article.journal .carousel {
     grid-column: 1/13;
 }
+
+
 
 article.journal .header {
     margin-bottom: 40px;
@@ -1738,7 +1759,7 @@ article.journal .header div.meta-info .tags {
 article.journal .header div.meta-info .tags span {
     display: inline-block;
     padding: .915em 1.834em;
-    line-height: 1.5;
+    line-height: 1.75;
     border: 1px solid var(--primary-border);
     text-transform: uppercase;
     border-radius: 20px;
@@ -1767,7 +1788,7 @@ article.journal div.author img {
 article.journal div.author p {
     font-family: "Serif",serif;
     font-size: 1.25vw;
-    line-height: 1.5;
+    line-height: 1.75;
     color: var(--primary-secondary);
 }
 
@@ -1817,7 +1838,7 @@ article.journal .main {
 article.journal .main div.content h2 {
     font-family: "Serif",serif;
     font-size: 2.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
     letter-spacing: var(--letter-spacing-30);
     margin-top: 5vh;
 }
@@ -1825,7 +1846,7 @@ article.journal .main div.content h2 {
 article.journal .main div.content h3 {
     font-family: "Serif",serif;
     font-size: 2vw;
-    line-height: 1.5;
+    line-height: 1.75;
     letter-spacing: var(--letter-spacing-30);
 }
 
@@ -1898,7 +1919,7 @@ article.journal .main div.content .para-list ol li ul li {
 
 article.journal .main div.content .para-list ol li ul span {
     font-size: 1.5vw;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 article.journal .main div.content .para-list ol li ul span .accent {
@@ -1916,5 +1937,5 @@ article.journal .main div.content .para-list ol li ul span .accent {
 }
 
 .insight-prompt div.bottomContent p section.para-list ol li span {
-    line-height: 1.5;
+    line-height: 1.75;
 }
