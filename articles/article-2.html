@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html" id="underlined">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1>
+                    Exploratory Data Analysis: Estimates of Location
+                </h1>
+                <h2 class="sans-light-30">
+                    Estimates of location are summary statistics that provide information about the central tendency or typical value of a dataset. These statistics help you understand where the data tends to cluster or concentrate.
+                </h2>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        ??? October 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            statistics
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/article/Article_2/article-2-inPage.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Introduction
+                    </h2>
+                    <p>
+                        Summarizing data and estimating central tendency is a fundamental step in data analysis, and while <span class="tooltip">mean<span class="tooltip-text" style="color: antiquewhite;">The sum of all values divided by the number of values.<br><em>Synonym</em>: average</span></span> is a commonly used measure of central tendency, it may not always be the most appropriate choice.
+                    </p>
+                    <p>
+                        Statisticians have developed alternative estimates to the mean to address situations where the mean might not provide a representative measure of central tendency.
+                    </p>
+                    <h3>
+                        Metrics and Estimates
+                    </h3>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Estimate:  In statistics, the term is commonly used to refer to a value calculated from a sample of data to infer a population parameter. This acknowledges the inherent uncertainty involved in making conclusions about the entire population based on a subset of data.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Metric: In data science and related fields, the term is more frequently used to refer to a specific quantitative measure used to assess performance, track progress, or evaluate the success of a particular aspect of a system. Metrics are often employed in a business or organizational context to make data-driven decisions and monitor key performance indicators (KPIs). Data scientists aim to provide actionable insights and measurements that align with organizational goals and objectives.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <p>
+                        The difference reflects the approach of statistics versus that of data science: accounting for uncertainty lies at the heart of the discipline of statistics, whereas concrete business or organizational objectives are the focus of data science. Hence, statisticians estimate, and data scienctists measure.
+                    </p>
+                    <h2>
+                        Mean
+                    </h2>
+                    <p>
+                        The most basic estimate of location is the mean, or average value. Consider the following set of numbers: [3 5 1 2]. The mean is (3 + 5 + 1 + 2) / 4 = 11 / 4 = 2.75. You will encounter the symbol <em>x̄</em> (pronounced "x-bar") being used to represent the mean of a sample from a population. The formula to compute the mean for a set of <em>n</em> values <em>x<span style="font-size: .8vw; color: #393943;">1</span></em>, <em>x<span style="font-size: .8vw; color: #393943;">2</span></em>, ..., <em>x<span style="font-size: .8vw; color: #393943;">n</span></em> is: 
+                    </p>
+                    <img src="../images/article/Article_2/mean-formula.png" alt="mean-formula" style="width: 50%; margin-left: 25%;">
+                    <p>
+                        The convention of capitalizing <em>N</em> when referring to a population and using lowercase <em>n</em> when referring to a sample is indeed a common practice in statistics. This distinction helps clarify whether you are discussing a parameter (population) or a statistic (sample) and is an important aspect of statistical notation.
+                    </p>
+                    <p>
+                        In data science and related fields, the conventions around <em>N</em> and <em>n</em> may be less strict. While some data scientists may follow the traditional capitalization rules to maintain consistency, others may use them interchangeably because the distinction between population and sample may not always be as critical in data science as it is in formal statistical analysis.
+                    </p>
+                    <p>
+                        A variation of the mean is a <span class="tooltip">trimmed mean<span class="tooltip-text" style="color: antiquewhite;">The average of all values after dropping a fixed number of extreme values.<br><em>Synonym</em>: truncated mean</span></span>, which you calculate by dropping a fixed number of sorted values at each end and then taking an average of the remaining values. Representing the sorted values by <em>x<span style="font-size: .8vw; color: #393943;">(1)</span></em>, <em>x<span style="font-size: .8vw; color: #393943;">(2)</span></em>, ..., <em>x<span style="font-size: .8vw; color: #393943;">(n)</span></em> where <em>x<span style="font-size: .8vw; color: #393943;">(1)</span></em> is the smallest value and <em>x<span style="font-size: .8vw; color: #393943;">(n)</span></em> the largest, the formula to compute the trimmed mean with <em>p</em> smallest and largest values omitted is:
+                    </p>
+                    <img src="../images/article/Article_2/trimmed-mean.png" alt="trimmed-mean-formula" style="width: 70%; margin-left: 15%;">
+                    <p>
+                        Trimmed means are particularly useful in situations where outliers or extreme values can distort the interpretation of the data. For example, in educational assessment, let's say there is a  standardized test with a large number of questions, and each question is graded on a scale from 0 to 100. The goal is to calculate a student's overall score on the test. However, some students may provide extreme responses, such as leaving many questions unanswered or guessing randomly, leading to exceptionally low or high scores.
+                    </p>
+                    <p>
+                        To mitigate the influence of such extreme responses and ensure a more reliable measure of a student's performance, a trimmed mean can be employed. Trimmed means are widely used, and in many cases are preferable to using the ordinary mean (see "Median and Robust Estimates").
+                    </p>
+                    <p>
+                        Another type of mean is a <span class="tooltip">weighted mean<span class="tooltip-text" style="color: antiquewhite;">The sum of all values times a weight divided by the sum of the weights.<br><em>Synonym</em>: weighted average</span></span>, which you calculate by multiplying each data value <em>x<span style="font-size: .8vw; color: #393943;">i</span></em> by a user-specified weight <em>w<span style="font-size: .8vw; color: #393943;">i</span></em> and dividing their sum by the sum of the weights. The formula for a weighted mean is:
+                    </p>
+                    <img src="../images/article/Article_2/weighted-mean.png" alt="weighted-mean-formula" style="width: 70%; margin-left: 15%;">
+                    <p>
+                        There are two main motivations for using a weighted mean:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Some values are intrinsically more variable than others, and highly variable observations are given a lower weight. For example, if we are taking the average from multiple sensors and one of the sensors is less acurate, then we might downweight the data from that sensor.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The data collected does not equally represent the different groups that we are interested in measuring. For example, because of the way an online experiment was conducted, we may not have a set of data that accurately reflects all groups in the user base. To correct that, we can give a higher weight to the values from the groups that were underrepresented.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h2>
+                        Median and Robust Estimates
+                    </h2>
+                    <p>
+                        The <span class="tooltip">median<span class="tooltip-text" style="color: antiquewhite;">The value such that one-half of the data lies above and below.<br><em>Synonym</em>: 50th percentile</span></span> is the middle value in a sorted list of data. If there is an even number of data values, it is the average of the two middle values. It represents the <em>middle point</em> of the dataset when ordered. Compared to the mean, which uses all observations, the median depends only on the values in the center of the sorted data. While this might seem to be a disadvantage, since the mean is more sensitive to the data, there are many instances in which the median is a better metric for location, especially when dealing with datasets that contain extreme values or outliers.
+                    </p>
+                    <p>
+                        The median is commonly used in various fields, including economics, income distribution analysis, housing prices, and healthcare, where extreme values or outliers are common and can distort the interpretation of data. Let's say we want to look at typical household incomes in neighborhoods around Lake Washington in Seattle. In comparing the Medina neighborhood to the Windermere neighborhood, using the mean would produce different results because Bill Gates lives in Medina. If we use the median, it won't matter how rich Bill Gates is. The position of the middle observation will remain the same.
+                    </p>
+                    <p>
+                        For some reasons that one uses a weighted mean, it is also possible to compute a <span class="tooltip">weighted median<span class="tooltip-text" style="color: antiquewhite;">The value such that one-half of the sum of the weights lies above and below the sorted data.</span></span>. As with the median, we first sort the data, although each data value has an associated weight. Instead of the middle number, the weighted median is a value such that the sum of the weights is equal for the lower and upper halves of the sorted list. Like the median, the weighted median is robust to outliers.
+                    </p>
+                    <h3>
+                        Outliers
+                    </h3>
+                    <p>
+                        The median is referred to as a <span class="tooltip">robust<span class="tooltip-text" style="color: antiquewhite;">Not sensitive to extreme values.<br><em>Synonym</em>: resistant</span></span> estimate of location since it is not influenced by <span class="tooltip">outliers<span class="tooltip-text" style="color: antiquewhite;">A data value that is very different from most of the data.<br><em>Synonym</em>: extreme value</span></span> (extreme cases) that could skew the results. An outlier is any value that is very distant from the other values in a data set. The exact definition of an outlier is somewhat subjective.
+                    </p>
+                    <p>
+                        Being an outlier in itself does not make a data value invalid or erroneous as in the previous example with Bill Gates. Still, outliers can be caused by data errors, including recording errors, sensor malfunctions, unit mismatches, or data entry mistakes. In such cases, the presence of outliers may indicate data quality issues that need to be addressed. It's important to identify and investigate outliers in your dataset. Outliers may carry valuable information or insights, especially in scientific research or anomaly detection. They may indicate unusual but real events or phenomena that warrant further examination.
+                    </p>
+                    <p>
+                        The median is not the only robust estimate of location, and trimmed mean is indeed another widely used and effective method to mitigate the influence of outliers while providing a compromise between the median and the mean. For example, trimming the bottom and top 10 % (a common choice) of the data will provide protection against outliers in all but the smallest data sets. The trimmed mean is robust to extreme values in the data, but uses more data to calculate the estimate for location.
+                    </p>
+                    <h3>
+                        Anomaly Detection
+                    </h3>
+                    <p>
+                        In contrast to typical data analysis, where outliers are sometimes informative and sometimes a nuissance, in anomaly detection the points of interest are the outliers, and the greater mass of data serves primarily to define the "normal" against which anomalies are measured.
+                    </p>
+                    <h2>
+                        Example: Location Estimates of Youtube Views and Engagement Rates
+                    </h2>
+                    <p>
+                        Table below shows data set containing a number of views and associated engagement rate (ratio of total likes and comments per total views) for each category in US Youtube trending videos.
+                    </p>
+                    <img src="../images/article/Article_2/example-table.png" alt="example-table" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        Compute the mean, trimmed mean, and median for the views using Python. To compute mean and median in Python we use <a href="https://pypi.org/project/pandas/" target="_blank"><span>Pandas</span></a> methods of the dataframe. The trimmed mean requires the <a href="https://pypi.org/project/scipy/" target="_blank"><span class="accent">trim_mean</span></a> function in <a href="https://pypi.org/project/scipy/" target="_blank"><span class="accent">scipy.stats</span></a>.
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part1">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_2/mean-calculation.png" alt="mean-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_2/trimmed-mean-calculation.png" alt="trimmed-mean-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_2/median-calculation.png" alt="median-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        The mean is bigger than the trimmed mean, which is bigger than the median. This is because the trimmed mean excludes the largest and smallest categories within 10 % from each end. If we want to compute the average engagement rate for the category, we need to use a weighted mean or median to account for different views in the categories. Weighted mean is available with <a href="https://pypi.org/project/numpy/" target="_blank"><span class="accent">NumPy</span></a>. For weighted median, we can use the specialized package <a href="https://pypi.org/project/wquantiles/" target="_blank"><span class="accent">wquantiles</span></a>.
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part2" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part2">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_2/weighted-mean-calculation.png" alt="weighted-mean-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_2/weighted-median-calculation.png" alt="weighted-median-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part2" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part2">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        In this case, the weighted mean and the weighted median are about the same.
+                    </p>
+                    <h2>
+                        Key Ideas
+                    </h2>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        The basic metric for location is the mean, but it can be sensitive to extreme values (outliers).
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Other metrics (median, trimmed mean) are less sensitive to outliers and unusual distribution and hence are more robust.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Further Reading
+                    </h3>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ul>
+                                <li>
+                                    <span>
+                                        The Wikipedia <a href="https://en.wikipedia.org/wiki/Central_tendency" target="_blank"><span class="accent">article</span></a> on central tendency contains an extensive discussion of various measures of location.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        John Tukey's 1977 classic <a href="https://en.wikipedia.org/wiki/Exploratory_data_analysis#Development" target="_blank"><span class="accent">Exploratory Data Analysis</span></a> (Pearson) is still widely used.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Peter Bruce, Andrew Bruce, and Peter Gedeck (2020) <a href="https://books.google.co.id/books/about/Practical_Statistics_for_Data_Scientists.html?id=k2XcDwAAQBAJ&redir_esc=y" target="_blank"><span class="accent">Practical Statistics for Data Scientist</span></a>, 7-13.
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                    </p>
+                </div>
+            </section>
+        </article>
+        <section class="contained article-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin fadeIn inView">
+                Read next
+            </h2>
+            <div class="entries">
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="./article-1.html">
+                        <div class="image-hover">
+                            <img src="../images/article/Article_1/article-1.png" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <div class="case-article-wrapper">
+                            <h2 class="poppins-17">
+                                CRUD Application in Object-Oriented Programming
+                            </h2>
+                            <p class="poppins-14">
+                                A simple CRUD application from scratch and implementing its functionality in Object-oriented Programming Paradigm with Python.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="">
+                        <div class="image-hover">
+                            <img src="" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <h2 class="poppins-17">
+                            ???
+                        </h2>
+                        <p class="poppins-14">
+                            ???
+                        </p>
+                    </a>
+                </div> -->
+            </div>
+        </section>
+        <section class="article-list fadeIn inView">
+            <div class="cta">
+                <a class="blunt-button" href="../articles.html">
+                    All Articles
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+    <script src="../js/project-selector.js"></script>
+</html>
