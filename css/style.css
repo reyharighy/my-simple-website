@@ -1896,6 +1896,33 @@ article.journal .main div.content .para-list ol span .accent {
     text-shadow: 0px 0px .5px #505050;
 }
 
+article.journal .main div.content .para-list ul {
+    font-family: "Serif",serif;
+    font-size: 1.5vw;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+
+article.journal .main div.content .para-list ul li {
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+}
+
+article.journal .main div.content .para-list ul span {
+    font-size: 1.5vw;
+    line-height: 1.75;
+}
+
+article.journal .main div.content .para-list ul span .accent {
+    font-size: 1.5vw;
+    color: var(--accent);
+    text-shadow: 0px 0px .5px #505050;
+}
+
+article.journal .main div.content .para-list ul span a:hover {
+    text-decoration: underline;
+}
+
 article.journal .main div.content img {
     width: 100%;
     margin-top: 10px;
@@ -1938,4 +1965,37 @@ article.journal .main div.content .para-list ol li ul span .accent {
 
 .insight-prompt div.bottomContent p section.para-list ol li span {
     line-height: 1.75;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--primary-secondary);
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 350px;
+    background-color: var(--primary-text);
+    backdrop-filter: blue(10px);
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 5px;
+    padding-left: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -150px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.tooltip-text {
+    color: antiquewhite;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
