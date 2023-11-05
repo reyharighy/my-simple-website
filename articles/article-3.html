@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html" id="underlined">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1>
+                    Exploratory Data Analysis: Estimates of Variability
+                </h1>
+                <h2 class="sans-light-30">
+                    Estimates of variability measures whether the data values are tightly clustered or spread out.
+                </h2>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        2 November 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            statistics
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/article/Article_3/article-3-inPage.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Introduction
+                    </h2>
+                    <p>
+                        Variability, often referred to as dispersion, is a fundamental aspect of data analysis. In statistics, it refers to the extent to which data points differ from each other. It assesses whether the data values are tightly clustered or widely spread out. Understanding variability is essential because it helps us make sense of the differences and patterns within a dataset.
+                    </p>
+                    <p>
+                        It has several vital implications:
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Variability is an indicator of data quality. High variability may suggest errors or inconsistencies in the data.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Variability affects decision-making processes. For instance, in business, understanding the variability of sales data is crucial for inventory management and financial planning.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Variability is a key factor in risk assessment. In finance, for example, it's used to analyze the volatility of stock prices.
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h2>
+                        Standard Deviation and Related Estimates
+                    </h2>
+                    <p>
+                        The most widely used estimates of variation are based on the differences, or <span class="tooltip">deviations<span class="tooltip-text" style="color: antiquewhite;">The difference between the observed values and the estimate of location.<br><em>Synonym</em>: errors, residuals</span></span>, between the estimate of location and the observed data.
+                    </p>
+                    <p>
+                        For instance, consider a dataset {1, 4, 4}. The mean is 3, and the median is 4. We can find how each data point deviates from this central value:
+                        <section class="para-list fadeIn inView">
+                            <ul>
+                                <li>
+                                    <span>
+                                        Deviation of 1 from the mean: 1 - 3 = -2.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Deviation of the first 4 from the mean: 4 - 3 = 1.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Deviation of the second 4 from the mean: 4 - 3 = 1.
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                    </p>
+                    <p>
+                        These deviations tell us how dispersed the data is around the central value. The result of these deviations adds up to precisely zero because the negative deviations balance the positive ones.
+                    </p>
+                    <h3>
+                        Measuring Variability
+                    </h3>
+                    <p>
+                        To measure variability, we need a way to consider the size of these deviations without canceling out the positive and negative values. A straightforward approach is to look at the average of the absolute values of the deviations from the mean. In the preceeding example, the absolute value of the deviations is {2 1 1}, and their average is (2 + 1 + 1) / 3 = 1.33. This is known as <span class="tooltip">mean absolute deviation<span class="tooltip-text" style="color: antiquewhite;">The mean of the absolute values of the deviations from the mean.<br><em>Synonym</em>: l1-norm, Manhattan norm</span></span> and is computed with the formula:
+                    </p>
+                    <img src="../images/article/Article_3/mean-absolute-deviation.png" alt="mean-absolute-deviation-formula" style="width: 80%; margin-left: 10%;">
+                    <p>
+                        where <em>x̄</em> is the sample mean.
+                    </p>
+                    <p>
+                        The best-known estimates of variability are <span class="tooltip">variance<span class="tooltip-text" style="color: antiquewhite;">The sum of squared deviations from the mean divided by <em>n</em> - 1 where <em>n</em> is the number of data values.<br><em>Synonym</em>: mean-squared-errors</span></span> and <span class="tooltip">standard deviation<span class="tooltip-text" style="color: antiquewhite;">The square root of the variance.</span></span>:
+                    </p>
+                    <img src="../images/article/Article_3/variance.png" alt="variance-formula" style="width: 80%; margin-left: 10%;">
+                    <img src="../images/article/Article_3/standard-deviation.png" alt="standard-deviation-formula" style="width: 80%; margin-left: 10%;">
+                    <p>
+                        The standard deviation is much easier to interpret than the variance since it is on the same scale as the original data. It quantifies the average "distance" of data points from the mean, indicating how much data values tend to deviate from the average. Still, with its more complicated and less intuitive formula, it might seem peculiar that the standard deviation is preferred in statistics over the mean absolute deviation. It owes preeminence to statistical theory. Working with squared values is mathematically more advantageous than absolute values, particularly in statistical methods. Squaring ensures that larger deviations receive more weight, allowing for more accurate analysis of data distribution.
+                    </p>
+                    <p>
+                        None of the variance, standard deviation, or mean absolute deviation are robust to outliers or extreme values. Outliers can heavily influence these measures, especially the variance and standard deviation, which are based on squared deviations. When outliers are present, these measures might not accurately reflect the central tendency and variability of the majority of the data.
+                    </p>
+                    <p>
+                        A robust estimate of variability is <span class="tooltip">median absolute deviation<span class="tooltip-text" style="color: antiquewhite;">The median of the absolute values of the deviations from the median.</span></span> from the median or MAD:
+                    </p>
+                    <img src="../images/article/Article_3/median-absolute-deviation.png" alt="median-absolute-deviation-formula" style="width: 100%; margin-left: 0%;">
+                    <p>
+                        where <em>m</em> is the median. Like the median, the MAD is not influenced by extreme values. It is also possible to compute a trimmed standard deviation analogous to the trimmed mean.
+                    </p>
+                    <p>
+                        The variance, the standard deviation, the mean absolute deviation, and the median absolute deviation from the median are not equivalent estimates, even in the case where the data comes from a normal distribution. In fact, the standard deviation is always greater than the median absolute deviation. Sometimes, the median absolute deviation is multiplied by a constant scaling factor to put the MAD on the same scale as the standard deviation in the case of normal distribution. The commonly used factor of 1.4826 means that 50 % of normal distribution fall within the range ±MAD.
+                    </p>
+                    <h3>
+                        Degrees of Freedom, and <em>n</em> or <em>n</em> - 1?
+                    </h3>
+                    <p>
+                        In statistics books, there is always some discussion of why we have <em>n</em> - 1 in the denominator in the variance formula, instead of <em>n</em>, leading into the concept of degrees of freedom. This distinction is not important since <em>n</em> is generally large enough that it won't make much difference whether you divide by <em>n</em> or <em>n</em> - 1. But in case you are interested, here is the story. It is based on the premise that you want to make estimates about a population, based on a sample.
+                    </p>
+                    <p>
+                        If you use the intuitive denominator of <em>n</em> in the variance formula, you will underestimate the true value of the variance and the standard deviation in the population. This is referred to as a biased estimate. However, if you divide by <em>n</em> - 1 instead of <em>n</em>, the variance becomes an unbiased estimate.
+                    </p>
+                    <p>
+                        To fully explain why using <em>n</em> leads to a biased estimate involves the notion of degrees of freedom, which takes into account the number of constraints in computing an estimate. In this case, there are <em>n</em> - 1 degrees of freedom since there is one constraint: the standard deviation depends on calculating the sample mean. For most problems, data scientists do not need to worry about degress of freedom.
+                    </p>
+                    <h2>
+                        Estimates Based on Percentiles
+                    </h2>
+                    <p>
+                        A different approach to estimating dispersion is based on looking at the spread of the sorted data. Statistics based on sorted (ranked) data are referred to as <span class="tooltip">order statistics<span class="tooltip-text" style="color: antiquewhite;">Metrics based on the data values sorted from smallest to biggest.<br><em>Synonym</em>: ranks</span></span>. One of the most straightforward ways to estimate dispersion is by calculating the <span class="tooltip">range<span class="tooltip-text" style="color: antiquewhite;">The difference between the largest and the smallest value in a data set.</span></span>, which is the difference between the largest and smallest values in a dataset. However, the range can be significantly influenced by outliers, making it less useful as a general measure of dispersion in the data.
+                    </p>
+                    <p>
+                        To avoid the sensitivity to outliers, we can look at the range of the data after dropping values from each end. Formally, these types of estimates are based on differences between <span class="tooltip">percentiles<span class="tooltip-text" style="color: antiquewhite;">The value such that <em>P</em> percent of the values take on this value or less and (100 - <em>P</em>) percent take on this value or more.<br><em>Synonym</em>: quantile</span></span>. In a data set, the <em>P</em>th percentile is a value such that at least <em>P</em> percent of the values take on this value or less and at least (100 - <em>P</em>) percent of the values take on this value or more. For instance, the 80th percentile is the value below which 80 percent of the data falls. This technique is particularly useful for identifying the median, which is the same as the 50th percentile. The percentile is essentially the same as a quantile, with quantiles indexed by fractions (so the .8 quantile is the same as the 80th percentile).
+                    </p>
+                    <p>
+                        A common measurement of variability is the difference between 25th percentile (the lower quartile) and the 75th percentile (the upper quartile), called <span class="tooltip">interquartile range<span class="tooltip-text" style="color: antiquewhite;">The difference between the 75th percentile and the 25th percentile.<br><em>Synonym</em>: IQR</span></span> which is less sensitive to outliers. Here is a simple example: {3, 1, 5, 3, 6, 7, 2, 9}. We sort these to get {1, 2, 3, 3, 5, 6, 7, 9}. The 25th percentile is at 2.5, and the 75th percentile is at 6.5, so the interquartile range is 6.5 - 2.5 = 4. Software can have slightly differing approaches that yield answers; typically, these differences are smaller.
+                    </p>
+                    <p>
+                        Exact percentile calculations can be computationally expensive, especially for large datasets that require sorting. To address this, machine learning and statistical software often employ specialized algorithms, like the Zhang-Wang-2007 method, to obtain approximate percentiles quickly with guaranteed accuracy.
+                    </p>
+                    <h3>
+                        Percentile: Precise Definition
+                    </h3>
+                    <p>
+                        If we have an even number of data (<em>n</em> is even), then the percentile is ambiguous under the preceeding definition. In fact, we could take on any value between the order statistics <em>x<span style="font-size: .8vw; color: #393943;">(j)</span></em> and <em>x<span style="font-size: .8vw; color: #393943;">(j + 1)</span></em> where <em>j</em> satisfies:
+                    </p>
+                    <img src="../images/article/Article_3/quantile.png" alt="quantile-formula" style="width: 70%; margin-left: 15%;">
+                    <p>
+                        Formally, the percentile is the weighted average:
+                    </p>
+                    <img src="../images/article/Article_3/percentile.png" alt="percentile-formula" style="width: 80%; margin-left: 10%;">
+                    <p>
+                        for some weight between 0 and 1. Statistical software has slightly differing approaches to choosing <em>w</em>. At the time of this writing, Python's <a href="https://numpy.org/doc/stable/reference/generated/numpy.quantile.html" target="_blank"><span class="accent">numpy.quantile</span></a> supports nine approaches, those are inverted cdf, averaged inverted cdf, closest observation, interpolated inverted cdf, hazen, weibull, linear, median unbiased, and normal unbiased.
+                    </p>
+                    <h2>
+                        Example: Variability Estimates of Youtube Views
+                    </h2>
+                    <p>
+                        Table below shows data set containing a number of views and associated engagement rate (ratio of total likes and comments per total views) for each category in US Youtube trending videos.
+                    </p>
+                    <img src="../images/article/Article_3/example-table.png" alt="example-table" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        The <a href="https://pypi.org/project/pandas/" target="_blank"><span>Pandas</span></a> data frame provides methods for calculating standard deviation and quantiles. Using the quantiles, we can easily determine the IQR. For the robust MAD, we use the function <a href="https://www.statsmodels.org/stable/generated/statsmodels.robust.scale.mad.html" target="_blank"><span>robust.scale.mad</span></a> from the <a href="https://pypi.org/project/statsmodels/" target="_blank"><span>statsmodels</span></a> package:
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part1">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_3/std-calculation.png" alt="std-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_3/iqr-calculation.png" alt="iqr-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_3/mad-calculation.png" alt="mad-calculation">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        The standard deviation is almost three times as large as the MAD. This is not suprising since the standard deviation is sensitive to outliers.
+                    </p>
+                    <h2>
+                        Key Ideas
+                    </h2>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        Variance and standard deviation are the most widespread and routinely reported statistics of variability.   
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Both are sensitive to outliers.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        More robust metrics include mean absolute deviation, median absolute deviation from the median, and percentiles (quantiles).
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Further Reading
+                    </h3>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ul>
+                                <li>
+                                    <span>
+                                        David Lane's online <a href="https://www.davidmlane.com/hyperstat/point_estimation.html" target="_blank"><span class="accent">statistics resource</span></a> has a section on percentiles.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Kevin Davenport has a useful <a href="https://www.r-bloggers.com/2013/08/absolute-deviation-around-the-median/" target="_blank"><span class="accent">post</span></a> on <em>R</em>-Bloggers about deviations from the median and their robust properties.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Peter Bruce, Andrew Bruce, and Peter Gedeck (2020) <a href="https://books.google.co.id/books/about/Practical_Statistics_for_Data_Scientists.html?id=k2XcDwAAQBAJ&redir_esc=y" target="_blank"><span class="accent">Practical Statistics for Data Scientist</span></a>, 13-19.
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                    </p>
+                </div>
+            </section>
+        </article>
+        <section class="contained article-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin fadeIn inView">
+                Read next
+            </h2>
+            <div class="entries">
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="./article-1.html">
+                        <div class="image-hover">
+                            <img src="../images/article/Article_1/article-1.png" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <div class="case-article-wrapper">
+                            <h2 class="poppins-17">
+                                CRUD Application in Object-Oriented Programming
+                            </h2>
+                            <p class="poppins-14">
+                                A simple CRUD application from scratch and implementing its functionality in Object-oriented Programming Paradigm with Python.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="./article-2.html">
+                        <div class="image-hover">
+                            <img src="../images/article/Article_2/article-2.png" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <div class="case-article-wrapper">
+                            <h2 class="poppins-17">
+                                Exploratory Data Analysis: Estimates of Location
+                            </h2>
+                            <p class="poppins-14">
+                                Estimates of location are summary statistics that provide information about the central tendency or typical value of a dataset. These statistics help you understand where the data tends to cluster or concentrate.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="article-list fadeIn inView">
+            <div class="cta">
+                <a class="blunt-button" href="../articles.html">
+                    All Articles
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+    <script src="../js/project-selector.js"></script>
+</html>
