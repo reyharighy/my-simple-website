@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html" id="underlined">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1>
+                    Exploratory Data Analysis: Exploring the Data Distribution
+                </h1>
+                <h2 class="sans-light-30">
+                    Each of estimates sums up the data in a single number to describe the location or variability of the data. It is also useful to explore how the data is distributed overall.
+                </h2>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        7 November 2023
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            statistics
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/article/Article_4/article-4-inPage.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Percentiles and Boxplots
+                    </h2>
+                    <p>
+                        In "Estimates Based on Percentiles" section from <a href="./article-3.html" target="_blank"><span class="accent">Exploratory Data Analysis: Estimates of Variability</span></a> article, we explored how percentiles can be used to measure the spread of data. Percentiles serve as a valuable tool for summarizing an entire data distribution. It's common practice to report quartiles (25th, 50th, and 75th percentiles) and deciles (the 10th, 20th, ..., 90th percentiles), which provide insights into both the central and wider ranges of the distribution. Moreover, percentiles are particularly advantageous for comprehending the <em>tails</em>, or the extremes, of the distribution. This concept extends beyond statistics and has even found its way into popular culture, where the term "one-percenters" is coined to refer to individuals who belong to the top 1 % in terms of wealth.
+                    </p>
+                    <h3>
+                        Example: Percentiles of Engagement Rate in Percent
+                    </h3>
+                    <p>
+                        Table below shows data set containing a number of views and associated engagement rate (ratio of total likes and comments per total views) for each category in US Youtube trending videos.
+                    </p>
+                    <img src="../images/article/Article_4/example-table.png" alt="example-table" style="width: 130%; margin-left: -15%;">
+                    <p>
+                        The <a href="https://pypi.org/project/pandas/" target="_blank"><span>Pandas</span></a> data frame method <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.quantile.html" target="_blank"><span>quantile</span></a> provides it:
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part2" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part2">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/percentiles-syntax.png" alt="percentiles-syntax">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/percentiles-table.png" alt="percentiles-table">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part2" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part2">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        The median is 2.82 %, although there is quite a bit of variability: the 5th percentile is only 1.0925 % and the 95th percentile is 5.7125 %.
+                    </p>
+                    <p>
+                        <span class="tooltip">Boxplots<span class="tooltip-text" style="color: antiquewhite;">A plot introduced by Tukey as a quick way to visualize the distribution of data.<br><em>Synonym</em>: box and whiskers plot</span></span>, as introduced by Tukey in 1977, rely on percentiles to offer a swift and effective means of visualizing data distribution. Figure below shows a boxplot of the engagement rate in percent provided by <a href="https://pypi.org/project/seaborn/" target="_blank"><span>Seaborn</span></a> which provides a number of basic exploratory plots for data frame; one of them is boxplots. It is a Python visualization library based on <a href="https://pypi.org/project/matplotlib/" target="_blank"><span>Matplotlib</span></a> and provides a high-level interface for drawing attractive statistical graphics.
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part1">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/boxplot-syntax.png" alt="boxplot-syntax">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/boxplot.png" alt="boxplot">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        From this boxplot, we can swiftly pick up valuable insights about the data distribution. The median engagement rate appears to be approximately 2.8%, signifying the midpoint of the data. Approximately half of the engagement rates fall within the range of 2% to 4%. However, there is an outlier with a significantly higher engagement rate.
+                    </p>
+                    <p>
+                        The left and right sides of the box represent the 25th and 75th percentiles, respectively, providing a clear picture of the interquartile range. The median is indicated by a vertical line inside the box. The horizontal lines extending from the box, often referred to as <em>whiskers</em>, reveal the range encompassing the majority of the data points.
+                    </p>
+                    <p>
+                        It's worth noting that there are various variations of boxplots, and you can refer to the documentation for tools like <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html" target="_blank"><span>seaborn.boxplot</span></a> and <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html" target="_blank"><span>matplotlib.pyplot.boxplot</span></a> for more options. By default, the whiskers extend to the furthest data points within 1.5 times the interquartile range (IQR), although different software may employ alternative rules. Any data points lying beyond the whiskers are typically considered outliers and are often plotted as individual points.
+                    </p>
+                    <h2>
+                        Frequency Tables
+                    </h2>
+                    <p>
+                        A <span class="tooltip">frequency table<span class="tooltip-text" style="color: antiquewhite;">A tally of the count of numeric data values that fall into a set of bins or intervals.</span></span> of a variable divides the variable's range into equally spaced segments, also known as bins or intervals, and provides information about how many values from the dataset fall within each of these segments. Based on the previously shown table of US Youtube trending videos, the function <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html" target="_blank"><span>pandas.cut</span></a> creates a series that maps the values into segments. Using the method <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.value_counts.html" target="_blank"><span>pandas.DataFrame.value_counts</span></a>, we get the frequency table:
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part3" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part3">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/frequency-table-syntax.png" alt="frequency-table-syntax">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/frequency-tables.png" alt="frequency-tables">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part3" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part3">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        The analysis reveals that the category with the least engagement is Autos & Vehicles, with an engagement rate of 0.83 %, while the most engaging category is Nonprofits & Activism, with an engagement rate of 10.07 %. This provides us with a range of engagement rates spanning from 0.83 % to 10.07 %, which equals 9.24 percentage points.
+                    </p>
+                    <p>
+                        To create a meaningful frequency distribution, we decide to divide this range into equal-sized bins, for example, using 10 bins. Each bin will have a width of 0.924 %. It's important to note that in this process, some bins may remain empty. However, the presence of empty bins is valuable information because it indicates that there are no values falling within those specific segments of the data, helping us understand the distribution more comprehensively.
+                    </p>
+                    <p>
+                        Additionally, it's worth considering different bin sizes when constructing frequency tables. If the bins are too large, important characteristics of the distribution may be obscured. Conversely, if the bins are too small, the data becomes overly granular, making it challenging to see the broader trends in the distribution. Balancing the bin size is crucial to gaining a clear and informative representation of the data.
+                    </p>
+                    <h3>
+                        Equal-sized or Equal-count Bins?
+                    </h3>
+                    <p>
+                        Both frequency tables and percentiles summarize the data by creating bins. In general, quartiles and deciles will have the same count in each bin (equal-count bins), but the bin sizes will be different. The frequency table, by contrast, will have different counts in the bins (equal-sized bins), and the bin sizes will be the same.
+                    </p>
+                    <h2>
+                        Histograms
+                    </h2>
+                    <p>
+                        A <span class="tooltip">histogram<span class="tooltip-text" style="color: antiquewhite;">A plot of frequency table with the bins on the x-axis and the count (or proportion) on the y-axis. While usually similar, bar charts should not be confused with histograms.</span></span> is a way to visualize a frequency table, with bins on the x-axis and the data count on the y-axis. To create a histogram corresponding to the previous frequency table above, use <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.hist.html" target="_blank"><span>pandas.Dataframe.plot.hist</span></a> method with the keyword argument "bins" to define the number of bins.
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part4" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part4">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/histogram-syntax.png" alt="histogram-syntax">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/histogram-figure.png" alt="histogram-figure">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part4" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part4">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        The histogram is shown in figure above. In general, histograms are plotted such that:
+                        <section class="para-list fadeIn inView">
+                            <ul>
+                                <li>
+                                    <span>
+                                        Empty bins are included in the graph.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Bins are of equal width.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        The number of bins (or, equivalently, bin size) is up to the user.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Bars are contiguous or no empty space shows between bars, unless there is an empty bin.
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                    </p>
+                    <h3>
+                        Statistical Moments
+                    </h3>
+                    <p>
+                        In statistical theory, location and variability are referred to as the first and second moments of a distribution. The third and fourth moments are called skewness and kurtosis. Skewness refers to whether the data is skewed to larger or smaller values, and kurtosis indicates the propensity of the data to have extreme values. Generally, metrics are not used to measure the skewness and kurtosis: instead, these are discovered through visual displays such as figures shown previously.
+                    </p>
+                    <h2>
+                        Density Plots and Estimates
+                    </h2>
+                    <p>
+                        Related to histogram is a <span class="tooltip">density plot<span class="tooltip-text" style="color: antiquewhite;">A smoothed version of the histogram, often based on a <em>kernel density estimate</em>.</span></span>, which shows the distribution of data values as a continuous line. A density plot can be thought of as a smoothed histogram, although it is typically computed directly from the data through a <em>kernel density estimate</em>. Figure below displays a density estimate superposed on a histogram. Pandas provides the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.density.html" target="_blank"><span class="accent">pandas.DataFrame.plot.density</span></a> method to create a density plot. Use the argument "bw_method" to control the smoothness of the density curve.
+                    </p>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 4/10;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part5" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part5">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/density-plot-syntax.png" alt="density-plot-syntax">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/article/Article_4/density-plot.png" alt="density-plot">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part5" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView" style="height: 0px;">
+                        <ul class="insight-prompt-carousel-part5">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p></p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <p>
+                        A key distinction from the histogram plotted previously is the scale of the y-axis: a density plot corresponds to plotting the histogram as a proportion rather than counts. Note that the total area under the curve is equal to 1, and instead of counts in bins you calculate areas under the curve between any two points on the x-axis, which correspond to the proportion of the distribution lying between those two points.
+                    </p>
+                    <h3>
+                        Density Estimation
+                    </h3>
+                    <p>
+                        Density estimation is a rich topic with a long history in statistical literature. In fact, the density estimation methods in <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.density.html" target="_blank"><span class="accent">pandas</span></a> and <a href="https://scikit-learn.org/stable/modules/density.html" target="_blank"><span class="accent">scikit-learn</span></a> offer good implementations. For many data science problems, there is no need to worry about the various types of density estimates; it suffices to use the base functions.
+                    </p>
+                    <h2>
+                        Key Ideas
+                    </h2>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ol>
+                                <li>
+                                    <span>
+                                        A frequency histogram plots frequency counts on the y-axis and variable values on the x-axis; it gives a sense of the distribution of the data at a glance.  
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A frequency table is a tabular version of the frequency counts found in a histogram.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A boxplot also gives a quick sense of the distribution of the data; it is often used in side-by-side displays to compare distributions.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        A density plot is a smoothed version of a histogram; it requires a function to estimate a plot based on the data (multiple estimates are possible, of course).
+                                    </span>
+                                </li>
+                            </ol>
+                        </section>
+                    </p>
+                    <h3>
+                        Further Reading
+                    </h3>
+                    <p>
+                        <section class="para-list fadeIn inView">
+                            <ul>
+                                <li>
+                                    <span>
+                                        Density Estimation in <em>R</em> is covered in <a href="http://vita.had.co.nz/papers/density-estimation.pdf" target="_blank"><span class="accent">Henry Deng and Hadley Wickham's paper</span></a> of the same name.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Matthew Conlen published <a href="https://mathisonian.github.io/kde/" target="_blank"><span class="accent">an interactive presentation</span></a> that demonstrates the effect of choosing different kernels and bandwith on kernel density estimates.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        Peter Bruce, Andrew Bruce, and Peter Gedeck (2020) <a href="https://books.google.co.id/books/about/Practical_Statistics_for_Data_Scientists.html?id=k2XcDwAAQBAJ&redir_esc=y" target="_blank"><span class="accent">Practical Statistics for Data Scientist</span></a>, 19-26.
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                    </p>
+                </div>
+            </section>
+        </article>
+        <section class="contained article-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin fadeIn inView">
+                Read next
+            </h2>
+            <div class="entries">
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="./article-1.html">
+                        <div class="image-hover">
+                            <img src="../images/article/Article_1/article-1.png" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <div class="case-article-wrapper">
+                            <h2 class="poppins-17">
+                                CRUD Application in Object-Oriented Programming
+                            </h2>
+                            <p class="poppins-14">
+                                A simple CRUD application from scratch and implementing its functionality in Object-oriented Programming Paradigm with Python.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="./article-2.html">
+                        <div class="image-hover">
+                            <img src="../images/article/Article_2/article-2.png" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <div class="case-article-wrapper">
+                            <h2 class="poppins-17">
+                                Exploratory Data Analysis: Estimates of Location
+                            </h2>
+                            <p class="poppins-14">
+                                Estimates of location are summary statistics that provide information about the central tendency or typical value of a dataset. These statistics help you understand where the data tends to cluster or concentrate.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="article-entry-thumbnail fadeIn inView">
+                    <a href="./article-3.html">
+                        <div class="image-hover">
+                            <img src="../images/article/Article_3/article-3.png" width="100%" height="100%" style="vertical-align: middle;">
+                        </div>
+                        <div class="case-article-wrapper">
+                            <h2 class="poppins-17">
+                                Exploratory Data Analysis: Estimates of Variability
+                            </h2>
+                            <p class="poppins-14">
+                                Estimates of variability measures whether the data values are tightly clustered or spread out.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="article-list fadeIn inView">
+            <div class="cta">
+                <a class="blunt-button" href="../articles.html">
+                    All Articles
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2023. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+    <script src="../js/project-selector.js"></script>
+</html>
