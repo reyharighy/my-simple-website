@@ -581,7 +581,7 @@ header.main-navigation.inView, .fadeIn.inView {
     overflow: hidden;
     transition: .2s ease-in-out;
     box-shadow: 0 5px 12 px rgba(0, 0, 0, 0);
-    flex: 0.25;
+    flex: 0.2;
     object-fit: fill;
 }
 
