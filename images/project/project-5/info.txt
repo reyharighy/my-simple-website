@@ -1,1 +1,1 @@
-This folder is intended to store all images used in related project.
+This directory is intended to store all images used in related project.
