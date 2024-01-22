@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='author' content="Muhammad Reyhan Arighy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>My Personal Data Science Projects</title>
+        <link rel="icon" type="image/png" href="../images/logo/icon.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="loaded">
+        <header class="contained main-navigation" style="z-index: 10;">
+            <a href="../index.html" class="logo" aria-label="Home Button">
+                <img src="../images/logo/home_logo.png" alt="Reyhan Arighy">
+            </a>
+            <nav id="main-navigation" class>
+                <ul>
+                    <li class>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../projects.html" id="underlined">
+                            Projects
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../articles.html">
+                            Articles
+                        </a>
+                    </li>
+                    <li class>
+                        <a href="../about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="journal split-grid contained">
+            <section class="header fadeIn">
+                <h1 style="padding-bottom: 50px;">
+                    Local Llama 2 Chatbot with LangChain, Pinecone, and Streamlit
+                </h1>
+                <div class="meta-info">
+                    <div class="date wide-12">
+                        22 January 2024
+                    </div>
+                    <hr>
+                    <div class="tags">
+                        <span class="wide-12">
+                            Project
+                        </span>
+                    </div>
+                </div>
+                <div class="author">
+                    <img src="../images/profile/profile-picture-mini.jpg" alt="mini profile picture">
+                    <p>
+                        by
+                        <span class="name" style="margin-left: 5px;">Muhammad Reyhan Arighy</span>
+                        <span>Data Scientist</span>
+                    </p>
+                </div>
+            </section>
+            <section class="image-holder journal-image">
+                <img src="../images/banner/porto-5.png" alt="banner">
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <h2>
+                        Introduction
+                    </h2>
+                    <p>
+                        This project aims to showcase the integration of technologies to build an intelligent and interactive chatbot 
+                        that runs locally. The main focus is to take advantage of the Llama 2 as open source Large Language Model 
+                        developed by Meta AI as introduced in <a href="https://ai.meta.com/llama/" target="_blank"><span class="accent">their website</span></a>.
+                    </p>
+                    <p>
+                        While building with Llama 2, this project is intended to leverage its factual accuracy and consistency by 
+                        providing it with reliable and up-to-date information from the knowledge base. Achieving this involves the model 
+                        with an external database that could be used to store such novel information.
+                    </p>
+                    <p>
+                        In order to keep it as simple as it goes, this project focuses solely on meeting the outlined objectives 
+                        without delving into alternative technologies that would certainly complement the project but are outside its 
+                        specific scope.
+                    </p>
+                    <h2>
+                        Chatbot Scheme Overview
+                    </h2>
+                    <img src="../images/project/project-5/chatbot scheme.jpg" alt="chatbot application scheme" style="width: 100%;">
+                    <p>
+                        Let's break down the scheme overview into key steps:
+                    </p>
+                    <h3>
+                        Step 1: Loading External Documents
+                    </h3>
+                    <p>
+                        To build a robust knowledge base for Llama 2 model, we begin by loading external documents by using <span class="accent">DirectoryLoader</span>
+                        library, importing a collection of documents that will serve as additional Llama 2 model's knowledge base.
+                    </p>
+                    <h3>
+                        Step 2: Text Chunk Splitting
+                    </h3>
+                    <p>
+                        After loading the external documents, the next crucial step involves breaking down the content into manageable pieces. 
+                        This is accomplished using <span class="accent">RecursiveCharacterTextSplitter</span> library, which facilitates the 
+                        division of documents into smaller text chunks. This process ensures that Llama 2 model can efficiently process and analyze 
+                        the information.
+                    </p>
+                    <h3>
+                        Step 3: Sentence Transformation
+                    </h3>
+                    <p>
+                        <span class="accent">SentenceTransformerEmbeddings</span> library is a powerful tool that transforms individual sentences within 
+                        the text chunks into representational vectors. By converting the textual data into numerical embeddings, we are able 
+                        to capture semantic relationships and nuances, facilitating more effective comprehension.
+                    </p>
+                    <h3>
+                        Step 4: Storing in Pinecone Index Database
+                    </h3>
+                    <p>
+                        The transformed sentence vectors are then stored in a Pineconce index database. This step is crucial for organizing and managing 
+                        the data efficiently. The Pineconce index database serves as a repository for the vector representations, enabling quick and 
+                        structured access during Llama 2 model's inference and interactions.
+                    </p>
+                    <h3>
+                        Step 5: User Query Processing
+                    </h3>
+                    <p>
+                        When a user submits a query, Llama 2 model initiates the inference process. The user's query is passed into the Pineconce index, 
+                        leveraging its efficient retrieval capabilities. This step aims to identify relevant text chunks based on the similarity between 
+                        the query and the stored vectors in the index.
+                    </p>
+                    <h3>
+                        Step 6: Retrieval of Relevant Chunks
+                    </h3>
+                    <p>
+                        Using the similarity scores obtained from the Pineconce index, Llama 2 model retrieves the most relevant text chunks associated with 
+                        the user's query. This retrieval step is crucial for obtaining contextual information that can aid in generating a meaningful response.
+                    </p>
+                    <h3>
+                        Step 7: Embedding Retrived Text Chunks into Llama 2 Model's Prompt
+                    </h3>
+                    <p>
+                        By embedding the retrieved text chunks, Llama 2 model incorporates contextual information into its understanding, allowing it to 
+                        consider the specifics of the user's query.
+                    </p>
+                    <h3>
+                        Step 8: Contextually Relevant Responses Generation
+                    </h3>
+                    <p>
+                        With the user's query and the embedded text chunks as contextual information, Llama 2 model generates a response that is contextually 
+                        relevant. The embedded text chunks contribute to the model's understanding of the specific context, enabling it to provide more 
+                        accurate and meaningful answers based on the information contained in the knowledge base.
+                    </p>
+                    <h2>
+                        Features
+                    </h2>
+                </div>
+            </section>
+            <section class="carousel fadeIn inView" style="grid-column: 3/11;">
+                <section class="insight-carousel-container fadeIn inView">
+                    <div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: end; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-left-part1" aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; flex-wrap: wrap;">
+                            <ul class="insight-carousel-part1">
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-5/photoArtboard 1.png" alt="langchain logo">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-5/photoArtboard 2.png" alt="pinecone logo">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                                <li class="slide">
+                                    <blockquote class="insight">
+                                        <div class="topContent">
+                                            <img src="../images/project/project-5/photoArtboard 3.png" alt="streamlit logo">
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; display: flex; flex-direction: column; align-items: start; align-self: center; width: 10%;">
+                            <button class="animate-arrow arrow-right-part1" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.616" height="68.83" 
+                                viewBox="0 0 38.616 68.83">
+                                    <defs>
+                                        <clippath id="clip-path">
+                                            <rect id="Rectangle_909" data-name="Rectangle 909" width="59.83" height="38.616" 
+                                            transform="translate(9 0)" fill="none"></rect>
+                                        </clippath>
+                                        <clippath id="clip-path-2">
+                                            <rect id="Rectangle_910" data-name="Rectangle 910" width="68.83" height="38.616" 
+                                            transform="translate(0 0)" fill="none"></rect>
+                                        </clippath>
+                                    </defs>
+                                    <g id="Component_29_3" data-name="Component 29 – 3" transform="translate(0 68.83) rotate(-90)">
+                                        <g id="Group_4572" data-name="Group 4572" transform="translate(0 0)">
+                                            <g id="Group_4571" data-name="Group 4571" clip-path="url(#clip-path)">
+                                                <line id="Line_451" data-name="Line 451" x2="45.574" transform="translate(10.83 19.308)" fill="none" 
+                                                stroke="#2a2b34" stroke-width="1"></line>
+                                            </g>
+                                        </g>
+                                        <path id="Path_15076" data-name="Path 15076" d="M43.889,32.342,56.846,19.385,43.889,6.427" 
+                                        transform="translate(0 0)" fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                        <g id="Group_4574" data-name="Group 4574" transform="translate(0 0)">
+                                            <g id="Group_4573" data-name="Group 4573" clip-path="url(#clip-path-2)">
+                                                <path id="outer_circle" data-name="Path 15078" d="M41.287,2.4a18.8,18.8,0,1,1-8.668,25.14A18.8,18.8,0,0,1,41.287,2.4Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                                <path id="inner_circle" data-name="Path 15098" d="M43.421,6.786A13.93,13.93,0,1,1,37,25.409,13.929,13.929,0,0,1,43.421,6.786Z" 
+                                                fill="none" stroke="#2a2b34" stroke-width="1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="main fadeIn inView">
+                <div class="content fadeIn inView">
+                    <section class="insight-prompt-carousel-container fadeIn inView">
+                        <ul class="insight-prompt-carousel-part1">
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            A specialized framework designed for developping language model applications, providing 
+                                            seamless integration with the powerful Llama 2 model. The framework offers off-the-shelf 
+                                            chains for easy initiation as well as customizable components for tailoring existing chains 
+                                            or building new ones.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Leverage Pinecone as a vector store for efficient similarity search and retrieval of 
+                                            contextually relevant responses. Pinecone runs serverless that lets you deliver remarkable 
+                                            chatbot applications with a certain number of advantages. It has power to search across 
+                                            billions of embeddings with ultra-low query latency. You can get started for free, then 
+                                            upgrade and scale as needed.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                            <li class="slide">
+                                <blockquote class="insight-prompt">
+                                    <div class="bottomContent">
+                                        <p>
+                                            Build a user-friendly interface using Streamlit, allowing users to interact seamlessly with 
+                                            the chatbot. No front-end experience required. It's the UI powering Large Language Model 
+                                            movement. That means GenAI and Streamlit: A perfect match.
+                                        </p>
+                                    </div>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </section>
+                    <h2 style="margin-top: 0px;">
+                        Llama 2 Model Usage
+                    </h2>
+                    <p>
+                        The chatbot application in this repository is designed to behave as an intelligent and interactive assistant, providing insightful 
+                        replies to a wide range of queries. Leveraging the capabilities of the Llama 2 open-access models, the chatbot aims to offer 
+                        valuable assistance in various domains. By this, we should be able to know how to prompt the models as well as how to change the 
+                        system prompt. You can get to know about it on this release of 
+                        <a href="https://huggingface.co/blog/llama2#how-to-prompt-llama-2" target="_blank"><span class="accent">Hugging Face Blog</span></a>.
+                    </p>
+                    <p>
+                        The prompt template for the first turn looks like this:
+                    </p>
+                    <img src="../images/project/project-5/llama 2 prompt.jpg" alt="llama 2 prompt" style="width: 100%;">
+                    <p>
+                        This template follows the model's training procedure as described in <a href="https://huggingface.co/papers/2307.09288" target="_blank"><span class="accent">Llama 2 Paper</span></a>. 
+                        We can use any system prompt we want, but it's crucial that the format matches the one used during training.
+                    </p>
+                    <p>
+                        To spell it out in full clarity, when trying to embed the contextually relevant information into system prompt, this is what is actually sent 
+                        to Llama 2 model when user enters a query to initiate a chat.
+                    </p>
+                    <img src="../images/project/project-5/llama 2 prompt with context.jpg" alt="llama 2 prompt with context" style="width: 100%;">
+                    <p>
+                        As you can see, the instructions between the special <span class="accent">&lt;&lt;SYS&gt;&gt;</span> and <span class="accent">&lt;&lt;/SYS&gt;&gt;</span> 
+                        tokens provide context for the model so it knows how we expect it to respond. This works because exactly the same format was used during training 
+                        with a wide variety of system prompts intended for different tasks.
+                    </p>
+                    <p>
+                        As the conversation progresses, all the interactions between user and assistant are appended to the previous prompt. The template used 
+                        during multi-turns conversation follow this structure.
+                    </p>
+                    <img src="../images/project/project-5/multi-turns conversation.jpg" alt="multi-turns conversation" style="width: 100%;">
+                    <p>
+                        For some final clarifications, you can go directly to <a href="https://huggingface.co/ArthurZ" target="_blank"><span class="accent">this link</span></a>.
+                    </p>
+                    <p>
+                        The model is stateless and does not "remember" previous fragments of the conversation, we must always supply it with
+                        all the context so the conversation can continue. This is the reason why context length is a very important parameter to maximize 
+                        as it allows for longer conversation and larger amounts of information to be used.  
+                    </p>
+                    <p>
+                        Longer conversation affects heavier computations when executing in standard hardware, particularly those not equipped with GPUs 
+                        for machine learning or with limited RAM. This can be overcomed by limitting the context window if contextually relevant context 
+                        is provided by external information.
+                    </p>
+                    <h2>
+                        Chatbot Interaction
+                    </h2>
+                    <p>
+                        Upon attempting to test the Llama 2 model's ability to provide factual and relevant responses to contextual query given by user, 
+                        we can establish the real environment using <span class="accent">streamlit</span> library as chatbot UI. This library would ease 
+                        our efforts in building chatbot application in just a matter of <span class="accent">pip install streamlit</span> and you're done. 
+                        Now check out <a href="https://docs.streamlit.io/" target="_blank"><span class="accent">their documentations</span></a> to get along with it.
+                    </p>
+                    <img src="../images/project/project-5/gif_llama2.gif" alt="llama 2 model demo" style="width: 100%;">
+                    <h2>
+                        Exceptional Inspirations
+                    </h2>
+                    <p>
+                        This project could't be made with the help of these blogs.
+                        <section class="para-list fadeIn inView">
+                            <ul>
+                                <li>
+                                    <span>
+                                        <a href="https://blog.futuresmart.ai/building-an-interactive-chatbot-with-langchain-chatgpt-pinecone-and-streamlit" target="_blank"><span class="accent">Building an Interactive Chatbot with LangChain, ChatGPT, Pinecone, and Streamlit</span></a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="https://medium.com/@daydreamersjp/implementing-locally-hosted-llama2-chat-ui-using-streamlit-53b181651b4e" target="_blank"><span class="accent">Implementing Locally-Hosted Llama2 Chat UI Using Streamlit</span></a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                    </p>
+                    <p style="color: transparent;">
+                        intentionally left blank
+                    </p>
+                    <p>
+                        Please find codes detailed on Github channel.
+                    </p>
+                    <section class="referred-button button" style="position: relative;">
+                        <a href="https://github.com/reyharighy/Local_Llama2_with_LangChain_Pinecone_Streamlit" target="_blank">
+                            Github
+                        </a>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <section class="contained project-entries fadeIn inView">
+            <hr>
+            <h2 class="section-heading section-heading-margin">
+                Read next
+            </h2>
+        </section>
+        <section class="contained case-projects-next fadeIn inView">
+            <article class="case-project fadeIn">
+                <a href="./porto-1.html">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-1.png" alt="Traveloka Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Traveloka Indonesia New Year Hotel Rooms
+                        </span>
+                        <section class="case-project-wrapper">
+                            This project is dedicated to conducting a comprehensive analysis and comparison
+                            of various aspects related to hotel accommodations offered during the New Year
+                            holiday season in Indonesia, with a primary objective of providing invaluable insights into
+                            the practices and improvements within the hospitality industry. In an increasingly
+                            competitive market, the project seeks to contribute to the elevation of customer
+                            satisfaction, highlighting trends, strengths, and areas for enhancement.
+                        </section>
+                    </p>
+                </a>
+            </article>
+            <article class="case-project fadeIn">
+                <a href="./porto-2.html" class="case-project fadeIn">
+                    <div class="image-holder image-hover">
+                        <img src="../images/banner/porto-2.png" alt="Youtube Project">
+                    </div>
+                    <p class="case-project-title">
+                        <span style="margin-bottom: 20px;">
+                            Statistical Analysis on USA Youtube Trending Videos
+                        </span>
+                        <section class="case-project-wrapper">
+                            The project's specific focus is to generate valuable insights tailored for content
+                            creators, marketers, and decision-makers, facilitating a deeper understanding of
+                            YouTube user preferences and consumer behavior within the digital landscape. By
+                            analyzing viewer engagement patterns and trending content topics,
+                            this research aims to equip stakeholders with data-driven strategies to enhance their
+                            online presence and effectively connect with their target audiences on the YouTube platform.
+                        </section>
+                    </p>
+                </a>
+            </article>
+        </section>
+        <section class="project-list fadeIn inView" style="margin-top: -30px;">
+            <div class="cta">
+                <a class="blunt-button" href="../projects.html">
+                    All Projects
+                </a>
+            </div>
+        </section>
+        <section class="contained" style="padding-bottom: 15px;"><hr></section>
+        <section class="contained contact-us-cta fadeIn inView">
+            <div class="contact-container">
+                <p class="title h1">
+                    Starting a new chapter in my career and believe I'm the right candidate?
+                </p>
+                <a href="mailto:arighymoch@gmail.com?subject=Hi,%20Reyhan!&body=Your%20Message%20Goes%20Here" 
+                class="cta-link red-animated-link small-sans" aria-label="E-mail Link Button">
+                    Let's Talk
+                </a>
+            </div>
+        </section>
+    </body>
+
+    <footer class="contained fadeIn inView">
+        <div class="footer-line">
+
+        </div>
+        <div class="footer-bottom">
+            <small style="font-family: 'Poppins'; font-weight: 200;">
+                Muhammad Reyhan Arighy 2024. All rights reserved.
+            </small>
+            <span class="social-links">
+                <a href="https://www.linkedin.com/in/reyharighy/" title="LinkedIn" target="_blank">
+                    <img src="../images/svg/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/reyharighy" title="Github" target="_blank">
+                    <img src="../images/svg/github-color-svgrepo-com.svg" alt="Github">
+                </a>
+                <a href="https://www.kaggle.com/reyhanarighy" title="Kaggle" target="_blank">
+                    <img src="../images/svg/kaggle-svgrepo-com.svg" alt="Kaggle">
+                </a>
+                <a href="https://medium.com/@arighymoch" title="Medium" target="_blank">
+                    <img src="../images/svg/medium-icon-svgrepo-com.svg" alt="Medium">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/project-selector.js"></script>
+    <script src="../js/menuAndFadeIn.js"></script>
+    <script src="../js/carouselsAndSliders.js"></script>
+    <script src="../js/adjustViewport.js"></script>
+</html>
